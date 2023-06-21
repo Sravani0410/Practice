@@ -1,0 +1,24 @@
+.navbar_container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    padding: 16px 12px;
+    background-color: teal;
+    align-items: center;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.792);
+}
+.link{
+    color: #ddd;
+    text-decoration: none;   
+}
+.search{
+    width: 400px;
+    padding: 6px;
+}
+.logout_btn{
+    padding: 4px 8px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,35 @@
+.add_userSection{
+    padding: 24px;
+    margin: auto;
+    margin-top: 54px;
+    width: 450px;
+    box-shadow: 0 0 5px 0.2px gray;
+    border-radius: 5px;
+}
+.genderInputsContainer{
+    display: flex;
+    gap: 24px;
+}
+.genderInput{
+    display: flex;
+    gap: 5px;
+
+}
+.form_actions{
+    margin-top: 24px;
+    display: flex;
+    width: 100%;
+}
+.btn{
+    width: 100%;
+    padding: 12px 24px;
+    background-color: teal;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor:pointer
+}
+.btn:hover{
+    background-color: rgb(0, 104, 104);
+}

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "firstname": "sandhya",
+      "lastname": "devi",
+      "photo": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+      "age": "12",
+      "phone": "7545454657",
+      "gender": "female",
+      "id": 1
+    },
+    {
+      "firstname": "sravani",
+      "lastname": "pyla",
+      "photo": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1279.jpg",
+      "age": "23",
+      "phone": "9412212313",
+      "gender": "female",
+      "id": 2
+    }
+  ]
+}

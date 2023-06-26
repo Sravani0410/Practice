@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch the Food app</title>
+  </head>
+  <body>
+    <div id="container">
+      <button id="categories">Category</button>
+      <button id="ingredient">Ingrediants</button>
+    </div>
+  </body>
+</html>
+<script>
+  const BaseURL = "https://www.themealdb.com/api/json/v1/1";
+  window.onload = function () {
+    document
+      .getElementById("categories")
+      .addEventListener("click", getCategories);
+    document
+      .getElementById("ingredient")
+      .addEventListener("click", getIngrediant);
+  };
+  const handleError = (error) => {
+    console.log(error);
+    return "Something Went Wrong";
+  };
+  async function getCategories() {
+    try {
+      const categoryData = await fetch(`${BaseURL}/filter.php?c=Seafood`);
+      const Data = await categoryData.json();
+      console.log(Data);
+      return Data;
+    } catch (err) {
+      console.log(err);
+      return handleError(err);
+    }
+  }
+  async function getIngrediants() {
+    try {
+      const IngrediantsData = await fetch(
+        `${BaseURL}/filter.php?i=chicken_breast`
+      );
+      const Data = await IngrediantsData.json();
+      console.log("IngrediantsData", Data);
+      return Data;
+    } catch (err) {
+      return handleError(err);
+    }
+  }
+</script>

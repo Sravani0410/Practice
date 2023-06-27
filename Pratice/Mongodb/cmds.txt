@@ -1,0 +1,9 @@
+1. check the databases:  show databases or show dbs
+2. use collections name
+3. if collections are created manually we can create through shell: db.newcollectionname.insertOne({})
+4. db.collectionname.inserMany({})
+5. db.collectionname.find() ------> find all the databases
+6. db.collection.find({name:"Sravani"})  ---> find the values on bases on name
+7. db.collectionname.find({author:"hhgdh"},{title:1,author:1})----> if documents have many field but we want some for that case we can use this command
+8. db.collectionname.find({},{title:1,author:1})  ----> find the all the documents with some fields
+9. db.books.findOne({ _id: ObjectId("649a7bb128c0686e37f811f6")})  ---> find through ObjectId

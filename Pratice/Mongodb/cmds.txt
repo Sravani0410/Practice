@@ -7,3 +7,9 @@
 7. db.collectionname.find({author:"hhgdh"},{title:1,author:1})----> if documents have many field but we want some for that case we can use this command
 8. db.collectionname.find({},{title:1,author:1})  ----> find the all the documents with some fields
 9. db.books.findOne({ _id: ObjectId("649a7bb128c0686e37f811f6")})  ---> find through ObjectId
+10. db.books.find().count() ---> how many values are there
+11. db.books.find({title:"Name of the Wind"}).count()  ---> paticular title has count
+12. db.books.find().limit(3)
+13. db.books.find().sort({title:1})  ---> ascending order
+14.  db.books.find().sort({title:-1})  ---> descending order
+15.  db.books.find().sort({title:1}).limit(3)  ---> ascending order with first 3 documents

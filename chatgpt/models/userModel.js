@@ -59,6 +59,7 @@ userSchema.methods.getSignedToken = function (res) {
     process.env.JWT_REFRESH_TOKEN,
     { expiresIn: process.env.JWT_REFRESH_EXPIREIN }
   );
+  console.log("JWT_REFRESH_EXPIREIN=============>", refreshToken);
   res.cookie("refreshToken", `${refreshToken}`, {
     maxAge: 86400 * 7000,
     httpOnly: true,

@@ -31,6 +31,7 @@ app.use(errorHandler)
 const PORT = process.env.PORT || 3004;
 
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/openai",require('./routes/openaiRoutes'))
 
 // listen server
 app.listen(PORT, () => {

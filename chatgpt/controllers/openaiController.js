@@ -7,13 +7,14 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 exports.summaryController = async (req, res) => {
   try {
-    const { text } = await req.body;
-    const { data } = await openai.createCompletion({
+    const text = await req.body;
+    const data = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `Summarize this \n${text}`,
+      prompt: `Summarize this \n ${text} `,
       max_tokens: 500,
       temperature: 0.5,
     });
+    console.log("================data=========", data);
     if (data) {
       if (data.choices[0].text) {
         return res.status(200).json(data.choices[0].text);

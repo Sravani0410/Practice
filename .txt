@@ -1,0 +1,40 @@
+features of vuejs:
+=================
+1.easy to code
+2.size is 50kb
+3.when we change the routes the page is not refresh 
+
+used in real time applications:
+===============================
+1.bignames
+2.grammerly
+3.gitlab
+4.ninegag
+5.bihuges
+6.shovumine
+
+and also parts of applications we can use the vuejs:
+===================================================
+7.google carriers
+8.apple---> internal management tool
+9.netflix---> to cloud storage services
+
+
+for reference website: 
+======================
+madewithvuejs.com
+
+technology:
+==========
+wappalyzer(WEBAPPLYZER) app is telling that which technology is used.
+
+concepts:
+=========
+- pass multiple props
+- data reactivity has 2 methods 
+  1.composition api --->using "ref" method  --> `setup` is a special hook dedicated for the Composition API.
+  2.options api --->old styling code
+  
+
+
+

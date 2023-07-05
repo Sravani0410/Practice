@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.container-footer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #1e1e26;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-footer .footer-left-part{
+    width:40%;
+    height:100%;
+    padding-left: 2%;
+}
+.container-footer .footer-right-part{
+    width:50%;
+    height:100%;
+    padding: 0 2% 0 2%;
+}
+
+
+.container-footer .footer-left-part .footer_logo{
+    Width:162px;
+    Height:63px;
+    Top:40px;
+    Left:80px;
+    background-blend-mode:Luminosity;
+} 
+.container-footer .footer-left-part .row-element h4,p,a{
+    color: #78787D;
+    font: "Poppins";
+    font-weight:400;
+    font-size:16px;
+    line-height:24px;
+    text-decoration: none;
+    margin: 0px;
+}
+.container-footer .footer-left-part .row-element{
+   display: flex;
+   margin :10px;
+   gap: 20px;
+   margin: 6%;
+}
+.container-footer .footer-left-part .row-element img{
+    width: 24px;
+    height:24px
+ }
+
+.container-footer .footer-right-part form div h4{
+    color: #ffff;
+    font:"Poppins";
+    font-weight:700;
+    font-size:18px;
+    line-height:28px;
+}
+
+.container-footer .footer-right-part form div .row{
+   display: flex;
+   width: 100%;
+   gap: 20px;
+   margin-bottom: 20px;
+}
+.container-footer .footer-right-part form div .row .row-element{
+    width: calc(48%);
+ }
+
+ .container-footer .footer-right-part form div .row .row-element input,select{
+    height: 39px; 
+    width: calc(100%);
+    border-radius: 8px;
+    border: none;
+    color: #78787D;
+    padding:2px;
+    box-sizing: border-box;
+    font: "Poppins";
+    
+ }
+ /* .container-footer .footer-right-part form div .row .row-element select option{   
+    color: green;
+    padding:2px;
+    font-style: italic;
+    font: medium;
+ } */
+ .container-footer .footer-right-part form div .row .row-element textarea{
+    display: block;
+    width: calc(200% + 20px); 
+    height: 78px; 
+    border-radius: 8px;
+    border: none;
+    color: #78787D;
+    padding:2px;
+    font: "Poppins";
+ }
+
+ .container-footer .footer-right-part form div .row .row-element label{
+    color: #78787D;
+    font: "Poppins";
+    font-weight: 700;
+    font-size: 16px;
+    Line-height:24px;
+ }
+ .container-footer .footer-right-part form div .row .row-element input[type=submit]{
+    width: calc(80%);
+    height: 39px; 
+    border-radius: 40px;
+    border: none;
+    background-color: #0A8C44;
+    padding: 10px 16px 10px 16px;
+    color: #ffff;
+    font: "Poppins";
+
+ }
+ ::placeholder {
+    padding:2px;
+    color: #78787D;
+    opacity: 1; /* Firefox */
+    font-weight: 400;
+    font-size: 14px;
+    font: "Poppins";
+  }
+
+

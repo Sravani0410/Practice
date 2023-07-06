@@ -1,0 +1,30 @@
+Introduction:
+=============
+Definition of Node:
+* it is a javascript runtime, built on google's open source v8 engine.
+* any browser natively understand html,css,js, here browser is the runtime application,browser provides all the tools and library to run a javascript code.
+* for example, when we run js in browser, browser also provides some api's,fetch,getElementById,querySelector,console.log() function.
+   so we are able to use  these api's functions in javascript in browser because browser is the one which provide these functions and api's and we make use of these functions and api's from over js code.
+   Now, before 2009 js is only capable of running inside browser, there is no other way to run outside the browser envirnoment.
+   Every browser has javascript engine which is responsibe for executing the javascript code. js engine is a tool which is required by a browser tools to excute and run javascript code.
+   Every browser has there own javascript enigine. for example, firefox uses spider monkey, microsoft h uses chakra, javascript chrome uses v8 engine. we can execute the javscript code in chrome browser.
+   After 2009, a programmer named as randal, create a nodejs came with brilinate idea. he thought it will be excute javascript outside of the browser.
+   to make this possible he took google v8 engine which is the fastest javascript engine out there and emedded inside a c++ program and he called as node js. 
+   similar to a browser, nodejs is run time envirnoment for excuting a javascript code and it contents a javascript engine which a javascript code and javascript engine is the v8 engine.
+   so that's why we say node js is javscript run time which is built on google v8 javascript engine.
+* Node has certain api's which provides envirnoment for the javascript code in node js. fs,http,realine,console.log() these api's are different from the api's we have in browser
+* here browser provides some functions and api's and at the same time nodejs also provides some api's and function's to uses this modules so we can use this modules in nodejs.
+* so we can finally use node js as server side developement in order built fast, high scalable network application powering the backend of a web application.
+why and where we have to use Nodejs:
+===============================
+ * Node js is single threaded,event driven and non-blocking io model. which makes nodejs very light and efficient. 
+ * Node js is prefect building fast and scalable, data intensive application --> this makes node js a perfect kind of applications.
+ * for example, we can make a building a api with database behind it using node.js  
+ * applications:
+   we can use streming application like netflix,youtube,uber,paypal, realtime chat apps,even server side application
+   not using application:
+   there some of application we are using the nodejs because  the apps need heavy server side proccesing like heavy image manupulation of video convertion,file compression
+* still why node js is learning:
+  same technology across entire stack--->because no need to learn, other techstack for backend, it will more comfotable other than switching the techstack to team.
+  huge library of open source packages are available in npm
+  there is a huge active community of nodejs developer.there are constentily improving node js to improve the developers. we can relay in technology.

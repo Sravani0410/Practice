@@ -1,0 +1,137 @@
+1.What is the difference between null and undefined in JavaScript?
+   * null is an assignment value that represents the intentional absence of any object value. 
+   * It is typically used to indicate that a variable has no value or an object property is intentionally empty.
+   * undefined means that a variable has been declared but has not been assigned a value. 
+   * It is the default value of variables that are declared but not initialized.
+
+2.Explain the concept of hoisting in JavaScript.
+   *Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their respective scopes during the compilation phase. 
+   *This means that you can use variables and call functions before they are declared in your code.
+   example:
+   console.log(x); // Output: undefined
+   var x = 10;
+   In the example above, even though x is accessed before it is declared, it doesn't throw an error. 
+   This is because during hoisting, the declaration of x is moved to the top, making it accessible throughout the scope.
+
+3.How does prototypal inheritance work in JavaScript?
+   *In JavaScript, objects can inherit properties and methods from other objects.
+   *This is achieved through prototypal inheritance. Each object has an internal link to another object called its prototype.
+   *When a property or method is accessed on an object, JavaScript looks for it in the object itself and, if not found, follows the prototype chain to find it in its prototype object.
+    example:
+    function Person(name) {
+    this.name = name;
+    }
+    Person.prototype.greet = function () {
+    console.log('Hello, my name is ' + this.name);
+    };
+    var john = new Person('John');
+    john.greet(); // Output: Hello, my name is John
+    In the example above, the Person function serves as a constructor. 
+    The greet method is added to the prototype of Person, so all instances created using new Person() can access and use that method.
+
+4.Describe the event bubbling and event capturing mechanisms in the DOM.
+    *Event bubbling and event capturing are two mechanisms for handling events in the Document Object Model (DOM).
+    *Event bubbling is the default behavior where an event triggered on a specific element will also trigger the same event on all of its parent elements in the DOM hierarchy, propagating upwards until it reaches the document root.
+    *Event capturing is the opposite mechanism where the event is first captured by the topmost element in the hierarchy and then propagated downwards to the target element.
+    *You can control the event flow by using the addEventListener method with the optional third parameter useCapture. 
+    *Setting useCapture to true enables event capturing, while setting it to false (default) enables event bubbling.
+5.What is the purpose of closures in JavaScript? Can you provide an example?
+    *Closures are functions that have access to variables from their outer (enclosing) lexical scope even after the outer function has finished executing.
+    *They are useful for creating private variables, implementing data encapsulation, and creating functions with persistent state
+    example:
+    function counter() {
+    var count = 0;
+    return function () {
+        count++;
+        console.log(count);
+    };
+    }
+    var increment = counter();
+    increment(); // Output: 1
+    increment(); // Output: 2
+    In the example above, the counter function returns an inner function that increments and logs a count variable. 
+    The inner function has access to the count variable even after the counter function has completed, thanks to closures.
+
+6.Explain the differences between synchronous and asynchronous programming in JavaScript.
+    *Synchronous programming executes code sequentially, blocking further execution until a task is complete. 
+    *Each statement waits for the previous one to finish.
+    *Asynchronous programming allows multiple tasks to be executed concurrently. 
+    *Instead of waiting for a task to complete, it delegates the task to another part of the program and continues executing the next statement.
+    *Asynchronous programming in JavaScript is commonly achieved through callback functions, promises, and async/await syntax.
+7.How does the this keyword work in JavaScript? Give some examples of how it can be used.
+    *In JavaScript, the value of this is determined by how a function is called. 
+    *It refers to the object on which a function is invoked.
+    *The value of this can vary based on the context in which the function is called, such as object method invocation, explicit binding using call() or apply(), or when using the new keyword.
+    example:
+    var person = {
+    name: 'John',
+    sayHello: function () {
+        console.log('Hello, my name is ' + this.name);
+    }
+    };
+    person.sayHello(); // Output: Hello, my name is John
+
+    function greet() {
+    console.log('Hello, ' + this.name);
+    }
+    var john = { name: 'John' };
+    greet.call(john); // Output: Hello, John
+
+    function Person(name) {
+    this.name = name;
+    }
+    var john = new Person('John');
+    console.log(john.name); // Output: John
+
+8.What are some ways to handle asynchronous operations in JavaScript?
+    *Callback functions: Pass a function as an argument to another function, which will be called once the asynchronous operation completes.
+    *Promises: Use the Promise object to handle asynchronous operations and chain multiple operations together.
+    *Async/await: Use the async keyword to define an asynchronous function, and await to pause the execution until a promise is resolved or rejected.
+    *Event emitters: Utilize event-driven patterns where events are emitted when an asynchronous operation completes, and listeners handle those events.
+9.How would you compare two JavaScript objects for equality?
+    *By default, comparing two JavaScript objects using == or === will check if they reference the same object in memory, rather than comparing their contents.
+    *To compare objects by their values, you can use libraries like Lodash or implement a custom deep equality check by recursively comparing each property and value.
+    example:
+    var obj1 = { name: 'John', age: 30 };
+    var obj2 = { name: 'John', age: 30 };
+    _.isEqual(obj1, obj2); // Output: true
+
+10.Explain the concept of lexical scoping in JavaScript.
+   simple:
+   =======
+    *Lexical scoping is a way of resolving variables based on their position in the source code.
+    *It determines the scope of a variable by where it is defined.
+    *In JavaScript, functions create a new scope, and variables defined within that function are only accessible within that function and any nested functions.
+    *Variables defined in an outer scope are also accessible within inner scopes, but the reverse is not true. 
+    *This behavior is called lexical scoping or static scoping.
+   detailed:
+   ========
+   Lexical scoping, also known as static scoping, is a concept in JavaScript that determines how variable names are resolved at compile time based on their lexical (static) position in the source code.
+   It means that the scope of a variable is determined by its location within the code structure, specifically where it is defined.
+   In lexical scoping, when a function is defined, it captures and creates a closure over the variables in its outer scope. 
+   This means that the function has access to the variables in its parent scope, even if it is called from a different location within the code.
+   example:
+   ========
+    function outer() {
+    var outerVar = 'I am outside!';
+    function inner() {
+        var innerVar = 'I am inside!';
+        console.log(outerVar + ' ' + innerVar);
+    }
+    inner(); // Output: I am outside! I am inside!
+    }
+    outer();
+    *In the example above, the inner function is defined within the outer function. 
+    *It forms a closure that captures the outerVar variable from its parent scope.
+    *When inner is called, it has access to both the outerVar and innerVar variables. 
+    *This is possible due to lexical scoping, as the variables are resolved based on their position in the code.
+    *If we were to call the inner function from outside the outer function, it would result in an error because the outerVar variable would be out of scope:
+        function outer() {
+        var outerVar = 'I am outside!';
+        }
+        outer();
+        inner(); // Error: inner is not defined
+    *In this case, the inner function is not lexically within the scope of the outer function, so it cannot access the outerVar variable.
+    *Lexical scoping plays a crucial role in JavaScript's scoping rules and enables the concept of closures, allowing functions to maintain access to variables from their parent scope even after the parent function has completed execution.
+
+

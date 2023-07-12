@@ -23,8 +23,28 @@ why and where we have to use Nodejs:
  * applications:
    we can use streming application like netflix,youtube,uber,paypal, realtime chat apps,even server side application
    not using application:
-   there some of application we are using the nodejs because  the apps need heavy server side proccesing like heavy image manupulation of video convertion,file compression
+   there some of application we are not using the nodejs because  the apps need heavy server side proccesing like heavy image manupulation of video convertion,file compression  -->php,python are used
 * still why node js is learning:
   same technology across entire stack--->because no need to learn, other techstack for backend, it will more comfotable other than switching the techstack to team.
   huge library of open source packages are available in npm
   there is a huge active community of nodejs developer.there are constentily improving node js to improve the developers. we can relay in technology.
+
+version:
+=======
+* the preferable version is even number version that will converted to LTS(long term support). because every 6 months odd number version is unsupported.
+REPL:
+====
+R-Read  ==>Reading user Input
+E-Eval  ==>Evaluting user input
+P-Print ==>Print or Output the result
+L-Loop  ==>Return and Wait for new input
+
+* Definition: REPL is simply envirnoment which allows us to excutes a javascript, most specifically node js code.
+  we start this envirnoment by excuting the node command so in order start the repl first we start run node in every terminal.
+
+  Example: First Enter the Node command then 
+   1. 30 + 30 --> read the value , evaluting the value, after Enter
+   2. 60 ---> print the result , after Enter
+   3. let user={name="John",age:28}  ----> Loop --> ready enter other operation 
+* underscore(_): _ is a special variable which stores the previous expression.  
+

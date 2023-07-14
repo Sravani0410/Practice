@@ -1,3 +1,21 @@
+interview topics:
+*hooks
+*stopwatch,counter
+*life cycle
+
+*closures --->how to work closures with example
+*currying 
+*how js functions
+
+*1. string manupulation
+*2. array problem
+
+*explain the project and challeging in projects
+
+*DSA:
+  1. tree,graph
+
+
 execution-context and hoisting ---> https://www.freecodecamp.org/news/javascript-execution-context-and-hoisting/
 setTimeout  ---> https://www.freecodecamp.org/news/javascript-settimeout-js-timer-to-delay-n-seconds/#:~:text=If%20the%20delay%20is%20not%20present%20in%20the,to%20zero%20and%20the%20message%20will%20appear%20immediately.
 

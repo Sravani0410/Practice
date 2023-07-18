@@ -7,7 +7,7 @@
        <div id="rhs">
          <div>Account</div>
          <div id="cart">
-            <div id="cart-count">1</div>
+            <div id="cart_count">1</div>
          </div>
        </div>
     </div>
@@ -28,7 +28,6 @@
     display:flex;
     flex:3;
     align-items: center;
-
  }
  #rhs{
     display:flex;

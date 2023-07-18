@@ -28,6 +28,16 @@ technology:
 ==========
 wappalyzer(WEBAPPLYZER) app is telling that which technology is used.
 
+create the vue project:
+=======================
+npm init vue@latest
+Project name:
+start asking the questions
+cd project name
+npm install
+npm run dev
+
+
 concepts:
 =========
 - pass multiple props

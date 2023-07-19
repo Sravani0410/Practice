@@ -1,17 +1,14 @@
 .card-profile-stats img{
-    max-width: 86px;
-    border-radius: 50%;
-    border: 1px solid #111;
+  max-width:60px;
+  border-radius: 50%;
+  border:1px solid black
 }
-
 .email{
     color: rgb(238,101,122);
 }
-
 .location{
     color: blue;
 }
-
 .calendar{
     color: rebeccapurple;
 }

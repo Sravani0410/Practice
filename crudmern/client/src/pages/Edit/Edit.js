@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Select from "react-select";
+import Spiner from "../../components/Spiner/Spiner"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Edit = () => {
@@ -19,7 +20,7 @@ const Edit = () => {
   const [status, setStatus] = useState("");
   const [image, setImage] = useState("");
   const [preview, setPreview] = useState("");
-  console.log(preview);
+  const [showSpin, setShowSpin] = useState(true)
 
   // status options:
   const options = [
@@ -77,10 +78,13 @@ const Edit = () => {
     if (image) {
       setPreview(URL.createObjectURL(image));
     }
+    setTimeout(() => {
+      setShowSpin(false)
+    }, [1200])
   }, [image]);
   return (
     <>
-      <div className="container">
+      {showSpin ? <Spiner /> : <div className="container">
         <h2 className="text-center mt-1">Update Your Details</h2>
         <Card className="shadow mt-3 p-3">
           <div className="profile_div text-center">
@@ -179,7 +183,8 @@ const Edit = () => {
           </Form>
         </Card>
         <ToastContainer position="top-center" />
-      </div>
+      </div>}
+
     </>
   );
 };

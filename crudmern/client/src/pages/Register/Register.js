@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import {useNavigate} from "react-router-dom"
 import Card from "react-bootstrap/Card";
 import "./Register.css";
@@ -10,6 +10,7 @@ import Spiner from "../../components/Spiner/Spiner";
 import { registerFunction } from "../../services/Apis";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { addData } from "../../components/context/ContextProvider";
 const Register = () => {
   const [inputData, setInputData] = useState({
     fname: "",
@@ -24,7 +25,9 @@ const Register = () => {
   const [preview, setPreview] = useState("");
   const [showSpin, setShowSpin] = useState(true);
 
-  const navigate=useNavigate()
+  const navigate=useNavigate();
+
+  const { userAdd,setUserAdd}=useContext(addData)
 
   // status options:
   const options = [
@@ -90,7 +93,7 @@ const Register = () => {
         "Content-Type": "multipart/form-data",
       };
       const response = await registerFunction(data, config);
-      // console.log("response",response)
+      console.log("response",response)
       if (response.status === 200) {
         setInputData({
           ...inputData,
@@ -103,6 +106,8 @@ const Register = () => {
         });
         setStatus("");
         setImage("")
+        setUserAdd(response?.data)
+        navigate("/")
       }
       else{
         toast.error("error")

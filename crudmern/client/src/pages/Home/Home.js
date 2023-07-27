@@ -12,13 +12,23 @@ import {
   updateData,
 } from "../../components/context/ContextProvider";
 import "./Home.css";
-import { userDeleteFunction, userDetailsFunction } from "../../services/Apis";
+import {
+  exporttocsvfunction,
+  userDeleteFunction,
+  userDetailsFunction,
+} from "../../services/Apis";
 import { toast } from "react-toastify";
 
 const Home = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState("");
   const [showSpin, setShowSpin] = useState(true);
+  const [search, setSearch] = useState("");
+  const [filtergender, setFilterGender] = useState("All");
+  const [status, setActive] = useState("All");
+  const [sort, setSort] = useState("new");
+  const [page, setPage] = useState(1);
+  const [pagecount, setPageCount] = useState(0);
   const { userAdd, setUserAdd } = useContext(addData);
   const { update, setUpdate } = useContext(updateData);
   const { userdelete, setUserDelete } = useContext(deleteData);
@@ -27,10 +37,19 @@ const Home = () => {
   };
   // get the user
   const userGet = async () => {
-    const response = await userDetailsFunction();
-    console.log("userdetails", response);
+    const response = await userDetailsFunction(
+      search,
+      filtergender,
+      status,
+      sort,
+      page
+    );
+    console.log("response", response);
     if (response.status === 200) {
-      setUserData(response.data);
+      // usersdata is coming from backend in usercontrollers
+      setUserData(response.data.usersdata);
+      // here Pagination and pageCount is coming from backend(usercontrollers) ==> Pagination: { count,  pageCount }
+      setPageCount(response.data.Pagination.pageCount);
     } else {
       console.log("error is get user data");
     }
@@ -41,18 +60,51 @@ const Home = () => {
     // console.log("delete user",response)
     if (response.status == 200) {
       userGet();
-      setUserDelete(response.data)
+      setUserDelete(response.data);
     } else {
       toast.error("error");
     }
   };
+  // export user
+  const exportuser = async () => {
+    const response = await exporttocsvfunction();
+    // console.log(response)
+    if (response.status === 200) {
+      window.open(response.data.downloadUrl, "blank");
+    } else {
+      toast.error("error !");
+    }
+  };
+  // pagination
+  // handle previous button
+
+  const handleprev = () => {
+    setPage(() => {
+      if (page === 1) {
+        return page;
+      } else {
+        return page - 1;
+      }
+    });
+  };
+  // handle next button
+  const handlenext = () => {
+    setPage(() => {
+      if (page === pagecount ) {
+        return page;
+      } else {
+        return page + 1;
+      }
+    });
+  };
+
   useEffect(() => {
     userGet();
     setTimeout(() => {
       setShowSpin(false);
     }, [1200]);
-  }, []);
-  console.log("userAdd", addData);
+  }, [search, filtergender, status, sort,page]);
+  // console.log("userAdd", addData);
   return (
     <>
       {userAdd ? (
@@ -87,6 +139,7 @@ const Home = () => {
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
+                  onChange={(e) => setSearch(e.target.value)}
                 />
                 <Button variant="success" className="search_btn">
                   Search
@@ -102,7 +155,9 @@ const Home = () => {
           {/* export, gender, status */}
           <div className="filter_div mt-5 d-flex justify-content-between flex-wrap">
             <div className="export_csv">
-              <Button className="export_btn">Export To Csv</Button>
+              <Button className="export_btn" onClick={exportuser}>
+                Export To Csv
+              </Button>
             </div>
             <div className="filter_gender">
               <div className="filter">
@@ -112,19 +167,22 @@ const Home = () => {
                     type={"radio"}
                     label={"All"}
                     name="gender"
-                    value={"ALL"}
+                    value={"All"}
+                    onChange={(e) => setFilterGender(e.target.value)}
                     defaultChecked
                   />
                   <Form.Check
                     type={"radio"}
                     label={"Male"}
                     name="gender"
+                    onChange={(e) => setFilterGender(e.target.value)}
                     value={"Male"}
                   />
                   <Form.Check
                     type={"radio"}
                     label={"Female"}
                     name="gender"
+                    onChange={(e) => setFilterGender(e.target.value)}
                     value={"Female"}
                   />
                 </div>
@@ -139,8 +197,12 @@ const Home = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item>New</Dropdown.Item>
-                  <Dropdown.Item>Old</Dropdown.Item>
+                  <Dropdown.Item onClick={() => setSort("new")}>
+                    New
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => setSort("old")}>
+                    Old
+                  </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </div>
@@ -154,7 +216,8 @@ const Home = () => {
                     type={"radio"}
                     label={"All"}
                     name="status"
-                    value={"ALL"}
+                    value={"All"}
+                    onChange={(e) => setActive(e.target.value)}
                     defaultChecked
                   />
                   <Form.Check
@@ -162,12 +225,14 @@ const Home = () => {
                     label={"Active"}
                     name="status"
                     value={"Active"}
+                    onChange={(e) => setActive(e.target.value)}
                   />
                   <Form.Check
                     type={"radio"}
                     label={"Inactive"}
                     name="status"
                     value={"InActive"}
+                    onChange={(e) => setActive(e.target.value)}
                   />
                 </div>
               </div>
@@ -177,7 +242,16 @@ const Home = () => {
         {showSpin ? (
           <Spiner />
         ) : (
-          <Tables userData={userData} userDelete={userDelete} />
+          <Tables
+            userData={userData}
+            userDelete={userDelete}
+            userGet={userDetailsFunction}
+            handleprev={handleprev}
+            handlenext={handlenext}
+            page={page}
+            pagecount={pagecount}
+            setPage={setPage}
+          />
         )}
       </div>
     </>

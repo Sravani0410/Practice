@@ -1,13 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 import Badge from "react-bootstrap/Badge";
+import Paginations from "../Pagination/Paginations";
 import Dropdown from "react-bootstrap/Dropdown";
 import "./Tables.css";
 import { BASE_URL } from "../../services/helper";
 import { NavLink } from "react-router-dom";
-const Tables = ({ userData, userDelete }) => {
+import { statuschangefunction } from "../../services/Apis";
+import { ToastContainer, toast } from "react-toastify";
+const Tables = ({
+  userData,
+  userDelete,
+  userGet,
+  handleprev,
+  handlenext,
+  page,
+  pagecount,
+  setPage,
+}) => {
+  const handleChange = async (id, status) => {
+    // console.log(id, status);
+    const response = await statuschangefunction(id, status);
+    // console.log("response", response?.data);
+    if (response.status === 200) {
+      window.location.reload(false);
+      // console.log("value of userGet after change the status", userGet());
+      userGet();
+      toast.success("Status Updated");
+    } else {
+      toast.error("error ");
+    }
+  };
   return (
     <>
       <div className="container">
@@ -29,11 +54,11 @@ const Tables = ({ userData, userDelete }) => {
                 <tbody>
                   {userData?.length > 0 ? (
                     userData?.map((el, index) => {
-                      console.log(el);
+                      // console.log(el);
                       return (
                         <>
                           <tr>
-                            <td>{index + 1}</td>
+                            <td>{index + 1 + (page-1)*2}</td> 
                             <td>{el.fname}</td>
                             <td>{el.email}</td>
                             <td>{el.gender == "Male" ? "M" : "F"}</td>
@@ -45,19 +70,31 @@ const Tables = ({ userData, userDelete }) => {
                                 >
                                   <Badge
                                     bg={
-                                      el.status == "ACtive"
+                                      el.status == "Active"
                                         ? "primary"
                                         : "danger"
                                     }
                                   >
-                                    {el.status} &nbsp;{" "}
+                                    {el.status}{" "}
                                     <i className="fa-solid fa-angle-down"></i>
                                   </Badge>
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                  <Dropdown.Item>Active</Dropdown.Item>
-                                  <Dropdown.Item>InActive</Dropdown.Item>
+                                  <Dropdown.Item
+                                    onClick={() =>
+                                      handleChange(el._id, "Active")
+                                    }
+                                  >
+                                    Active
+                                  </Dropdown.Item>
+                                  <Dropdown.Item
+                                    onClick={() =>
+                                      handleChange(el._id, "InActive")
+                                    }
+                                  >
+                                    InActive
+                                  </Dropdown.Item>
                                 </Dropdown.Menu>
                               </Dropdown>
                             </td>
@@ -123,9 +160,17 @@ const Tables = ({ userData, userDelete }) => {
                   )}
                 </tbody>
               </Table>
+              <Paginations
+                handleprev={handleprev}
+                handlenext={handlenext}
+                page={page}
+                pagecount={pagecount}
+                setPage={setPage}
+              />
             </Card>
           </div>
         </Row>
+        <ToastContainer />
       </div>
     </>
   );

@@ -11,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 // whenever we call the uploads that means we have to show the uploads folder data ----> according to frontend
 app.use("/uploads",express.static("./uploads"))
+app.use("/files",express.static("./public/files"))
 app.use(router);
 
 app.get("/",(req,res)=>{

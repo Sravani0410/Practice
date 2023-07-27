@@ -10,4 +10,6 @@ router.get("/userdetails",controllers.userget)
 router.get("/userdetails/:id",controllers.singleuserget)
 router.put("/useredit/:id",upload.single("user_profile"),controllers.useredit)
 router.delete("/userdelete/:id",controllers.userDelete)
+router.put("/userstatus/:id",controllers.userstatus)
+router.get("/userexport",controllers.userExport)
 module.exports=router

@@ -1,0 +1,39 @@
+import React, { useState, useEffect } from "react";
+
+const ScreenSizeDisplay = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
+  return (
+    <div> 
+      <h2>Get the size of the current screen/window</h2>
+      <p>The example displays the browser window's height and width:</p>
+      <p>(NOT including toolbars/scrollbars)</p>
+
+      <p>
+        Browser width: {windowSize.width}, height: {windowSize.height}.
+      </p>
+    </div>
+  );
+};
+
+export default ScreenSizeDisplay;

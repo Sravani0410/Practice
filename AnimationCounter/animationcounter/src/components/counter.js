@@ -1,7 +1,27 @@
-// import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CountUp from "react-countup";
+
 function Counter() {
+  const [hasFocus, setHasFocus] = useState(false);
+
+  useEffect(() => {
+    const onFocus = () => {
+      setHasFocus(true);
+    };
+
+    const onBlur = () => {
+      setHasFocus(false);
+    };
+
+    document.addEventListener("focusin", onFocus);
+    document.addEventListener("focusout", onBlur);
+
+    return () => {
+      document.removeEventListener("focusin", onFocus);
+      document.removeEventListener("focusout", onBlur);
+    };
+  }, []);
+
   return (
     <>
       <CountUp
@@ -13,11 +33,12 @@ function Counter() {
         decimal=","
         onEnd={() => console.log("Ended! 👏")}
         onStart={() => console.log("Started! 💨")}
+        // isInView={hasFocus}
+        onFocus={hasFocus}
       >
-        {({ countUpRef, start }) => (
+        {({ countUpRef }) => (
           <div>
             <span ref={countUpRef} />
-            <button onClick={start}>Start</button>
           </div>
         )}
       </CountUp>
@@ -30,15 +51,14 @@ function Counter() {
         decimal=","
         onEnd={() => console.log("Ended! 👏")}
         onStart={() => console.log("Started! 💨")}
+        isInView={hasFocus}
       >
-        {({ countUpRef, start }) => (
-          <div onScroll={start}>
+        {({ countUpRef }) => (
+          <div>
             <span ref={countUpRef} />
-            <button onClick={start}>Start</button>
           </div>
         )}
       </CountUp>
-      {/* <AnimationComponent /> */}
     </>
   );
 }

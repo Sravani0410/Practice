@@ -1,0 +1,2 @@
+1. [] == [] ===> false
+2. {} == {} ===> false ===> even we are having same object still it is getting the false

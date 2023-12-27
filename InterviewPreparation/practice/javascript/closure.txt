@@ -1,0 +1,53 @@
+Closure:It is a mechanism in which javascript maintains scope of variables in a closure scope.
+If the particular varibles goes out of the scope functions.
+For suppose if a function its being excuted at some point of time and it refer some variable which being out of the scope.
+with that javscript put it in the closure.it being in excution phase.
+we know javscript has 2 pass engines:
+lexcial scope:it matters more on where your functions are declared so based on this how closure is working during run time.
+
+example:
+function outer(){
+    var a=10; // the value a is put in closure scope
+    return function inner(b){
+        return a+b
+    }
+}
+1st method:
+var fn=outer()  // here we invoke the inner function
+console.log(fn(10)); 
+
+2nd method:
+console.log(outer()(10))
+
+3rd method: this method is called currying(syntax)
+function outer(a){
+    return function inner(b){
+        return a+b
+    }
+}
+console.log(outer(10)(10)) //we can invoke the functions like this
+
+example 2:
+function calculator(initValue=0){
+  var value=initValue
+  function add(val){
+    value=value+val
+    return value
+  }
+  function sub(val){
+    value=value-val
+    return value
+  }
+  return {add,sub}
+}
+var calc=calculator()
+console.log(calc.add(10)) /*output 10 */
+console.log(calc.add(10)) /*output 20  ---> here its remember the previous value , sometimes it has memorization,isPrime number*/
+// console.log(calc.sub(10))
+
+Here examples of closure are debouncing and throttling:
+why we are basically applying merization to debouncing and throttling.we are keeping in memory or some information when was the last time i had called in a function
+
+********************************************Debouncing********************************************************
+
+

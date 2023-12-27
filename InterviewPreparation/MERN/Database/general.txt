@@ -1,0 +1,413 @@
+- **Authentication**
+    - **What is Authentication?**
+        - **Authentication** is the process of identifying someone's identity by assuring that the person is the same as what he is claiming for. (**Identification**)
+        - It is used by both servers and clients.
+            - Client ⇒
+                - The client uses it when he wants to know that it is the same server that it claims to be.
+            - Server ⇒
+                - The server uses it when someone wants to access the information, and the server needs to know who is accessing the information.
+                - It is done mostly by using the *username and password.*
+                - Other ways of authentication can be done using *cards, retina scans, voice recognition, and fingerprints.*
+        - Most common `Authentication` used
+            - Signup/Register/Create Account
+            - Login.
+        - If the `Email` and `Password` are correct only then `Login`.
+        - We have to match it with the data that is there in the database.
+        - ****For Authentication, we give them an access token that is unique when they are logged in.
+        - For that, we use JWT(JSON Web Token) Authentication
+            
+            !https://www.simplilearn.com/ice9/free_resources_article_thumb/JWT_in_ExpressJS_1.png
+            
+        
+    - **What is Authorization?**
+        - **Authorization** is the process of granting someone to do something. It means it is a way to check if the user has permission to use a resource or not.
+        - It usually works with authentication so that the system could know who is accessing the information.
+        - In authorization, data is provided through the access tokens.
+        - Authorization permissions cannot be changed by the user. The permissions are given to a user by the owner/manager of the system, and he can only change it.
+        - **Example** ⇒
+            - The author only can delete their own post as it is authorized to do that.
+            - After customers successfully authenticate themselves, they can access the cart page as they have the token with them.
+    - **How do you do role-based authentication?**
+        - Role-based authentication is a common technique used to manage access control in systems with multiple users. 
+          In this approach, each user is assigned a specific role or set of roles that determine their level of access to various resources within the system.
+        - Identify the different roles that will be needed to access different resources within the system. For example, a system might have roles such as "teachers", "students", or “admin”.
+        - We can separate out the parts of our application based on features ( like roles, such as students, and teachers )with the help of routes.
+            
+            ![picExpress.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e295ca1-acfb-4cc7-a3a1-6aec3011404d/picExpress.png)
+            
+            ![pic3.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c849e659-eb59-41fe-9edd-11a354b77b04/pic3.png)
+            
+            ![pic4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0734d914-6d50-4d2f-bb87-39b6db07e363/pic4.png)
+            
+            ![pic2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c1d5f93-bc86-41ee-b485-1d85752fa647/pic2.png)
+            
+        - In the above example, separate routes are made for teachers and students.
+        - We can implement access control with the use of a combination of authentication and authorization mechanisms to enforce access control based on the user's role. This might include using passwords, tokens, or other authentication methods, as well as implementing rules that restrict access based on the user's role and permissions.
+        - The goal of role-based authentication is to provide a secure and efficient way of managing access to resources within a system, while also ensuring that users are only given access to the resources that they need to perform their assigned tasks.
+    - **What is hashing?**
+        - Hashing is a process of transforming plain text into a fixed-length sequence of characters, known as a **hash.**
+        - Hashing is used to store passwords securely in a database.
+        - When a user creates a password, the password is hashed before it is stored in the database. 
+        This ensures that even if the database is compromised, an attacker would not be able to easily obtain the original passwords.
+        - When the user logs in again, their password is hashed again and compared to the stored hash to verify their identity.
+        - Hashing algorithms are one-way designed, meaning that it is difficult (or infeasible) to decrypt the original cleartext from the hash. 
+          This makes it difficult for attackers to obtain the original password, even if they have access to the hash.
+        - The **`bcrypt`** module (**third-party package available for Node.js** ) is there that provides an implementation of the bcrypt hashing function.
+          It can be used to securely store passwords in a way that makes them difficult to crack.
+        - The **`bcrypt`** module is built on top of the bcrypt algorithm and provides a simple interface for hashing passwords and comparing them to hashed values.
+        - Hashing provides an extra layer of security, it is not foolproof. Attackers can still use methods such as brute force attacks to try to guess passwords, even if they only have access to the hashed values.
+        - To overcome this **salt ( a random sequence of characters )** is added to the password before it is hashed.
+    - **What is encryption?**
+        - Encryption is the process of converting plain, readable data or information into an encoded form so that it can only be accessed and understood by authorized parties who have the decryption key.
+        - The purpose of encryption is to protect data from unauthorized access, theft, or modification.
+        - The coded message is called **cipher text.**
+        - The transformation from plain text to cipher text is done using an encryption algorithm and a secret key.
+        - Decryption (the process of converting encrypted data back into its original form) is required so that it can be read and understood by an authorized recipient.
+        - For decrypting the cipher text, you require a key or password that was used to encrypt the data, without which the data cannot be decrypted.
+        - Data like **videos, audios** and even **WhatsApp messages** are sent in encrypted form.
+    - **How are hashing and encryption different?**
+        
+        
+        ### HASHING
+        
+        - Hashing is a one-way process that takes data and produces a fixed-size output, called a **hash**.
+        - The hash cannot be reversed back to the original data.
+        - Hashing is used for storing passwords securely, as the hash of a password can be stored instead of the password itself.
+        - When a user enters their password, the system takes the **hash** of the password and compares it with the stored **hash** to see if they match.
+        
+        ### ENCRYPTION
+        
+        - Encryption is a two-way process that transforms plain text into ciphertext using an encryption algorithm and a key.
+        - The cipher text can be decrypted to the original data as well.
+        - Encryption is used for securing data during transmission, such as when sending sensitive information over the internet. such as videos, audio, and even WhatsApp messages.
+        - The ciphertext can be decrypted back into the plain text using a decryption algorithm and the same key.
+    - **What is salt?**
+        - S**alt is a random sequence of characters that** is added to the password before it is hashed.
+        - The **purpose of the salt** is to add an extra layer of security to the password hash.
+        - When a user creates a password, the password is first combined with a random salt value. The resulting combination is then hashed and stored in the database along with the salt value.
+        - When the user logs in again, the salt value is retrieved from the database and combined with the entered password. 
+          The resulting combination is then hashed and compared to the stored hash value to verify the user's identity.
+        - A salt value can be generated using a variety of methods :
+            - By using a random number generator, or
+            - By using unique values such as the user's username or email address.
+        - It is important to use a unique salt value for each password because using the same salt value for multiple passwords would make the hashes vulnerable to attacks such as "collision attacks".
+        - Some popular hashing algorithms, such as **bcrypt**, automatically generate a random salt value for each password by default. This helps ensure that the salt values are unique and unpredictable and increases the security of the password hashes.
+    - **What is JWT?**
+        - **JWT** stands for **JSON Web Token**. It is a compact, URL-safe means of representing claims to be transferred between two parties. JWTs are used for authentication and authorization in web applications and APIs.
+        - They contain JSON objects which have the information that needs to be shared. Each JWT is also signed using hashing to ensure that the JSON contents (also known as JWT claims) cannot be altered by the client or a malicious party.
+        - A JWT is composed of three parts:
+            - **Header**: Consists of two parts:
+                - The signing algorithm that’s being used.
+                - The type of token, which, in this case, is mostly “JWT”.
+            - **Payload**: The payload contains the claims or the JSON object.
+            - **Signature**: A string that is generated via a cryptographic algorithm (hashing) that can be used to verify the integrity of the JSON payload.
+        
+        !https://www.simplilearn.com/ice9/free_resources_article_thumb/JWT_in_ExpressJS_1.png
+        
+    - **How is JWT different and list the pros and cons of using JWT tokens?**
+        - JWT is a format for securely transmitting data between parties, while hashing and encryption are cryptographic techniques for transforming data. JWT is used for authentication and authorization in web applications, while hashing and encryption are used for data validation and data confidentiality.
+        - **PROS of JWT -**
+            - **Stateless and Scalable**: JWTs do not require a database or server-side storage to maintain state information. This makes them easier to manage and more scalable.
+            - **Security:** JWTs can be digitally signed and encrypted, providing a high level of security for transmitting sensitive information.
+            - **Standardized:** JWTs are an open standard, supported by many programming languages and web frameworks, making them widely adopted and easy to integrate into different systems.
+            - **Versatile:** JWTs can be used for authentication and authorization purposes, as well as for storing custom user attributes or other metadata.
+        - **CONS of JWT -**
+            - **Payload Size:** JWT tokens can be larger in size than other types of tokens, such as session cookies, which can impact network performance.
+            1. **No Revocation:** Once a JWT token is issued, it cannot be revoked until it expires, which can be a security risk in certain cases.
+            2. **Token Validation:** Validating the signature of a JWT token requires additional computation, which can impact performance in high-traffic systems.
+            3. **Security Risks:** If the encryption or signature algorithms used to generate the JWT token are compromised, the token and the data it contains may be vulnerable to attack.
+    - **What are the different ways to manage authentication?**
+        
+        There are several ways to manage authentication.
+        
+        - ****MFA(Multi-factor Authentication) -****
+            - It requires at least two methods of authentication. This is becoming more common because passwords alone are no longer considered secure.
+            - With multi-factor authentication, a user is asked to enter a username and password. If it matches, a code is sent to an authentication app, phone number, email, or another resource then only the user is supposed to have access. The user will then enter that code on the login page.
+        - **2FA(Two-factor authentication) -**
+            - It requires exactly two methods of verification, which would mean entering the user’s password in addition to one of the methods (e.g., verifying a code sent to their phone, email, app, etc.).
+            - Two-factor authentication is becoming more common with consumer applications because it offers much more security than a password alone without causing a lot of inconvenience for the user.
+        - **Third-party authentication providers -**
+            - Websites can use third-party authentication providers, such as Google, Facebook, or Twitter, to authenticate users. This is known as social login.
+        - **SSO(Single-sign-on) -**
+            - Websites can implement SSO using protocols such as SAML (**Security Assertion Markup Language**) or OAuth to allow users to authenticate once and gain access to multiple websites or applications without having to enter their credentials repeatedly.
+            - Within an enterprise setting, using an SSO provider means that employees need to only log in once each day. From there, authentication takes place behind the scenes as the identity provider exchanges verification keys with all of the websites and apps that you have set up to use SSO.
+    - **What is cookie-based auth?**
+        - **Cookie-based auth** is a method of managing user authentication in web applications where a cookie (**pieces of data used to identify the user and their preferences**) is used to store user authentication information.
+        - The browser returns the cookie to the server every time the page is requested. Specific cookies like HTTP cookies are used to perform cookie-based authentication to maintain the session for each user.
+        - When a user logs in to a website, the server generates a unique session identifier and sends it back to the user's browser in the form of a cookie. The browser then stores the cookie, and sends it back to the server with every subsequent request, allowing the server to identify and authenticate the user.
+        - The cookie usually contains an encrypted or hashed version of the user's authentication credentials, such as a username and password. The server verifies the credentials stored in the cookie and uses them to authenticate the user for subsequent requests.
+        - Cookies can be set to expire after a certain period of time, or when the user logs out of the website. This helps to ensure that the user's session remains secure and that their authentication information is not compromised.
+        - Its drawback is that cookies can be intercepted and manipulated by attackers, potentially leading to security vulnerabilities.
+    - **What is session management?**
+        - Session management is the process of securely managing and maintaining the state of a user's interaction with a web application or system.
+        - The purpose of session management is to keep track of a user’s actions across multiple pages or requests and to persist the data for the duration of the user’s session.
+        - This is typically achieved by assigning a unique session ID to the user and storing relevant information, such as the user’s preferences or shopping cart contents, on the server. The session ID is then passed back and forth between the client and the server to ensure that the correct information is retrieved and updated for each request.
+        - The ultimate goal of session management is to provide a seamless and personalized experience for the user and also ensure the security and reliability of the data being stored.
+        - The process of retrieving personalized information using a session ID:
+            - The web browser (client) sends a request to the server for a web page.
+            - The server generates a unique session ID and assigns it to the user. This ID is returned back to the client in the form of a cookie or URL parameter.
+            - On later requests, the client sends the session ID back to the server as part of the request.
+            - The server uses the session ID to look up the user information from a database or other storage mechanism.
+            - The server retrieves the user’s personalized information based on the session ID and integrates it into the response. This could include things like a custom greeting, the contents of a shopping cart, or any other information that the user has provided or interacted with during their session.
+            - The server returns the personalized response to the client, which displays the web page with the relevant information.
+            - The client continues to send requests with the session ID, allowing the server to maintain the state of the user’s session and retrieve the appropriate information for each request.
+            - When a user **logs out of a web application, the session got a timeout, destruction of all cookies, including the session ID cookie or session ID got deleted**, then their session is typically invalidated. This is done to ensure that the user’s information is no longer accessible and to prevent unauthorized access to their account.
+    - **What is OAuth?**
+        - **OAuth (Open Authorization)** is an open standard and authorization protocol that allows third-party applications to access user data from a resource server (such as a social media platform like Facebook, Gmail, etc., or cloud storage service) on behalf of the user, without requiring the user to share their login credentials with the third-party application.
+        - The OAuth process involves the client (**the third-party application that wants to access the user's data**) obtaining an access token from the resource server (**the server that hosts the user's data and is responsible for authenticating the user**)after the user authenticates themselves on the resource server. This access token is then used by the client to access the user's data from the resource server. The access token is typically valid for a limited time period and can be revoked by the resource owner (**the user who owns the data that the third-party application wants to access**) at any time.
+- APIs
+    - **What is REST API?**
+        - A REST (**Representational State Transfer**) API (**Application Programming Interface**) is a type of web service that enables different software systems to communicate with each other over the internet. RESTful APIs rely on the HTTP protocol, which is built on top of TCP/IP (Transmission Control Protocol/Internet Protocol).
+        - **REST** suggests creating an object of the data requested by the client and sending the values of the object in response to the user.
+        - RESTful APIs use **TCP ( a low-level networking protocol that provides a reliable, ordered, and error-checked delivery of packets between two applications running on different hosts)** to establish a connection between a client and a server and to transfer data between them.
+        - When a client makes a request to a server, it sends a TCP packet containing the HTTP request, including the HTTP method (such as GET or POST), the URL, and any parameters or headers.
+        - The server receives the packet and sends back a TCP packet containing the HTTP response, including the status code, any headers, and the response body.
+        - A REST API uses HTTP methods, such as GET, POST, PUT, and DELETE, to perform operations on resources. The resources can be represented in different formats, such as XML, JSON, or plain text, depending on the requirements of the client application.
+        - ****Principles of REST API****
+            - **Stateless:** A REST API is stateless, which means that each request contains all the necessary information to perform the operation, and the server does not maintain any session state between requests.
+            - **Client-server architecture:** A REST API follows a client-server architecture, where the client and server are independent and can evolve separately.
+            - **Cacheable:**  A REST API can be designed to be cacheable, which means that clients can store responses and reuse them for subsequent requests, which can improve performance.
+            - **Uniform interface:** A REST API uses a uniform interface to interact with resources,  an HTTP method, and a representation of the resource.
+            - **Layered system:** A REST API can be designed to be layered, where intermediate servers can act as caches, which can improve scalability and performance.
+    - **What is gRPC?**
+        - gRPC is a high-performance RPC framework/technology built by Google. It uses Google’s own “**Protocol Buffers**”, which is an open-source message format for data serialization, as the default method of communication between the client and the server.
+        - It allows clients to call remote methods on a server as if they were local methods, which makes it easier to build distributed systems and microservices.
+        - It uses HTTP/2 (**a major revision of the HTTP network protocol used by the World Wide Web**) as the underlying transport protocol, which provides several benefits, such as
+            - bi-directional streaming (**clients and servers can send and receive messages at the same time**),
+            - flow control, and
+            - multiplexing.
+    - **What is GraphQL?**
+        - GraphQL or “**Graph Query Language**” is a query language and runtime that was developed by Facebook that allows the client (frontend) to request data from an API.
+        - It provides a more efficient, powerful, and flexible alternative to REST APIs for building web applications.
+        - Advantages of GraphQL over its RESTful counterpart:
+            - **One endpoint:** With traditional REST APIs, you have to create specific endpoints based on the data you want to request. This makes scaling your API difficult because soon, you might find yourself having to manage tens, maybe hundreds, of routes that you will have to remember.
+            - **Fewer server requests:** It allows you to make multiple queries and mutations with only one server request. This can be useful when your server only allows a limited number of requests a day.
+            - **Declarative data fetching:** It only fetches what you actually need. All you have to do is specify what fields to return.
+            - **Type system:** It uses a type system to describe your data, which makes developing much easier. If you are a TypeScript fan, this is a win-win.
+            - **Self-documenting:** It is self-documenting, meaning that all of your queries and mutations will automatically be documented by GraphQL.
+    - **What is HTTP?**
+        - **HTTP** stands for **Hypertext Transfer Protocol**. It’s a set of rules which govern the exchange of data over the Internet.
+        - It is an application-layer protocol that is used to transmit data between web servers and web browsers.
+        - HTTP defines a set of rules for how web browsers and web servers should communicate with each other. A client (usually a web browser) sends an HTTP request to a server, and the server responds with an HTTP response.
+        - HTTP also defines several status codes that are used to indicate the status of the request or response. Some common status codes include
+            - 200 OK (success),
+            - 404 Not Found (resource not found),
+            - 500 Internal Server Error (server error), and
+            - 401 Unauthorized (authentication required).
+    - **What is a web socket?**
+        - WebSocket is a two-way computer communication protocol over a single TCP.
+        - Unlike traditional HTTP communication, which requires the client to constantly poll the server for new information.
+        - It enables real-time communication where the client and server can send data to each other at any time, without constant requests.
+        - They are commonly used in real-time applications. Examples ⇒
+            - chat rooms,
+            - online gaming,
+            - stock tickers, and
+            - other applications
+            
+            that require frequent updates and low-latency communication between the client and server
+            
+- Caching
+    - [ ]  What is Caching?
+    - [ ]  What are ways to cache on the backend?
+        - [ ]  What is LRU cache?
+    - [ ]  What is Redis? Why do we use it?
+    - [ ]  How can we implement caching on frontend?
+    - [ ]  What is a CDN?
+- System
+    - **What is DNS?**
+        - The Domain Name Server (DNS) is the phonebook of the Internet.
+        - It translates human-readable, text-based domain names into machine-readable, numerical-based IP addresses. Example ⇒ like "**google.com**," into machine-readable IP addresses, like "**172.217.5.110.**"
+        - This translation is necessary because computers communicate using IP addresses, but humans find it easier to remember and use domain names.
+        - When we want to go to a web page, we need to tell our computer the IP address of the site, which is used for any type of client (**web browser, another server, computer**) to identify each other on the network. Every machine that’s connected to a network will have an IP address.
+        - **DNS** operates as a distributed database system that stores information about domain names and their IP addresses
+        - When a user types into the browser, the operating system’s DNS client will check for information in a local cache. If the requested address isn’t there, it will look for a Domain Name System server in the local area network (LAN).
+        - When the local DNS server receives the query, and the requested domain name is found, it will return the output.
+        - If the name is not found, the local server will forward the query to a DNS cache server, often provided by the Internet Service Provider (ISP).
+        - Since the DNS server’s cache contains a temporary store of DNS records, it will quickly respond to requests. These DNS cache servers are called ***not authoritative DNS servers*** as they provide request resolution based on a cached value acquired from ***authoritative DNS servers** (It maintains and provides a list of authoritative name servers for each of the top-level domains (.com, .org, etc.))*.
+    - **How does the internet work?**
+        - The internet is a global network of interconnected computer networks that allows for the sharing of information and communication across the world.
+        - At its most basic level, the internet works by transmitting data packets between devices using a standard set of protocols, such as the Transmission Control Protocol (TCP) and the Internet Protocol (IP).
+        - Process:
+            - When we access the internet on our device, such as a computer or mobile, our device sends a request to your Internet Service Provider (ISP) through a modem or router.
+            - Our ISP then connects us to the internet through its own network, which is connected to other networks through internet exchange points.
+            - Once connected to the internet, our device can communicate with other devices around the world by sending and receiving data packets through various networks and servers.
+            - These packets are routed through different networks using routing protocols that help to ensure that the data reaches its destination.
+    - **What are HTTP and HTTPS?**
+        
+        
+        ### HTTP
+        
+        - HTTP is **Hypertext Transfer Protocol**.
+        - It is used to transfer data over the internet.
+        - HTTP is the protocol used by web servers and browsers to communicate and transfer data over the internet.
+        - It is a plain text protocol, which means that data sent over HTTP is not encrypted and can be intercepted and read by third parties. This makes HTTP an insecure protocol, especially when sensitive information such as login credentials, credit card information, or personal data is involved.
+        
+        ### HTTPS
+        
+        - HTTPS is **Hypertext Transfer Protocol Secure**.
+        - It is used to transfer data over the internet.
+        - HTTPS is a secure version of HTTP that uses SSL/TLS (Secure Sockets Layer/Transport Layer Security) encryption to protect the data being transferred.
+        - When you access a website using HTTPS, your browser establishes a secure connection with the web server, and all data sent between your browser and the server is encrypted and can't be read by third parties.
+        
+        The use of HTTPS is important for websites that handle sensitive information or perform transactions, such as e-commerce sites, banking sites, and social media platforms. HTTPS not only protects the privacy of user data but also helps prevent man-in-the-middle attacks, where an attacker intercepts and changes data being transferred between two parties.
+        
+    - **What is throughput?**
+        - Throughput is a measure of how many units of information a system can process in a given amount of time. 
+          It refers to the amount of data that can be transferred over a network or system in a given amount of time.
+        - It is applied broadly to systems ranging from various aspects of computer and network systems to organizations.
+        - It is typically measured in bits per second (bps), or one of its multiples (kilobits per second, megabits per second, etc.).
+        - There are several factors that can affect the throughput of a system:
+            - **System resources:** The availability of resources such as CPU, memory, disk I/O, and network bandwidth can significantly impact the throughput of a system.
+            For example, if the CPU is overutilized and running at 100% utilization, it can limit the throughput of a system.
+            - **Workload:** The type and intensity of the workload being processed can affect the throughput of a system. For example, a system processing many small transactions will have a lower throughput than a system processing fewer, larger transactions.
+            For example, a system processing a high number of complex database queries will have a lower throughput compared to a system processing simpler web page requests.
+            - **Network bandwidth:** The speed and reliability of the network connection can greatly impact the throughput of a system, especially for systems that rely on network communication.
+            For example, a system with a slow and unreliable internet connection will have a lower throughput compared to a system with a fast and stable connection.
+            - **Concurrent connections:** The number of concurrent connections can also impact the throughput of a system. Too many connections can lead to congestion and decreased performance.
+            For example, a web server hosting a popular website will have lower throughput if it is handling too many concurrent connections from users.
+            - **Software algorithms:** The algorithms used to process data and complete transactions can impact the throughput of a system. More efficient algorithms can improve the throughput of a system.
+            For example, a system using an inefficient sorting algorithm will have lower throughput compared to a system using a more efficient sorting algorithm.
+            - **Queuing and Scheduling:** The way that requests are queued and scheduled for processing can affect the throughput of a system. An effective queuing and scheduling strategy can help to maximize the throughput of a system.
+            For example, a system that processes requests in a first-come, first-serve manner will have lower throughput compared to a system using a more sophisticated scheduling algorithm that prioritizes high-priority requests.
+        - Higher throughput generally means faster transfer speeds and better performance
+    - **What is availability?**
+        - In computing, availability refers to the ability of a system or service to be accessible and functioning properly when it is needed. This means that users should be able to access and use the system or service without interruption or downtime, except for scheduled maintenance or upgrades.
+        - It is measured as a percentage of uptime over a given period of time, such as a month or a year.
+        - High availability refers to how often a system is working properly and able to be used. It is usually expressed as a percentage, with 100% meaning that the system never stops working. Some common services have an availability rate between 99% and 100%.
+    - **What is the client-server model?**
+        - Client–server model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called **servers**, and service requesters, called **clients**.
+        - Often clients and servers communicate over a computer network on separate hardware, but both client and server may reside in the same system.
+        - A server host runs one or more server programs, which share their resources with clients.
+        - A client does not share any of its resources, but it requests content or service from a server. Clients, therefore, initiate communication sessions with servers, which await incoming requests.
+        - Examples of computer applications that use the client-server model are email, network printing, and the World Wide Web.
+        
+        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/42df1f4a-fe71-4fbb-a62a-025d5c8e696d/Untitled.png)
+        
+    - **What is latency?**
+        - Latency is the time it takes for data to travel from its source to its destination.
+        - It is like the total time it takes to reach a destination, similar to the travel time of a trip.
+        - **For example**, if you want to reach a friend's house, the latency would be the amount of time it takes to get there from your starting point.
+        - Latency is often measured in milliseconds (ms) and can be affected by a variety of factors, including
+            - network congestion,
+            - hardware capabilities, and
+            - the distance between the source and destination
+    - **What is rate-limiting?**
+        - Rate limiting is a technique used to control the rate at which requests are made to an API, service, or website.
+        - The purpose of rate limiting is to ensure the stability and availability of the system by preventing excessive usage that could lead to degradation of performance, increased costs, or complete failure of the system.
+        - It typically involves setting limits on the number of requests a client can make over a given period of time, such as 10 requests per second or 1,000 requests per day.
+        - The process of designing a rate limiter involves several steps, including
+            - problem statement,
+            - requirements gathering,
+            - system analysis,
+            - system design and implementation, and
+            - system deployment and maintenance.
+        - There are several algorithms available for implementing a rate limiter, including
+            - the fixed window algorithm,
+            - sliding window algorithm, and
+            - token bucket algorithm.
+        - Each algorithm has its own pros and cons,
+    - **What are the different ways to do rate limits?**
+        
+        There are several ways to implement rate limits for an API or web application. Some common methods:
+        
+        - **Fixed Window:**
+            - This approach limits the number of requests that can be made within a fixed time window.
+            - It maintains a count of the number of requests made in the current time window and compares it to the maximum allowed number of requests.
+            - If the count exceeds the limit, the rate limiter blocks or throttles the request.
+        - **Sliding Window:**
+            - This approach is similar to the fixed window algorithm, but instead of a fixed time window, it uses a sliding window that moves with time such as the last 5 minutes.
+            - This approach is more flexible and can adapt to changing usage patterns.
+        - **Token Bucket:**
+            - This approach works by assigning a certain number of tokens to each request.
+            - Requests are only allowed if there are enough tokens in the bucket. Tokens are added to the bucket at a fixed rate and the rate limiter blocks or throttles requests when the bucket is empty.
+            - Once a token bucket is empty, the client must wait until new tokens are added before making more requests.
+        - **Leaky Bucket:**
+            - This approach is similar to the token bucket algorithm, but instead of tokens, a leaky bucket algorithm tracks the rate of requests by draining a bucket at a constant rate.
+            - The bucket is refilled with new requests, but once it overflows, requests are rejected.
+    - **What is a load balancer?**
+        - Load balancer, as the name suggests, it balances the load.
+        - The load balancer can manage how the client decides which server to ping on.
+        - It can use a simple **round-robin algorithm**, which basically means if there are servers A, B, and C, the load balancer will send the first request to server A, then B, then C, then A again, and so on.
+        - It is important to understand that the DNS will be pointed to the load balancer
+        - The load balancer will also check the health of a server. In case a server fails, and is not reachable, the load balancer will move all the load to the second server. This also improves the reliability of the system.
+        - In case the load increases, you just need to add more servers, and the load can be easily managed with this. So it allows a much more stable architecture.
+        - This works well when it comes to our web servers
+        
+        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b389be6d-8120-497d-a3c3-ae4d2ad2e336/Untitled.png)
+        
+    - **What are horizontal and vertical scaling?**
+        
+        
+        ### VERTICAL SCALING
+        
+        - Vertical scaling, also known as scaling up, involves adding more power (such as CPU and RAM) to a single server.
+        - This method is simple and effective for low traffic but has its limitations.
+        - For example, there is a limit to the number of resources you can add to a single server, and if the server goes down, the website or application becomes inaccessible.
+        
+        ### HORIZONTAL SCALING
+        
+        - Horizontal scaling, or scaling out, involves adding more servers to increase resources.
+        - This method is better suited for large-scale applications and allows for failover and redundancy. If a server goes down, there are still other servers available to handle the traffic.
+        - To address issues such as slow response time or server overload, a load balancer can be used to distribute the load evenly among multiple servers.
+        
+        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a41bb56a-f026-4ef3-8d3d-e8e266e35705/Untitled.png)
+        
+    - **What is a stateless backend?**
+    - **How do Browsers work?**
+    - **Describe how you design an API.**
+    - **How do you build a system which is reliable?**
+- Testing
+    - **What is testing?**
+        - Testing is the process of evaluating a software application or system to identify any defects or errors between the expected and actual results.
+        - The responsibility of testing is to point out the issues of bugs and give developers a clue to help them fix them right following the requirements.
+        - Testing involves executing the software application or system with a set of predefined inputs and verifying that the outputs match the expected results.
+        - It involves a range of activities, such as -
+            - designing test cases,
+            - creating test data,
+            - executing test cases, and
+            - reporting defects.
+    - **What is unit testing?**
+        - Unit testing is a type of software testing, where an individual unit of software is tested.
+        - A **unit** is the smallest testable part of any software.
+        - The purpose is to validate that each unit of the software performs as designed.
+        - **Unit Testing** makes the development of the software faster.
+        - Benefits of unit testing -
+            - **Early detection of defects:** Unit testing is performed by software developers themselves so that major issues/bugs are found at their end and can help detect defects early in the development process, which can reduce the cost and time required for fixing them.
+            1. **Improved code quality:** Unit testing promotes better code design and organization by encouraging developers to write modular and loosely coupled code.
+            2. **Better maintainability:** Unit testing helps improve the maintainability of the codebase as they are designed to run frequently (ideally after every change to the code) to ensure that new changes do not introduce any break in existing functionality.
+    - **What is functional testing?**
+        - Functional Testing is defined as a type of testing that verifies that each **function**
+         of the software application is working correctly and meets the specified functional requirements.
+        - The purpose of functional testing is to validate that the software behaves as expected and performs the intended functions and tasks.
+        - It focuses on manual testing as well as automation testing.
+        - Functional Testing involves checking the following:
+            - User Interface
+            - APIs
+            - Database
+            - Security
+            - Client/ server applications
+            - The functionality of the Application Under Test
+        - Benefits of functional testing:
+            - **Ensures software quality:** It ensures that the software application or system meets the specified functional requirements and works as expected. This helps ensure that the software is of high quality and meets the expectations of the end-users.
+            - **Identifies defects early:** It is performed early in the development phase, which helps detect defects early and reduce the cost and time required for fixing them.
+            - **Improves software reliability:** It helps improve the reliability of the software application or system by identifying and fixing defects that could cause crashes, errors, or other issues.
+            - **Increases software efficiency:** It helps identify and fix performance-related issues, such as slow response times or resource utilization, which helps improve the efficiency and scalability of the software.
+            - **Boosts stakeholder confidence:** It helps build stakeholder confidence in the software application or system by demonstrating that it works as expected and meets their requirements.
+            - **Reduces maintenance costs:** It helps ensure that the software application or system is maintainable by detecting and fixing defects that could cause maintenance issues or make it difficult to modify or enhance the software in the future.
+- Security
+    - [ ]  What is HTTPS? what is the difference between HTTP and HTTPS?
+    - [ ]  What is SSL/TLS?
+    - [ ]  What is CORS?
+    - [ ]  What is OWASP?
+- Databases
+    - [ ]  What is the difference between SQL and NoSQL databases?
+    - [ ]  What are some common queries in SQL?
+    - [ ]  How do you do joins in SQL?
+    - [ ]  How do you use lookup in mongodb?
+    - [ ]  What is CAP theorem?
+    - [ ]  What is indexing?
+    - [ ]  What is DB replication?
+    - [ ]  What is PACELC?
+    - [ ]  What is Normalization / Denormalization?
+    - [ ]  What is Entity Relationship Model? ( ER Model )
+    - [ ]

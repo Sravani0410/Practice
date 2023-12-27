@@ -1,0 +1,41 @@
+Here some questions to ponder on till then
+
+- **What is non-blocking vs blocking?**
+    
+    In Node.js, blocking and non-blocking behavior is determined by how I/O operations are handled
+    
+    ### NON-BLOCKING
+    
+    - By default, Node.js uses a non-blocking I/O model, where I/O operations are performed asynchronously without blocking the main thread of execution.
+    - This means that when an I/O operation is executed, the program continues to execute other tasks while waiting for the I/O operation to complete.
+    - This non-blocking behavior is achieved through the use of :
+        - callbacks,
+        - promises, and
+        - async/await functions.
+    
+    ### BLOCKING
+    
+    - Blocking behavior can occur when using certain synchronous I/O methods in Node.js.
+    - Synchronous methods block the main thread until the operation is completed, preventing the program from executing any other tasks until the operation is finished.
+    - This can lead to delays and decreased performance if many synchronous I/O operations need to be executed.
+    
+- [ ]  • [Overview of Blocking vs Non-Blocking](https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/)
+- [ ]  What is throughput?
+- [ ]  what is the difference between readFile and readFileSync
+- [ ]  How can you make a network request using http module?
+    - [ ]  https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/
+- [ ]  How to create a web server without express?
+- [ ]  What is libuv?
+- [ ]  What are the different phases involved in event loop?
+    - [ ]  • [The Node.js Event Loop, Timers, and `process.nextTick()`](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+    - [ ]  • [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/en/docs/guides/dont-block-the-event-loop/)
+- [ ]  What are timers in Node.js?
+    - [ ]  • [Timers in Node.js](https://nodejs.org/en/docs/guides/timers-in-node/)
+- [ ]  What is NVM? how do you use it?
+- [ ]  What is common.js? how is it different from es modules?
+- [ ]  How does the crypto module work?
+- [ ]  What are web sockets?
+- [ ]  What are microservices?
+- [ ]  Creating a CLI based app using Node.js and publish it
+
+[Express.js + Mongoose](https://www.notion.so/Express-js-Mongoose-76da7be40f27428aa5196d1809d30139?pvs=21)

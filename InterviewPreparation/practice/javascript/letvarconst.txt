@@ -1,0 +1,2 @@
+var name="sandhya"
+console.log(name)

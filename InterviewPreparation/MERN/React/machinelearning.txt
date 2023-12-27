@@ -1,0 +1,8 @@
+- [ ]  Search bars like google
+- [ ]  PIN input component
+- [ ]  useMemo / React.memo to show how performance can be improved
+- [ ]  React Redux - crud applications
+- [ ]  PIxel perfect pages
+- [ ]  Full stack applications
+- [ ]  Live chat applications
+- [ ]  To-Do

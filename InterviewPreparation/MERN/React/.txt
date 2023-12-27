@@ -1,0 +1,52 @@
+- What is React?
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27035/MeiWWtaXrz2nbhbXInh4x5tsb96sT4eAdWFixAbx.mp4
+    
+
+[What is JSX](https://www.notion.so/What-is-JSX-40bb315c430d4ab098df8a29c9d85945?pvs=21)
+
+- What is the difference between State and Props?
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27037/1MoOwWo5GQbCoDiMBIhx0dvfTxnJIW8xChFjB9DM.mp4
+    
+    Props are used to pass data from a parent component to a child component, while state is used to manage data within a component.
+Props are immutable and cannot be changed within a component, while state is mutable and can be updated using the setState function.
+Props are passed down from the parent component and are read-only within the child component, while state is only accessible within the component where it is defined.
+Props can be used to customize the behavior or appearance of a component, while state is used to keep track of information that can change over time.
+
+- What is Conditional Rendering?
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27038/2e5qgd0V9Ev2NfyKt4GbimpqHJnKdNPooEVXF9vW.mp4
+    
+- What is Lifecycle Diagram / Phases ( Hooks )
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27039/tQP90kChoCSHqft0Ad2ixs8dTqg8tgyufRBSYC55.mov
+    
+- Explain how lists work in React?
+    
+    To be done
+    
+
+[What is Virtual DOM & How does it Work?](https://www.notion.so/What-is-Virtual-DOM-How-does-it-Work-afecd0003929454b85249bdcd75bd9b6?pvs=21)
+
+[How does Class Components work?](https://www.notion.so/How-does-Class-Components-work-46ddc312d65b47dc88f4ceeda16e1dcd?pvs=21)
+
+
+===========================================================Reference Links=====================================================================
+
+How to Prevent Infinite Loops When Using useEffect() in ReactJS:
+          https://www.freecodecamp.org/news/prevent-infinite-loops-when-using-useeffect-in-reactjs/#:~:text=The%20current%20property%20will%20be,each%20render%20of%20the%20component.&text=By%20changing%20the%20value%20of%20data.
+
+=======================================================================================================================================================
+Interview Questions:
+1.Is browser understand js code ?
+    -No, through transpiller it will convert to understand the js code in browser.
+2. what is jsx?
+    - we can html code in javascript also with the help of jsx. 
+    - because browser did not understand. for that browser needs to understand there is a transpiller, babel.
+    - with th help of transpiller it needs to convert to understand the browser(is browser will understand jsx?)
+3. Concept of useEffect,useCallback and useRef
+   -praticed in src/components/useeffect/infiniteloop.js file 
+   -Reference link : https://www.freecodecamp.org/news/prevent-infinite-loops-when-using-useeffect-in-reactjs/#:~:text=The%20current%20property%20will%20be,each%20render%20of%20the%20component.&text=By%20changing%20the%20value%20of%20data.
+   
+          

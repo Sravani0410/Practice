@@ -1,0 +1,108 @@
+Questions:
+
+Q. how to greet the interviewer?
+    - Thank you for asking, I'm doing great.I hope you having a good day as well.
+      I'm exicited today for this interview and to learn more about the opportunity.
+    - Thank you asking I'm doing well. I'm exicited today for this interview and to learn more about the opportunity.
+    - I'm doing great , thank you. I hope you having a good day as well.I'm looking forward to our conversation.
+Q. Research about the company?
+     - check in www.glassdoor.combination
+Q. make a list of your acheivements and challenges?
+     acheivements: Awards
+                   promotions/bonus
+                   cerification courses
+                   ideas or innovations introduced in business
+                   special projects
+     challenges: meeting deadlines
+                 conflicts with co-Workers
+                 handling difference in opinion
+                 difficult clients
+                 gap in employment
+                 shift in career
+       Tips to follow: know the situation, the action i took and result 
+       sample answer:In my previous job, due to lack of coordintion between the team, even the simplest task could cause problems in a project.
+       i managed to create a system which not only helped us to bridge the communication gap but also we were able to complete the tasks well ahead of time.
+       and because of this we have completed the project .
+Q. practice and rehearse your sample answers.
+     - how to speak these answer
+===========================================================================================
+
+Q. Tell me about yourself?
+      - First of all,Thank you for taking out the time to interview me today.
+        I'm born and raised in Vishakapatnam.I have completed my graduation from sri padmavathi mahila university with a degree in B.tech(electrical enginerring) 
+      - After i did coaching for ese but after covid i was intersted in coding so i joined masai school there i learning most of the skills like html,css,js,node,express,mongodb and 
+        i did the clone projects and get the cerificate as full stack web developer.
+      - Currently, i'm working on extern labs as software developer.
+        i did project like nitroxpress, harbour bites as frontend and chat app with includes both Frontend and backend.there i was particepiate in hackaton there i got price as a individual contribution on coding. 
+      - My current goal is to secure a job in your company because to improve my skills.
+      - In future, i look forward to using my knowledge and enchancing my skills to solve the real life problems from clients.
+Q. how do you define success?
+   -1.Success to me is accomplishing goals that are meaningful to me. an major success are 
+      I create through my work and the progress I make towards personal and professional
+   -2.Succsess to me is achieving a goal that i have set for myself. 
+      it can be as simple as completing a task or a big life milestone.
+      it is about reflecting on the journey and feeling proud of what i have accomplished
+Q. who all are there in your family?
+    - in my nucleat family there are 5 of us.It my parents,my younger brother and sister.we spend a lot of quality time together
+Q. why have you changed jobs so frequently?
+    sample answer: I felt that the position was no longer providing me with chance to grow professionally.
+      so i thought i require a new opportunity that would allow me to continue to develop my skills and expand my knowledge.
+      that's why when i saw the job opening here, i immediately wanted to apply.
+    - i changed a job because my career to explore different industries and roles.
+       but i have now identified my passion and seeking a long term commitment in this field with your organization.
+    - I'am seeking more opportunities to grow professionally.
+    -i faced organizational restructuring and layoffs at my previous companies,leading to involuntary job changes. 
+      i'm now looking for a stable work environment to contribute my skills
+Q. How do you priorities tasks when faced with multiple deadlines?
+    - I prioritize tasks based on deadlines, focusing on the most urgent first to ensure nothing is delayed.
+    - I always categorized tasks into urgent and important to tackle high-priority projects.
+    - I communicate with my team to understand project dependencies and adjust priorities accordingly.
+    - I breakdown complex projects into smaller and mangaeable tasks, addressing the most time-sensitive ones intially
+    - I regularly update my to do list,reassessing priorities as deadlines approach to stay on track.
+Q. Do you have any other job offers in hand?
+    -I do have an offer in hand.However, the position doesn't interest me as much as this one. this is the reason i wanted to be interviwed here to understand more about my role and the position.
+    -I was at an early stage of my job search.when i interviwed for a few companies in x-domain and lucky out of three companies. igot an offer from one company. however based on the discussions regarding the roles and responsibilities here.
+       I'm confident that this is where i would love to contribute. 
+Q. what are your salary exceptations?
+    -I'm excepting a hike on x% on my current ctc. 
+     I have upskilled myself by doing certificates,trainings and acquiring x and y skills that has improved my profile.
+     I can assure you that. I will prove to be an assest from day one.
+Q. why should i hire you?
+     - I believe i have the combination of skills and experience necessary in this role.
+     i have a proven track record of successfully executing projects on time and within the budget,as well as the ability to manage multiple tasks simultaneously.
+     i have also completed masai cerificate course that will help me to quickly understand this role and contribute from day one.
+     this makes me the perfect candidate for this job. this is the reason i believe that i should be considered for this position.
+Q. why do you want to work here
+    I have always been drawn to the mission of this company and the values that it stands for.
+    I passionate about helping people and making a positive difference and i see this company as an incredible opportunity to do both.
+    I'm exicited to join this company as i strongly belive my x and y skills will help me to contribute in your upcoming projects.
+Q. Do you have any questions for me?
+     About the job:
+    -what are the goals the company has for the next year?
+    -how many people are on the team I'd be part of?
+    -what are your exceptations from a new hire for this position?
+    About the company:
+    -how would you describe the company culture?
+    -what kind of growth does the company except to see within the next five years?
+    -can you describe some of teh company's recent challages and acheivements?
+    About next steps:
+    -I have really enjoyed learning more about this opportunity. what are the next steps in the hiring process?
+    -Thank you for explaining the role to me in such depth.when might i heard back from yo regarding a decision?
+Q. what are weakness and strengthness?
+   - i focus my time on only one thing at a time.
+   - my greatest strength is flexibility to handle change my work environment.
+    in my previous company i was working on in-site at jaipur i was adaptable no only company but also outside of the company.
+   - my greatest strength is that i have a solid work ethic.
+    the projects that i have done has so far, that leads to meet the deadlines. 
+    i have always been motivated my self for completing the tasks according to the schedule.
+
+    weakness:
+      - my biggest weakness is i can't say no to people.my immediate response when people ask me for help for assistance.is to say yes,even i don't have capacity for additional work.
+      however,i'm trying to more mindful in situation like this and assess my workload before committing.
+      -Although i always met my deadlines,i used to have a problem with procrastination, and i'd end up working really long days as a deadline approached.
+       i decided that i needed to deal with the issuse, so i took classed on project management and time management. 
+       i learened how to organize my days and attack bigger projects in mangeable chucks.
+       now i put together a plan as soon as i get a new assignment, and i often beat my deadlines.
+Q. Describe yourself in 3 words?
+     -dependable,trusetworthy,self-motived, work in-progress(i have lot to learn)
+        - self motivated- i will get up and running quickly in the role and i will need little supervision.

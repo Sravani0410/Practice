@@ -1,0 +1,4 @@
+Dummy data is mock data generated at random as a substitute for live data in testing environments.
+In other words, dummy data acts as a placeholder for live data, 
+the latter of which testers only introduce once it’s determined that the trail program does not have any unintended, 
+negative impact on the underlying data.

@@ -1,0 +1,54 @@
+
+Types of NoSQL databases
+
+- Types of NoSQL Databases
+- Mongo Queries
+    - CRUD operations
+    - query embedded / nested documents
+    - query array documents
+    - query array of embedded documents
+    - projection ( $, elemMatch, slice )
+    - query null or missing fields
+    - [query operators](https://www.mongodb.com/docs/manual/reference/operator/query/#std-label-query-selectors)
+        - Comparison ( $eq, $gt, $gte, $in, $lt, $lte, $ne, $nin )
+        - Logical  ( $and, $not, $nor, $or )
+        - Array ( all, elemMatch, size )
+        - Evaluation ( expr, regex, where )
+        - geospatial ( bonus )
+        - element (exists, type )
+- Aggregation Operations
+    - understanding aggregation pipeline
+        An aggregation pipeline consists of one or more [stages](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/#std-label-aggregation-pipeline-operator-reference) 
+        that process documents:
+        - Each stage performs an operation on the input documents. 
+          For example, a stage can filter documents, group documents, and calculate values.
+        - The documents that are output from a stage are passed to the next stage.
+        - An aggregation pipeline can return results for groups of documents. 
+          For example, return the total, average, maximum, and minimum values.
+        - limitations of aggregation
+        - diskUsage
+        - **Memory Restrictions**
+    - match
+    - group
+    - buckets
+    - count
+    - graphLookup
+    - geoNear
+    - limit
+    - skip
+    - sort
+    - sortByCount
+    - out
+    - project
+    - set
+    - unset
+    - unwind
+    - findAndModify
+- Indexing
+    - use mongo Compass to show GUI
+    - single index
+    - compound index
+    - how does query engine decide to select index A, B, C
+    - how does compound index work
+    - B+ trees database
+- GeoSpatial queries

@@ -1,0 +1,125 @@
+1.what is node.js?
+A.Node.js is a very popular scripting language that is primarily used for server-side scripting requirements.
+  It is non-blocking I/O for any javscript any framework
+
+2.Difference between Node.js and javascript?
+A.JavaScript is programming language, Engines are used v8 engine,spider monkey and java core. 
+  It used as client side operation,performance issuses
+  Node.js Interpreter scripting language, Engines are used v8 engine in google chrome.
+  It is server-side and non-blocking activity(asynchronousP:continuosly run the code without stop)
+
+3.explain middleware in node.js?
+    -  https://www.scaler.com/topics/nodejs/middleware-in-nodejs/
+
+4. what is difference between put and patch?
+    - https://rapidapi.com/blog/put-vs-patch/
+
+5. what is difference between REST API's and SOAP API's and WEB API's?
+    https://rapidapi.com/blog/rest-api-vs-web-api/
+    https://www.youtube.com/watch?v=9H1NR35FPo0
+
+    API: - To interact client and server
+         - if client want some information from server through which medium i.e, api is used to interact server and client.
+         - It is software interface that offers services to other software to enhance the required functionalities.
+         - API will access through URI (Uniform Resource Identifier)
+    REST API's - REST stands for REpresentational State Transfer
+                  -It was a architecture styling and it will have some principals are:
+                      -uniform interface- If client calls URL 
+                          - explanation:                                       (URL--->URI)
+                                          client------called URL------------------->API------------------------>server
+                                                   (through URL to connect with client to server)
+                          - This uniform interface will follw the steps:
+                                -URL should be in URI formate 
+                                -Separte medium (like specific language to know both client and server like JSON,XML formate) like it will follow standard formate
+                                -REST having crud operation (GET,POST,PUT,PATCH,DELETE)
+                                -Interpretation medium: response type will be mandatatory like string,json,xml,html formate to understand the client
+                      -Client-server - decoupling
+                           - Client to server in between api will be same formate.if any changes in server side it won't be effect in client side and vise-versa.so client and server have independence
+                           - for example, if client is js code and server is python code so it won't be effect on api and client side
+                      -stateless
+                           - client is send the request1 and in server side is take the request and it will send the relative information.
+                           - when second time send the request2 from client to server. so server take as new request and send the relative information.
+                           - in server side every request is independent.session concept will come into picture.
+                      -Cacheable
+                           - client want some repeated information to take from server.
+                           - that time server side it is burden so in that cases,we are using this Cacheable to elimate override
+                           - how Cacheable will work?
+                               - for suppose client want get user details, for first time it will give the response and store in client side cache 
+                               - if 2nd want the get user details whenever hit the api then server is manged by flag, whether data is changed are not.
+                               - if changed data is send to client from server side . if not changed client used cache data which is already stored 
+                               - this process is called Cacheable
+                      -layered system
+                          - client calls the api whether the api is intermediate server or end server or not it won't be a difference
+                      -code on demand(optional)
+                  - with is principals to make the api's is called REST API's
+    RESTful API's - If using REST principals to make any api is called RESTful APIs
+                    REST and RESTFul are same
+    SOAP API's - Before REST APIs SOAP APIs are there
+               - Abbreviation- Simple Object Access Protocol.
+               - client to server to communicate with XML-based messaging protocal
+               - Difference between REST and SOAP:
+                    - REST is set of roles it was architecture style but SOAP is protocal
+                    - if we want to send any request we have to follow the set of formate then it will go to server and take the response
+                    - but SOAP is implemention, REST is architecture style
+                    - for example, if we send the request we have to decalre types--->through WSDL(Web services description language) language 
+                           <defintion>
+                             <types>datatype defintion
+                             </types>
+                             <message>
+                             defintion of data being communicated
+                             </message>
+                             <portType>set of operations.......
+                             </portType>
+                             <binding>protocal and data format specifications
+                             </binding>
+                           </defintion>
+                    - we have to follow the set of instructions and before example we have to follow like that i.e., one type of protocal
+                    - but REST is different because that was architecture we can write any language to implement
+                    - REST is follow the XML,JSON--> any formate to send the request or to get the response. but SOAP is XML based(WSDL language)
+                    - In SOAP, WSDL language to java class with the help of apcahe cfx etc..
+                    - SOAP is more secure compare to REST
+                    - REST is lightweight 
+                    - REST is http protocal and SOAP can be used anything basically http is used
+               -A RESTful API can be implemented in Java in a number of ways: you can use Spring,JAX-RS
+               -JAX-RS is nothing more than specification, a set of interfaces and annotaions offered by Java EE. 
+                 And then, of course, we have the implementions,some of the more well known as RESTEasy and Jersey 
+6. what are the status codes?
+     -https://medium.com/codex/http-status-codes-types-and-common-code-explanations-c6c02b95c631
+
+      200: OK — The most common, standard code telling you everything went, well, “OK”. 
+                The request was fulfilled by the server and the response was properly returned to the browser. 
+                Most commonly received after a standard GET request.
+      201: Created — The request was fulfilled and a new resource was created as a result. 
+                     Most commonly received after a POST or PUT request.
+      204: No Content — The request was properly fulfilled but no data was returned to the browser. 
+                        Most commonly received after a DELETE request.
+      301: Moved Permanently — The URL you are visiting permanently redirects you to a different resource. 
+                               The redirect will also pass along some important information to the search engines even though the URL is at a different location.
+      302: Found — The URL you are visiting will temporarily redirect you to a different resource. 
+                   It means a change will be made soon though, and therefore will not pass along helpful info to search engines.
+      400: Bad Request — There is invalid syntax in the request that could not be understood by the server.
+      401: Unauthorized — The server requires authentication but it has not been provided by the request. 
+                          An example would be trying to consume data from an API but leaving out the required unique key.
+      403: Forbidden — A valid request was received by the server but the client/user does not have the right permissions, account, or rights to access the data.
+      404: Not Found — The most common of the errors! 
+                       The request is valid, but the server cannot find the resource that is being requested.
+      410: Gone — The request was sent to a dead resource. 
+                  It is no longer available and it isn’t coming back.
+      418: I’m a teapot — This is a joke. But it is real. 
+                          Although not used in any practical or useful ways, some sites do return this code in an attempt to be funny. 
+                          It is ignored by most browsers as it is not an official status code.
+      451: Unavailable for Legal Reasons — The server is prohibiting access due to legal reasons. 
+                                           Could be due to copyright violation, government censorship, or a court order. 
+                                           Yes, this is a reference to the novel Fahrenheit 451 by Ray Bradbury.
+      500: Internal Server Error — The classic server error. 
+                                   There isn’t a problem with the request, but rather the server. 
+                                   It is a vague status and doesn’t give much more information about what the problem is other than the problem is unexpected.
+      502: Bad Gateway — This means the server that received the request is functioning as a gateway or proxy for another server upstream, and the upstream server sent an invalid response back.
+      503: Service Unavailable — Usually a temporary status that indicates the server may be overloaded, down for maintenance, etc. 
+                                 Whatever the reason, it’s unable to handle requests at the moment.
+      504: Gateway Timeout — Similar to the 502 error, the server acting as a gateway is unable to get a response from the upstream server in a timely manner.
+
+
+7. what is streams?
+   https://medium.com/sessionstack-blog/how-javascript-works-streams-and-their-use-cases-79d127522166
+

@@ -1,0 +1,1660 @@
+1. Array Manipulation:
+    Question: Implement basic array manipulation operations such as insertion, deletion, and update.
+    Example:
+    // Implementing an array with basic operations
+2. Array Traversal:
+    Question: Traverse an array and perform a specific operation on each element.
+    Example:
+    // Sum of all elements in an array
+3. Array Search:
+    Question: Find the index or occurrence of a specific element in an array.
+    Example:
+    // Finding the index of an element in an array
+4. Array Rotation:
+    Question: Rotate an array to the left or right by a specific number of positions.
+    Example:
+    // Rotating an array to the left by k positions
+5. Array Sorting:
+    Question: Sort an array using different sorting algorithms or methods.
+    Example:
+    // Sorting an array using a custom comparator
+6. Array Filtering:
+    Question: Filter elements in an array based on a certain condition.
+    Example:
+    // Filtering even numbers from an array
+7. Array Subarrays:
+    Question: Find or generate all possible subarrays of an array.
+    Example:
+    // Finding all subarrays of an array
+8. Array Sum/Subset Sum:
+    Question: Find a subset of elements whose sum matches a specific target.
+    Example:
+    // Finding a subset with a given sum in an array
+9. Array Rotation Check:
+    Question: Check if one array is a rotation of another.
+    Example:
+    // Checking if one array is a rotation of another
+10. Array Intersection/Union:
+    markdown
+    - **Question:** Find the intersection or union of two arrays.
+    - **Example:**
+    ```javascript
+    // Finding the intersection of two arrays
+    ```
+11. Array Product Except Self:
+    sql
+    - **Question:** Given an array, compute an output array where each element is the product of all elements in the input array except itself.
+    - **Example:**
+    ```javascript
+    // Product of Array Except Self
+    ```
+12. Array Majority Element:
+    markdown
+    - **Question:** Find the majority element in an array (the element that appears more than n/2 times).
+    - **Example:**
+    ```javascript
+    // Finding the majority element in an array
+    ```
+13. Array Rain Water Trapping:
+    markdown
+    - **Question:** Given an array representing heights of bars, calculate how much rainwater can be trapped between the bars.
+    - **Example:**
+    ```javascript
+    // Trapping Rain Water
+    ```
+14. Array Stock Buy/Sell:
+    markdown
+    - **Question:** Given an array representing stock prices on different days, find the maximum profit that can be earned by buying and selling.
+    - **Example:**
+    ```javascript
+    // Best Time to Buy and Sell Stock
+    ```
+15. Array Spiral Order:
+    markdown
+    - **Question:** Traverse a 2D matrix in a spiral order.
+    - **Example:**
+    ```javascript
+    // Spiral Matrix
+    ```
+16. Array Median:
+    Question: Find the median of two sorted arrays.
+    Example:
+    // Median of Two Sorted Arrays
+17. Array Unique Elements:
+    Question: Remove duplicates from a sorted or unsorted array.
+    Example:
+    // Remove Duplicates from Sorted Array
+18. Array Partitioning:
+    Question: Partition an array into two parts such that the elements on one side are less than a given value, and on the other side are greater.
+    Example:
+    // Partition Array
+19. Array Triplet Sum:
+    Question: Find all unique triplets in the array that sum up to a given target.
+    Example:
+    // 3Sum
+20. Array Next Permutation:
+    Question: Implement the next permutation, which rearranges numbers into the lexicographically next greater permutation.
+    Example:
+    // Next Permutation
+21. Array Jump Game:
+    Question: Determine if you can reach the last index of the array by jumping from index to index.
+    Example:
+    // Jump Game
+22. Array Missing Number:
+    Question: Find the missing number in an array containing numbers from 1 to n, with one number missing.
+    Example:
+    // Missing Number
+23. Array Dutch National Flag Problem:
+    Question: Given an array containing 0s, 1s, and 2s, sort the array in a single traversal.
+    Example:
+    // Sort Colors
+24. Array Maximum Subarray Sum:
+    Question: Find the contiguous subarray with the largest sum (Kadane's Algorithm).
+    Example:
+    // Maximum Subarray Sum
+25. Array Rotate Image:
+    Question: Rotate an N x N 2D matrix representing an image.
+    Example:
+    // Rotate Image
+26. Array Zigzag Conversion:
+    Question: Convert a string in zigzag order given the number of rows.
+    Example:
+    // ZigZag Conversion
+27. Array Set Matrix Zeroes:
+    Question: Given an m x n matrix, set entire rows and columns to zero if an element is zero.
+    Example:
+    // Set Matrix Zeroes
+28. Array Trapping Rain Water II:
+    Question: Given an elevation map, calculate how much rainwater can be trapped after raining.
+    Example:
+    // Trapping Rain Water II
+29. Array Celebrity Problem:
+    Question: Given a party of N people, find the celebrity (someone who knows nobody but is known by everyone).
+    Example:
+    // Find the Celebrity
+30. Array Shortest Unsorted Continuous Subarray:
+    Question: Find the shortest subarray, sorting which makes the entire array sorted.
+    Example:
+    // Shortest Unsorted Continuous Subarray
+31. Array Top K Frequent Elements:
+    Question: Given an array, find the k most frequent elements.
+    Example:
+    // Top K Frequent Elements
+32. Array Circular Array Loop:
+    Question: Determine if a given array contains a cycle (a series of repeating elements).
+    Example:
+    // Circular Array Loop
+33. Array Valid Mountain Array:
+    Question: Determine if an array is a valid mountain array (follows a specific pattern).
+    Example:
+    // Valid Mountain Array
+34. Array Game of Life:
+    Question: Implement the Game of Life, given the current state and evolving it based on specific rules.
+    Example:
+    // Game of Life
+35. Array Subarray Sum Equals K:
+    Question: Given an array of integers, find the total number of continuous subarrays whose sum equals a specific target (K).
+    Example:
+    // Subarray Sum Equals K
+36. Array Best Time to Buy and Sell Stock III:
+    Question: Find the maximum profit with at most two transactions allowed.
+    Example:
+    // Best Time to Buy and Sell Stock III
+37. Array Maximum Average Subarray I:
+    Question: Find the contiguous subarray with the largest average.
+    Example:
+    // Maximum Average Subarray I
+38. Array Spiral Matrix II:
+    Question: Generate an N x N matrix filled with elements from 1 to N^2 in spiral order.
+    Example:
+    // Spiral Matrix II
+39. Array Container With Most Water:
+    Question: Given n non-negative integers representing vertical lines, find two lines which, together with the x-axis forms a container that holds the most water.
+    Example:
+    // Container With Most Water
+40. Array Valid Sudoku:
+    Question: Determine if a 9x9 Sudoku board is valid.
+    Example:
+    // Valid Sudoku
+41. Array Sort Colors II:
+    Question: Given an array with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent.
+    Example:
+    // Sort Colors II
+42. Array Shortest Path in Binary Matrix:
+    Question: Find the length of the shortest path in a binary matrix from the top-left to the bottom-right that minimizes the sum of the values along the path.
+    Example:
+    // Shortest Path in Binary Matrix
+43. Array Minimum Path Sum:
+    Question: Given a m x n grid filled with non-negative numbers, find a path from the top-left to the bottom-right that minimizes the sum of numbers along its path.
+    Example:
+    // Minimum Path Sum
+44. Array Majority Element II:
+    Question: Find all elements that appear more than ⌊ n/3 ⌋ times in an array.
+    Example:
+    // Majority Element II
+45. Array Spiral Order III:
+    Question: Generate a matrix filled with elements from 1 to n^2 in spiral order.
+    Example:
+    // Spiral Order III
+46. Array Jump Game II:
+    Question: Given an array of non-negative integers, you are initially positioned at the first index and need to jump to the end in the minimum number of jumps.
+    Example:
+    // Jump Game II
+47. Array Product of Array Except Self:
+    Question: Given an array nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+    Example:
+    // Product of Array Except Self
+48. Array Diagonal Traverse:
+    Question: Given a matrix of M x N elements, return all elements of the matrix in diagonal order as shown in the below image.
+    Example:
+    // Diagonal Traverse
+49. Array Find Duplicate Number:
+    Question: Given an array containing n+1 integers where each integer is between 1 and n (inclusive), find the duplicate number.
+    Example:
+    // Find the Duplicate Number
+50. Array Shortest Distance to a Character:
+    Question: Given a string S and a character C, return an array of integers representing the shortest distance from the character C in the string.
+    Example:
+    // Shortest Distance to a Character
+
+
+52. Array Contains Duplicate:
+    JavaScript Solution:
+    function containsDuplicate(nums) {
+    const numSet = new Set();
+
+    for (let num of nums) {
+        if (numSet.has(num)) {
+        return true;
+        }
+
+        numSet.add(num);
+    }
+
+    return false;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 1];
+    const result = containsDuplicate(array);
+    console.log(result);
+53. Array Product of Array Except Self (Optimized):
+    JavaScript Solution:
+    function productExceptSelf(nums) {
+    const n = nums.length;
+    const result = new Array(n).fill(1);
+
+    let leftProduct = 1;
+    let rightProduct = 1;
+
+    for (let i = 0; i < n; i++) {
+        result[i] *= leftProduct;
+        result[n - 1 - i] *= rightProduct;
+
+        leftProduct *= nums[i];
+        rightProduct *= nums[n - 1 - i];
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 4];
+    const result = productExceptSelf(array);
+    console.log(result);
+54. Array Search in Rotated Sorted Array:
+    JavaScript Solution:
+    function search(nums, target) {
+    let left = 0;
+    let right = nums.length - 1;
+
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+
+        if (nums[mid] === target) {
+        return mid;
+        }
+
+        if (nums[left] <= nums[mid]) {
+        if (nums[left] <= target && target < nums[mid]) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+        } else {
+        if (nums[mid] < target && target <= nums[right]) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+        }
+    }
+
+    return -1;
+    }
+
+    // Example usage:
+    const array = [4, 5, 6, 7, 0, 1, 2];
+    const target = 0;
+    const result = search(array, target);
+    console.log(result);
+55. Array Merge Intervals:
+    JavaScript Solution:
+    function merge(intervals) {
+    if (intervals.length === 0) {
+        return [];
+    }
+
+    intervals.sort((a, b) => a[0] - b[0]);
+
+    const merged = [intervals[0]];
+
+    for (let i = 1; i < intervals.length; i++) {
+        const current = intervals[i];
+        const lastMerged = merged[merged.length - 1];
+
+        if (current[0] <= lastMerged[1]) {
+        lastMerged[1] = Math.max(lastMerged[1], current[1]);
+        } else {
+        merged.push(current);
+        }
+    }
+
+    return merged;
+    }
+
+    // Example usage:
+    const intervals = [[1,3],[2,6],[8,10],[15,18]];
+    const result = merge(intervals);
+    console.log(result);
+56. Array Plus One:
+    JavaScript Solution:
+    function plusOne(digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+        if (digits[i] < 9) {
+        digits[i]++;
+        return digits;
+        } else {
+        digits[i] = 0;
+        }
+    }
+
+    // If we're here, all digits were 9, so we add a new leading digit 1
+    digits.unshift(1);
+    return digits;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3];
+    const result = plusOne(array);
+    console.log(result);
+57. Array Jump Game III:
+    JavaScript Solution:
+    function canReach(arr, start) {
+    const visited = new Set();
+
+    const dfs = (index) => {
+        if (index < 0 || index >= arr.length || visited.has(index)) {
+        return false;
+        }
+
+        if (arr[index] === 0) {
+        return true;
+        }
+
+        visited.add(index);
+
+        return dfs(index + arr[index]) || dfs(index - arr[index]);
+    };
+
+    return dfs(start);
+    }
+
+    // Example usage:
+    const array = [4, 2, 3, 0, 3, 1, 2];
+    const start = 5;
+    const result = canReach(array, start);
+    console.log(result);
+58. Array Find Peak Element:
+    JavaScript Solution:
+    function findPeakElement(nums) {
+    let left = 0;
+    let right = nums.length - 1;
+
+    while (left < right) {
+        const mid = Math.floor((left + right) / 2);
+
+        if (nums[mid] > nums[mid + 1]) {
+        right = mid;
+        } else {
+        left = mid + 1;
+        }
+    }
+
+    return left;
+    }
+
+    // Example usage:
+    const array = [1, 2, 1, 3, 5, 6, 4];
+    const result = findPeakElement(array);
+    console.log(result);
+59. Array Two Sum:
+    JavaScript Solution:
+    function twoSum(nums, target) {
+    const numMap = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (numMap.has(complement)) {
+        return [numMap.get(complement), i];
+        }
+        numMap.set(nums[i], i);
+    }
+
+    return [];
+    }
+
+    // Example usage:
+    const array = [2, 7, 11, 15];
+    const target = 9;
+    const result = twoSum(array, target);
+    console.log(result);
+60. Array Merge Sorted Array:
+    JavaScript Solution:
+    function merge(nums1, m, nums2, n) {
+    let i = m - 1;
+    let j = n - 1;
+    let k = m + n - 1;
+
+    while (j >= 0) {
+        if (i >= 0 && nums1[i] > nums2[j]) {
+        nums1[k--] = nums1[i--];
+        } else {
+        nums1[k--] = nums2[j--];
+        }
+    }
+    }
+
+    // Example usage:
+    const array1 = [1, 2, 3, 0, 0, 0];
+    const m = 3;
+    const array2 = [2, 5, 6];
+    const n = 3;
+    merge(array1, m, array2, n);
+    console.log(array1);
+61. Array Valid Mountain Array:
+    JavaScript Solution:
+    function validMountainArray(arr) {
+    const n = arr.length;
+    let i = 0;
+
+    // Ascending phase
+    while (i < n - 1 && arr[i] < arr[i + 1]) {
+        i++;
+    }
+
+    // Peak cannot be the first or last element
+    if (i === 0 || i === n - 1) {
+        return false;
+    }
+
+    // Descending phase
+    while (i < n - 1 && arr[i] > arr[i + 1]) {
+        i++;
+    }
+
+    return i === n - 1;
+    }
+
+    // Example usage:
+    const array = [0, 3, 2, 1];
+    const result = validMountainArray(array);
+    console.log(result);
+62. Array Game of Life:
+    JavaScript Solution:
+    function gameOfLife(board) {
+    const m = board.length;
+    const n = board[0].length;
+
+    const countLiveNeighbors = (row, col) => {
+        let count = 0;
+
+        for (let i = Math.max(0, row - 1); i <= Math.min(m - 1, row + 1); i++) {
+        for (let j = Math.max(0, col - 1); j <= Math.min(n - 1, col + 1); j++) {
+            count += board[i][j] & 1;
+        }
+        }
+
+        count -= board[row][col] & 1; // Exclude the cell itself
+        return count;
+    };
+
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+        const liveNeighbors = countLiveNeighbors(i, j);
+
+        if (board[i][j] === 1) {
+            // Rule 1 and 3
+            if (liveNeighbors === 2 || liveNeighbors === 3) {
+            board[i][j] |= 2; // Set the second bit to 1
+            }
+        } else {
+            // Rule 4
+            if (liveNeighbors === 3) {
+            board[i][j] |= 2; // Set the second bit to 1
+            }
+        }
+        }
+    }
+
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+        board[i][j] >>= 1; // Update the cell state
+        }
+    }
+    }
+
+    // Example usage:
+    const grid = [
+    [0, 1, 0],
+    [0, 0, 1],
+    [1, 1, 1],
+    [0, 0, 0]
+    ];
+    gameOfLife(grid);
+    console.log(grid);
+63. Array Subarray Sum Equals K:
+    JavaScript Solution:
+    function subarraySum(nums, k) {
+    const prefixSumMap = new Map();
+    prefixSumMap.set(0, 1);
+    let count = 0;
+    let sum = 0;
+
+    for (let num of nums) {
+        sum += num;
+        if (prefixSumMap.has(sum - k)) {
+        count += prefixSumMap.get(sum - k);
+        }
+
+        prefixSumMap.set(sum, (prefixSumMap.get(sum) || 0) + 1);
+    }
+
+    return count;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 4, 5];
+    const k = 9;
+    const result = subarraySum(array, k);
+    console.log(result);
+64. Array Best Time to Buy and Sell Stock III:
+    JavaScript Solution:
+    function maxProfit(nums) {
+    if (nums.length === 0) {
+        return 0;
+    }
+
+    const n = nums.length;
+    const maxTransactions = 2;
+    const dp = new Array(maxTransactions + 1).fill().map(() => new Array(n).fill(0));
+
+    for (let t = 1; t <= maxTransactions; t++) {
+        let maxDiff = -nums[0];
+        for (let i = 1; i < n; i++) {
+        dp[t][i] = Math.max(dp[t][i - 1], nums[i] + maxDiff);
+        maxDiff = Math.max(maxDiff, dp[t - 1][i] - nums[i]);
+        }
+    }
+
+    return dp[maxTransactions][n - 1];
+    }
+
+    // Example usage:
+    const array = [3, 3, 5, 0, 0, 3, 1, 4];
+    const result = maxProfit(array);
+    console.log(result);
+65. Array Maximum Average Subarray I:
+    JavaScript Solution:
+    function findMaxAverage(nums, k) {
+    let sum = 0;
+
+    for (let i = 0; i < k; i++) {
+        sum += nums[i];
+    }
+
+    let maxSum = sum;
+
+    for (let i = k; i < nums.length; i++) {
+        sum += nums[i] - nums[i - k];
+        maxSum = Math.max(maxSum, sum);
+    }
+
+    return maxSum / k;
+    }
+
+    // Example usage:
+    const array = [1, 12, -5, -6, 50, 3];
+    const k = 4;
+    const result = findMaxAverage(array, k);
+    console.log(result);
+66. Array Spiral Matrix II:
+    JavaScript Solution:
+    function generateMatrix(n) {
+    const matrix = new Array(n).fill().map(() => new Array(n).fill(0));
+
+    let top = 0;
+    let bottom = n - 1;
+    let left = 0;
+    let right = n - 1;
+    let num = 1;
+
+    while (top <= bottom && left <= right) {
+        for (let i = left; i <= right; i++) {
+        matrix[top][i] = num++;
+        }
+        top++;
+
+        for (let i = top; i <= bottom; i++) {
+        matrix[i][right] = num++;
+        }
+        right--;
+
+        if (top <= bottom) {
+        for (let i = right; i >= left; i--) {
+            matrix[bottom][i] = num++;
+        }
+        bottom--;
+        }
+
+        if (left <= right) {
+        for (let i = bottom; i >= top; i--) {
+            matrix[i][left] = num++;
+        }
+        left++;
+        }
+    }
+
+    return matrix;
+    }
+
+    // Example usage:
+    const n = 3;
+    const result = generateMatrix(n);
+    console.log(result);
+67. Array Container With Most Water:
+    JavaScript Solution:
+    function maxArea(height) {
+    let maxArea = 0;
+    let left = 0;
+    let right = height.length - 1;
+
+    while (left < right) {
+        const h = Math.min(height[left], height[right]);
+        const w = right - left;
+        maxArea = Math.max(maxArea, h * w);
+
+        if (height[left] < height[right]) {
+        left++;
+        } else {
+        right--;
+        }
+    }
+
+    return maxArea;
+    }
+
+    // Example usage:
+    const array = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+    const result = maxArea(array);
+    console.log(result);
+68. Array Valid Sudoku:
+    JavaScript Solution:
+    function isValidSudoku(board) {
+    const rows = new Array(9).fill().map(() => new Set());
+    const columns = new Array(9).fill().map(() => new Set());
+    const boxes = new Array(9).fill().map(() => new Set());
+
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+        const num = board[i][j];
+
+        if (num === '.') {
+            continue;
+        }
+
+        if (rows[i].has(num) || columns[j].has(num) || boxes[Math.floor(i / 3) * 3 + Math.floor(j / 3)].has(num)) {
+            return false;
+        }
+
+        rows[i].add(num);
+        columns[j].add(num);
+        boxes[Math.floor(i / 3) * 3 + Math.floor(j / 3)].add(num);
+        }
+    }
+
+    return true;
+    }
+
+    // Example usage:
+    const sudokuBoard = [
+    ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+    ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+    ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+    ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+    ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+    ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+    ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+    ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+    ['.', '.', '.', '.', '8', '.', '.', '7', '9']
+    ];
+    const result = isValidSudoku(sudokuBoard);
+    console.log(result);
+69. Array Sort Colors II:
+    JavaScript Solution:
+    function sortColors(nums) {
+    let low = 0;
+    let high = nums.length - 1;
+    let i = 0;
+
+    while (i <= high) {
+        if (nums[i] === 0) {
+        [nums[i], nums[low]] = [nums[low], nums[i]];
+        low++;
+        i++;
+        } else if (nums[i] === 2) {
+        [nums[i], nums[high]] = [nums[high], nums[i]];
+        high--;
+        } else {
+        i++;
+        }
+    }
+    }
+
+    // Example usage:
+    const array = [2, 0, 2, 1, 1, 0];
+    sortColors(array);
+    console.log(array);
+70. Array Shortest Path in Binary Matrix:
+    JavaScript Solution:
+    function shortestPathBinaryMatrix(grid) {
+    const n = grid.length;
+
+    if (grid[0][0] === 1 || grid[n - 1][n - 1] === 1) {
+        return -1; // Start or end cell is blocked
+    }
+
+    const directions = [
+        [-1, -1], [-1, 0], [-1, 1],
+        [0, -1],           [0, 1],
+        [1, -1], [1, 0], [1, 1]
+    ];
+
+    const queue = [[0, 0, 1]]; // [row, column, pathLength]
+    grid[0][0] = 1; // Mark the starting cell as visited
+
+    while (queue.length > 0) {
+        const [row, col, pathLength] = queue.shift();
+
+        if (row === n - 1 && col === n - 1) {
+        return pathLength;
+        }
+
+        for (const [dr, dc] of directions) {
+        const newRow = row + dr;
+        const newCol = col + dc;
+
+        if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n && grid[newRow][newCol] === 0) {
+            queue.push([newRow, newCol, pathLength + 1]);
+            grid[newRow][newCol] = 1; // Mark the cell as visited
+        }
+        }
+    }
+
+    return -1; // No valid path found
+    }
+
+    // Example usage:
+    const grid = [
+    [0, 0, 0],
+    [1, 1, 0],
+    [1, 1, 0]
+    ];
+    const result = shortestPathBinaryMatrix(grid);
+    console.log(result);
+71. Array Minimum Path Sum:
+    JavaScript Solution:
+    function minPathSum(grid) {
+    const m = grid.length;
+    const n = grid[0].length;
+
+    for (let i = 1; i < m; i++) {
+        grid[i][0] += grid[i - 1][0];
+    }
+
+    for (let j = 1; j < n; j++) {
+        grid[0][j] += grid[0][j - 1];
+    }
+
+    for (let i = 1; i < m; i++) {
+        for (let j = 1; j < n; j++) {
+        grid[i][j] += Math.min(grid[i - 1][j], grid[i][j - 1]);
+        }
+    }
+
+    return grid[m - 1][n - 1];
+    }
+
+    // Example usage:
+    const grid = [
+    [1, 3, 1],
+    [1, 5, 1],
+    [4, 2, 1]
+    ];
+    const result = minPathSum(grid);
+    console.log(result);
+72. Array Majority Element II:
+    JavaScript Solution:
+    function majorityElement(nums) {
+    let candidate1 = null;
+    let candidate2 = null;
+    let count1 = 0;
+    let count2 = 0;
+
+    for (let num of nums) {
+        if (num === candidate1) {
+        count1++;
+        } else if (num === candidate2) {
+        count2++;
+        } else if (count1 === 0) {
+        candidate1 = num;
+        count1 = 1;
+        } else if (count2 === 0) {
+        candidate2 = num;
+        count2 = 1;
+        } else {
+        count1--;
+        count2--;
+        }
+    }
+
+    count1 = 0;
+    count2 = 0;
+
+    for (let num of nums) {
+        if (num === candidate1) {
+        count1++;
+        } else if (num === candidate2) {
+        count2++;
+        }
+    }
+
+    const result = [];
+    if (count1 > nums.length / 3) {
+        result.push(candidate1);
+    }
+    if (count2 > nums.length / 3) {
+        result.push(candidate2);
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const array = [3, 3, 3, 2, 2, 2, 1, 1, 1];
+    const result = majorityElement(array);
+    console.log(result);
+73. Array Spiral Order III:
+    JavaScript Solution:
+    function generateMatrix(n) {
+    const matrix = new Array(n).fill().map(() => new Array(n).fill(0));
+
+    let top = 0;
+    let bottom = n - 1;
+    let left = 0;
+    let right = n - 1;
+    let num = 1;
+
+    while (top <= bottom && left <= right) {
+        for (let i = top; i <= bottom; i++) {
+        matrix[i][left] = num++;
+        }
+        left++;
+
+        for (let i = left; i <= right; i++) {
+        matrix[bottom][i] = num++;
+        }
+        bottom--;
+
+        if (top <= bottom) {
+        for (let i = bottom; i >= top; i--) {
+            matrix[i][right] = num++;
+        }
+        right--;
+        }
+
+        if (left <= right) {
+        for (let i = right; i >= left; i--) {
+            matrix[top][i] = num++;
+        }
+        top++;
+        }
+    }
+
+    return matrix;
+    }
+
+    // Example usage:
+    const n = 4;
+    const result = generateMatrix(n);
+    console.log(result);
+74. Array Jump Game II:
+    JavaScript Solution:
+    function jump(nums) {
+    let steps = 0;
+    let maxReach = 0;
+    let lastJump = 0;
+
+    for (let i = 0; i < nums.length - 1; i++) {
+        maxReach = Math.max(maxReach, i + nums[i]);
+
+        if (i === lastJump) {
+        lastJump = maxReach;
+        steps++;
+        }
+    }
+
+    return steps;
+    }
+
+    // Example usage:
+    const array = [2, 3, 1, 1, 4];
+    const result = jump(array);
+    console.log(result);
+75. Array Product of Array Except Self:
+    JavaScript Solution:
+    function productExceptSelf(nums) {
+    const n = nums.length;
+    const output = new Array(n).fill(1);
+
+    let leftProduct = 1;
+    for (let i = 0; i < n; i++) {
+        output[i] *= leftProduct;
+        leftProduct *= nums[i];
+    }
+
+    let rightProduct = 1;
+    for (let i = n - 1; i >= 0; i--) {
+        output[i] *= rightProduct;
+        rightProduct *= nums[i];
+    }
+
+    return output;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 4];
+    const result = productExceptSelf(array);
+    console.log(result);
+76. Array Diagonal Traverse:
+    JavaScript Solution:
+    function findDiagonalOrder(matrix) {
+    if (matrix.length === 0) {
+        return [];
+    }
+
+    const m = matrix.length;
+    const n = matrix[0].length;
+    const result = [];
+
+    for (let sum = 0; sum <= m + n - 2; sum++) {
+        if (sum % 2 === 0) {
+        for (let i = Math.min(sum, m - 1); i >= Math.max(0, sum - n + 1); i--) {
+            result.push(matrix[i][sum - i]);
+        }
+        } else {
+        for (let i = Math.max(0, sum - n + 1); i <= Math.min(sum, m - 1); i++) {
+            result.push(matrix[i][sum - i]);
+        }
+        }
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+    const result = findDiagonalOrder(matrix);
+    console.log(result);
+77. Array Find Duplicate Number:
+    JavaScript Solution:
+    function findDuplicate(nums) {
+    let slow = nums[0];
+    let fast = nums[0];
+
+    do {
+        slow = nums[slow];
+        fast = nums[nums[fast]];
+    } while (slow !== fast);
+
+    slow = nums[0];
+    while (slow !== fast) {
+        slow = nums[slow];
+        fast = nums[fast];
+    }
+
+    return slow;
+    }
+
+    // Example usage:
+    const array = [1, 3, 4, 2, 2];
+    const result = findDuplicate(array);
+    console.log(result);
+78. Array Shortest Distance to a Character:
+    JavaScript Solution:
+    function shortestToChar(S, C) {
+    const n = S.length;
+    const result = new Array(n);
+
+    let prev = -Infinity;
+    for (let i = 0; i < n; i++) {
+        if (S[i] === C) {
+        prev = i;
+        }
+        result[i] = i - prev;
+    }
+
+    prev = Infinity;
+    for (let i = n - 1; i >= 0; i--) {
+        if (S[i] === C) {
+        prev = i;
+        }
+        result[i] = Math.min(result[i], prev - i);
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const str = "loveleetcode";
+    const char = "e";
+    const result = shortestToChar(str, char);
+    console.log(result);
+79. Array Array Manipulation:
+    JavaScript Solution:
+    function arrayManipulation(n, queries) {
+    const array = new Array(n + 1).fill(0);
+
+    for (let i = 0; i < queries.length; i++) {
+        const [a, b, k] = queries[i];
+        array[a - 1] += k;
+        array[b] -= k;
+    }
+
+    let max = 0;
+    let sum = 0;
+
+    for (let i = 0; i < n; i++) {
+        sum += array[i];
+        max = Math.max(max, sum);
+    }
+
+    return max;
+    }
+
+    // Example usage:
+    const n = 5;
+    const queries = [
+    [1, 2, 100],
+    [2, 5, 100],
+    [3, 4, 100]
+    ];
+    const result = arrayManipulation(n, queries);
+    console.log(result);
+80. Array Array Traversal:
+    JavaScript Solution:
+    function arrayTraversal(nums) {
+    const result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        result.push(nums[i] * 2);
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 4, 5];
+    const result = arrayTraversal(array);
+    console.log(result);
+81. Array Array Search:
+    JavaScript Solution:
+    function arraySearch(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === target) {
+        return i;
+        }
+    }
+
+    return -1;
+    }
+
+    // Example usage:
+    const array = [4, 2, 7, 1, 9];
+    const target = 7;
+    const result = arraySearch(array, target);
+    console.log(result);
+82. Array Array Rotation:
+    JavaScript Solution:
+    function arrayRotation(nums, k) {
+    const n = nums.length;
+    k = k % n;
+
+    const rotatedArray = nums.slice(n - k).concat(nums.slice(0, n - k));
+    return rotatedArray;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 4, 5];
+    const k = 2;
+    const result = arrayRotation(array, k);
+    console.log(result);
+83. Array Array Sorting:
+    JavaScript Solution:
+    function arraySorting(nums) {
+    return nums.sort((a, b) => a - b);
+    }
+
+    // Example usage:
+    const array = [3, 1, 4, 1, 5, 9, 2, 6, 5];
+    const result = arraySorting(array);
+    console.log(result);
+84. Array Array Filtering:
+    JavaScript Solution:
+    function arrayFiltering(nums) {
+    return nums.filter(num => num % 2 === 0);
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 4, 5, 6];
+    const result = arrayFiltering(array);
+    console.log(result);
+85. Array Array Subarrays:
+    JavaScript Solution:
+    function arraySubarrays(nums) {
+    const result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i; j < nums.length; j++) {
+        result.push(nums.slice(i, j + 1));
+        }
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3];
+    const result = arraySubarrays(array);
+    console.log(result);
+86. Array Array Sum/Subset Sum:
+    JavaScript Solution:
+    function arraySubsetSum(nums, target) {
+    const dp = new Array(target + 1).fill(false);
+    dp[0] = true;
+
+    for (let num of nums) {
+        for (let i = target; i >= num; i--) {
+        dp[i] = dp[i] || dp[i - num];
+        }
+    }
+
+    return dp[target];
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 7];
+    const target = 6;
+    const result = arraySubsetSum(array, target);
+    console.log(result);
+87. Array Array Rotation Check:
+    JavaScript Solution:
+    function arrayRotationCheck(nums1, nums2) {
+    if (nums1.length !== nums2.length) {
+        return false;
+    }
+
+    const combined = nums1.concat(nums1);
+
+    for (let i = 0; i < combined.length - nums1.length; i++) {
+        if (combined.slice(i, i + nums1.length).join('') === nums2.join('')) {
+        return true;
+        }
+    }
+
+    return false;
+    }
+
+    // Example usage:
+    const array1 = [1, 2, 3, 4, 5];
+    const array2 = [3, 4, 5, 1, 2];
+    const result = arrayRotationCheck(array1, array2);
+    console.log(result);
+88. Array Array Intersection/Union:
+    JavaScript Solution:
+    function arrayIntersection(nums1, nums2) {
+    const set1 = new Set(nums1);
+    const set2 = new Set(nums2);
+
+    const intersection = [...set1].filter(num => set2.has(num));
+    return intersection;
+    }
+
+    // Example usage:
+    const array1 = [1, 2, 2, 1];
+    const array2 = [2, 2];
+    const result = arrayIntersection(array1, array2);
+    console.log(result);
+89. Array Array Product Except Self:
+    JavaScript Solution:
+    function productExceptSelf(nums) {
+    const n = nums.length;
+    const output = new Array(n).fill(1);
+
+    let leftProduct = 1;
+    for (let i = 0; i < n; i++) {
+        output[i] *= leftProduct;
+        leftProduct *= nums[i];
+    }
+
+    let rightProduct = 1;
+    for (let i = n - 1; i >= 0; i--) {
+        output[i] *= rightProduct;
+        rightProduct *= nums[i];
+    }
+
+    return output;
+    }
+
+    // Example usage:
+    const array = [1, 2, 3, 4];
+    const result = productExceptSelf(array);
+    console.log(result);
+90. Array Array Majority Element:
+    JavaScript Solution:
+    function majorityElement(nums) {
+    let candidate = nums[0];
+    let count = 1;
+
+    for (let i = 1; i < nums.length; i++) {
+        if (count === 0) {
+        candidate = nums[i];
+        count = 1;
+        } else if (candidate === nums[i]) {
+        count++;
+        } else {
+        count--;
+        }
+    }
+
+    // Validate if the candidate is the majority element
+    count = 0;
+    for (let num of nums) {
+        if (num === candidate) {
+        count++;
+        }
+    }
+
+    return count > nums.length / 2 ? candidate : -1; // -1 if no majority element
+    }
+
+    // Example usage:
+    const array = [3, 3, 4, 2, 4, 4, 2, 4, 4];
+    const result = majorityElement(array);
+    console.log(result);
+91. Array Array Rain Water Trapping:
+    JavaScript Solution:
+    function trap(height) {
+    const n = height.length;
+    if (n <= 2) {
+        return 0; // Not enough elements to trap water
+    }
+
+    let leftMax = new Array(n).fill(0);
+    let rightMax = new Array(n).fill(0);
+
+    leftMax[0] = height[0];
+    for (let i = 1; i < n; i++) {
+        leftMax[i] = Math.max(leftMax[i - 1], height[i]);
+    }
+
+    rightMax[n - 1] = height[n - 1];
+    for (let i = n - 2; i >= 0; i--) {
+        rightMax[i] = Math.max(rightMax[i + 1], height[i]);
+    }
+
+    let trappedWater = 0;
+    for (let i = 0; i < n; i++) {
+        trappedWater += Math.min(leftMax[i], rightMax[i]) - height[i];
+    }
+
+    return trappedWater;
+    }
+
+    // Example usage:
+    const array = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
+    const result = trap(array);
+    console.log(result);
+92. Array Array Stock Buy/Sell:
+    JavaScript Solution:
+    function maxProfit(prices) {
+    let profit = 0;
+
+    for (let i = 1; i < prices.length; i++) {
+        if (prices[i] > prices[i - 1]) {
+        profit += prices[i] - prices[i - 1];
+        }
+    }
+
+    return profit;
+    }
+
+    // Example usage:
+    const array = [7, 1, 5, 3, 6, 4];
+    const result = maxProfit(array);
+    console.log(result);
+93. Array Array Spiral Order:
+    JavaScript Solution:
+    function spiralOrder(matrix) {
+    const result = [];
+
+    while (matrix.length > 0) {
+        result.push(...matrix.shift());
+
+        for (let i = 0; i < matrix.length; i++) {
+        if (matrix[i].length > 0) {
+            result.push(matrix[i].pop());
+        }
+        }
+
+        if (matrix.length > 0) {
+        result.push(...matrix.pop().reverse());
+        }
+
+        for (let i = matrix.length - 1; i >= 0; i--) {
+        if (matrix[i].length > 0) {
+            result.push(matrix[i].shift());
+        }
+        }
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+    const result = spiralOrder(matrix);
+    console.log(result);
+94. Array Array Median of Two Sorted Arrays:
+    JavaScript Solution:
+    function findMedianSortedArrays(nums1, nums2) {
+    const merged = nums1.concat(nums2).sort((a, b) => a - b);
+    const n = merged.length;
+
+    if (n % 2 === 0) {
+        const mid1 = merged[(n / 2) - 1];
+        const mid2 = merged[n / 2];
+        return (mid1 + mid2) / 2;
+    } else {
+        return merged[Math.floor(n / 2)];
+    }
+    }
+
+    // Example usage:
+    const array1 = [1, 3];
+    const array2 = [2];
+    const result = findMedianSortedArrays(array1, array2);
+    console.log(result);
+95. Array Array Unique Elements:
+    JavaScript Solution:
+    function removeDuplicates(nums) {
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] === nums[i + 1]) {
+        nums.splice(i, 1);
+        i--; // Move back to check the current index again
+        }
+    }
+
+    return nums.length;
+    }
+
+    // Example usage:
+    const array = [1, 1, 2, 2, 3, 4, 4, 5];
+    const result = removeDuplicates(array);
+    console.log(result, array);
+96. Array Array Partitioning:
+    JavaScript Solution:
+    function partitionArray(nums, target) {
+    let low = 0;
+    let high = nums.length - 1;
+
+    while (low <= high) {
+        while (nums[low] < target) {
+        low++;
+        }
+
+        while (nums[high] >= target) {
+        high--;
+        }
+
+        if (low <= high) {
+        // Swap elements
+        [nums[low], nums[high]] = [nums[high], nums[low]];
+        low++;
+        high--;
+        }
+    }
+
+    return low;
+    }
+
+    // Example usage:
+    const array = [1, 4, 3, 2, 5, 2];
+    const target = 3;
+    const result = partitionArray(array, target);
+    console.log(result, array);
+97. Array Array Triplet Sum:
+    JavaScript Solution:
+    function threeSum(nums) {
+    const result = [];
+
+    nums.sort((a, b) => a - b);
+
+    for (let i = 0; i < nums.length - 2; i++) {
+        if (i > 0 && nums[i] === nums[i - 1]) {
+        continue; // Skip duplicates
+        }
+
+        let left = i + 1;
+        let right = nums.length - 1;
+
+        while (left < right) {
+        const sum = nums[i] + nums[left] + nums[right];
+
+        if (sum === 0) {
+            result.push([nums[i], nums[left], nums[right]]);
+
+            while (left < right && nums[left] === nums[left + 1]) {
+            left++;
+            }
+
+            while (left < right && nums[right] === nums[right - 1]) {
+            right--;
+            }
+
+            left++;
+            right--;
+        } else if (sum < 0) {
+            left++;
+        } else {
+            right--;
+        }
+        }
+    }
+
+    return result;
+    }
+
+    // Example usage:
+    const array = [-1, 0, 1, 2, -1, -4];
+    const result = threeSum(array);
+    console.log(result);
+98. Array Array Next Permutation:
+    JavaScript Solution:
+    function nextPermutation(nums) {
+    let i = nums.length - 2;
+
+    while (i >= 0 && nums[i] >= nums[i + 1]) {
+        i--;
+    }
+
+    if (i >= 0) {
+        let j = nums.length - 1;
+        while (j >= 0 && nums[j] <= nums[i]) {
+        j--;
+        }
+
+        [nums[i], nums[j]] = [nums[j], nums[i]];
+    }
+
+    reverse(nums, i + 1);
+    }
+
+    function reverse(nums, start) {
+    let end = nums.length - 1;
+    while (start < end) {
+        [nums[start], nums[end]] = [nums[end], nums[start]];
+        start++;
+        end--;
+    }
+    }
+
+    // Example usage:
+    const array = [1, 2, 3];
+    nextPermutation(array);
+    console.log(array);
+99. Array Array Jump Game:
+    JavaScript Solution:
+    function canJump(nums) {
+    let maxReach = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (i > maxReach) {
+        return false;
+        }
+        maxReach = Math.max(maxReach, i + nums[i]);
+        if (maxReach >= nums.length - 1) {
+        return true;
+        }
+    }
+
+    return false;
+    }
+
+    // Example usage:
+    const array = [2, 3, 1, 1, 4];
+    const result = canJump(array);
+    console.log(result);
+100. Array Array Missing Number:
+    JavaScript Solution:
+    function missingNumber(nums) {
+    const n = nums.length;
+    let expectedSum = (n * (n + 1)) / 2;
+    let actualSum = nums.reduce((acc, num) => acc + num, 0);
+
+    return expectedSum - actualSum;
+    }
+
+    // Example usage:
+    const array = [3, 0, 1];
+    const result = missingNumber(array);
+    console.log(result);
+101. Array Array Dutch National Flag Problem:
+    JavaScript Solution:
+    function sortColors(nums) {
+    let low = 0;
+    let high = nums.length - 1;
+    let i = 0;
+
+    while (i <= high) {
+        if (nums[i] === 0) {
+        [nums[i], nums[low]] = [nums[low], nums[i]];
+        low++;
+        i++;
+        } else if (nums[i] === 2) {
+        [nums[i], nums[high]] = [nums[high], nums[i]];
+        high--;
+        } else {
+        i++;
+        }
+    }
+    }
+
+    // Example usage:
+    const array = [2, 0, 2, 1, 1, 0];
+    sortColors(array);
+    console.log(array);
+102. Array Array Maximum Subarray Sum (Kadane's Algorithm):
+    JavaScript Solution:
+    function maxSubArray(nums) {
+    let maxSum = nums[0];
+    let currentSum = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
+        currentSum = Math.max(nums[i], currentSum + nums[i]);
+        maxSum = Math.max(maxSum, currentSum);
+    }
+
+    return maxSum;
+    }
+
+    // Example usage:
+    const array = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+    const result = maxSubArray(array);
+    console.log(result);
+103. Array Array Rotate Image:
+    JavaScript Solution:
+    function rotate(matrix) {
+    const n = matrix.length;
+
+    // Transpose the matrix
+    for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+        [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
+        }
+    }
+
+    // Reverse each row
+    for (let i = 0; i < n; i++) {
+        matrix[i].reverse();
+    }
+    }
+
+    // Example usage:
+    const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+    rotate(matrix);
+    console.log(matrix);
+104. Array Array Zigzag Conversion:
+    JavaScript Solution:
+    function convert(s, numRows) {
+    if (numRows === 1) return s;
+
+    const rows = new Array(numRows).fill('');
+    let index = 0;
+    let step = 1;
+
+    for (let char of s) {
+        rows[index] += char;
+
+        if (index === 0) {
+        step = 1;
+        } else if (index === numRows - 1) {
+        step = -1;
+        }
+
+        index += step;
+    }
+
+    return rows.join('');
+    }
+
+    // Example usage:
+    const string = "PAYPALISHIRING";
+    const numRows = 3;
+    const result = convert(string, numRows);
+    console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+

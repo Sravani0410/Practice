@@ -1,0 +1,106 @@
+EventLoop:
+CallStack:
+CallBack Queue:
+MicroTask Queue:
+=======================
+EventLoop:
+It will handled by javascript engine. In Event loop there is a CallStack(it behaves as heart of javascript engine).
+For example when we take the javascript code:
+methods like function:
+
+console.log("start")
+function abc(){
+console.log("abc function")
+}
+abc()
+console.log("end")
+abc()
+
+here javascript engine will read line by line excuted. whenever javascript engine reads starts the global execution from CallStack Queue(it is part of CallStack).
+whenever global execution starts javascript engine starts read the code in line by line.
+console.log start
+abc function
+console.log end
+abc function
+after all code completed global execution will Remove.
+
+here web browser will give some web api's features like fetch,setTimeout,console and dom api's
+
+2nd example:
+
+console.log("start")
+function abc(){
+console.log("abc function")
+}
+abc()
+setTimeout(function callBackFuntion(){
+console.log("setTimeout after 2sec")
+},2000)
+console.log("end")
+abc()
+
+Q)So now how web api's feature will handle the CallStack?
+A)that time javascript engine will provide callback queue
+
+console complie:order to print the code
+1. console.log start
+2. abc function
+now set setTimeout is feature it out. so it will not come to global excution.
+so for that case it will memorize to callback queue. the process is going on in callback queue,
+whenever global execution is empty in callback.the settiemout function will move to callstack to callback queue with the help of event loop.
+3. console.log end
+4. abc function
+5. console.log setTimeout after 2sec.
+
+3rd example:
+
+console.log("start")
+function abc(){
+console.log("abc function")
+}
+abc()
+
+setTimeout(function callBackFuntion(){
+console.log("setTimeout after 2sec")
+},2000);
+
+fetch("https://api.example.com")
+.then(function callBackFetch(){
+    console.log("fetch callback")
+});
+
+console.log("end")
+
+Explaination: Here MicroTask Queue is come into picture.MicroTask will handle the promises. Event loop will take MicroTask Queue compare to CallBack Queue.
+console:
+=======
+1.console.log start
+2.abc function 
+3.before setTimeout and fetch it will take console.log end after global execution will empty the callstack
+4.then which the help of event loop checkout MicroTask queue then it will put in CallStack console.log fetch callback
+5.console.log setTimeout after 2 sec
+
+callback queue is not only for setTimeout also it is DOM api's and Web api's except promises and mutation observerse.
+
+Note: In CallStack, when javascript code is running then global executation will start and check any internal function(here abc function) are there not it will executed and clear. 
+now global executation are clear then with the help of event loop check MicroTask queue and CallBack Queue is there are not.
+
+Event Loop: here Event loop will work is to move the MicroTask Queue task and callback queue task whenever global execution is cleared.
+event loop will monitor the callstack wheather callstack is empty are not.
+
+
+Event loop in Node.js:
+========================
+1.javascript is a synchronous,blocking,single threaded language.
+2.To make async programming possible, we need the help of libuv
+
+Explaination: javascript code is run in v8 engine to execute.they are not parts 1. memory heap and 2. call stack
+whenever declared variable or functions memory is allocated in heap. whenever we execute code functions are pushed into the callstack and funtion returns poped up(LIFO) into callstack.
+
+libuv: Libuv is a library written in the programming language C that helps nodejs to improve efficiency while running tasks parallelly.
+whenever we execute async method
+
+
+
+
+

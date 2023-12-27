@@ -1,0 +1,802 @@
+Q. what is difference between html and html file?
+    -HTML (Hypertext Markup Language) and HTML file refer to related concepts in web development, but they have distinct meanings:
+    -HTML (Hypertext Markup Language):
+           Definition: HTML is a standard markup language used for creating and structuring the content on the World Wide Web. 
+                       It is the backbone of web pages and is used to describe the structure of documents using markup tags.
+           Purpose: HTML is used to define the structure and elements of a web page, such as headings, paragraphs, links, images, forms, and more. 
+                    It provides a way to organize and format content for web browsers.
+    -HTML File:
+           Definition: An HTML file is a text document that contains HTML code. 
+                       It typically has a file extension of ".html" or ".htm." 
+                       It is a plain text file that includes HTML tags to define the structure and content of a web page.
+           Purpose: An HTML file is the tangible representation of an HTML document. 
+                    It contains the markup code that browsers interpret to render the visual representation of a web page. 
+                    HTML files can be created and edited using a simple text editor or specialized web development tools.
+    In summary, HTML is a markup language used to structure web content, while an HTML file is a specific instance of a text document containing HTML code. The HTML file is what you create, save, and upload to a web server for browsers to retrieve and display as a web page.
+Q. what are the new features which are added in html?
+   - As of my last knowledge update in January 2022, HTML continues to evolve with new features being introduced through various specifications and updates.
+     Since then, there may have been additional developments. 
+     Here are some features that were introduced or gained prominence around that time:
+        1.HTML Living Standard (HTML5): HTML5 is the latest version of HTML, and it introduced several new features and improvements over its predecessors.
+            Some notable features include:
+              -  New Semantic Elements: HTML5 introduced semantic elements like <article>, <section>, <nav>, <header>, <footer>, and <aside> to better define the structure of a web page.
+              -  New Input Types: HTML5 introduced new input types such as <input type="date">, <input type="email">, <input type="url">, and <input type="range"> to enhance user input options.
+              -  Canvas and SVG: HTML5 includes the <canvas> element for drawing graphics dynamically and supports scalable vector graphics (SVG) directly in the markup.
+              -  Audio and Video Elements: HTML5 introduced <audio> and <video> elements for embedding multimedia content without the need for third-party plugins.
+              -  Local Storage: The localStorage and sessionStorage APIs provide a way to store data locally in the user's browser.
+              -  Web Workers: Web Workers enable parallel processing in the background, allowing scripts to run independently of the main page, improving performance.
+              -  Responsive Images: The <picture> element and srcset attribute allow developers to provide different image sources based on factors like screen size and resolution.
+        2.Web Components: While not strictly a part of HTML5, the concept of web components involves using a set of web platform APIs to create reusable custom elements. These include the Shadow DOM, HTML Templates, and the Custom Elements API.
+        3.HTML Updates: HTML continues to evolve with periodic updates and new specifications. Developers are encouraged to stay informed about the latest standards and features through resources like the World Wide Web Consortium (W3C) and the Web Hypertext Application Technology Working Group (WHATWG) websites.
+    To get the most up-to-date information on HTML features and specifications, please refer to the latest documentation and resources provided by the official standards organizations.
+Q. what is box model?
+    -Entire webpage is converted into the box model.
+    -The box model is a fundamental concept in web design and layout that describes how elements on a webpage are structured and how their dimensions are calculated. 
+    -In the box model, every HTML element is treated as if it were enclosed in a rectangular box. 
+    -This box consists of four main components:
+        Content:This is the actual content of the box, such as text, images, or other media.
+        Padding:Padding is the transparent area around the content, inside the box. 
+                It provides space between the content and the border.
+        Border:The border surrounds the padding, and it can have a specified thickness and style. 
+                It marks the boundary between the padding and the margin.
+        Margin:The margin is the transparent outermost area around the border. 
+                It represents the space between the border of this box and the adjacent boxes in the layout.
+    -Here's a visual representation of the box model:
+    -       +-----------------------------+
+            |          Margin             |
+            |                             |
+            |  +-----------------------+  |
+            |  |        Border         |  |
+            |  |                       |  |
+            |  |  +-----------------+  |  |
+            |  |  |     Padding     |  |  |
+            |  |  |                 |  |  |
+            |  |  |  +-----------+  |  |  |
+            |  |  |  |  Content  |  |  |  |
+            |  |  |  +-----------+  |  |  |
+            |  |  +-----------------+  |  |
+            |  +-----------------------+  |
+            |                             |
+            +-----------------------------+
+Q. what is difference between id and class?
+    -In HTML and CSS, both IDs (Identifiers) and classes are used to apply styles to elements, but they serve different purposes and have some key differences:
+    -ID:
+         Uniqueness:An ID must be unique within the HTML document. No two elements can have the same ID.
+         Selector Syntax:In CSS, the selector for an ID is denoted by the # symbol followed by the ID name. For example: #myId.
+         Usage:IDs are often used when there is only one specific element on a page that requires unique styling or scripting.
+         JavaScript:IDs are commonly used in JavaScript to uniquely identify and manipulate specific elements on a page.
+    -Class:
+         Reusability:Classes are not required to be unique; multiple elements can share the same class.
+         Selector Syntax:In CSS, the selector for a class is denoted by the . (dot) symbol followed by the class name. For example: .myClass.
+         Usage:Classes are used to apply a style or behavior to multiple elements on a page. 
+               They promote reusability and are suitable for styling similar groups of elements.
+         JavaScript:Classes are also used in JavaScript, often for more general interactions where multiple elements share similar functionality.
+    -Example:
+        HTML:
+            <div id="uniqueElement">This is a unique element with an ID.</div>
+            <div class="sharedElement">This is a shared element with a class.</div>
+            <div class="sharedElement">Another shared element with the same class.</div>
+        CSS:
+            #uniqueElement {
+                color: blue;
+            }
+
+            .sharedElement {
+                color: green;
+            }
+   In this example, the element with the ID uniqueElement will have a blue color, while the elements with the class sharedElement will have a green color.
+   In summary, use IDs when you need a unique identifier for a specific element, and use classes when you want to apply styles or behaviors to multiple elements that share common characteristics. 
+   Avoid using IDs for styling purposes if the styling is not unique to a single element, as classes are more versatile in such cases.
+Q. Which one the most priority ?
+     -In CSS, specificity determines which styles are applied to an element when there are conflicting style rules. 
+      Specificity is calculated based on the types of selectors used in the CSS rules. 
+      Here's a general hierarchy from least specific to most specific:
+     -Type Selectors (e.g., div, p, a):These have the lowest specificity.
+      Class Selectors (e.g., .myClass):Classes have higher specificity than type selectors.
+      ID Selectors (e.g., #myId):IDs have higher specificity than classes.
+      Inline Styles (e.g., style attribute):Inline styles have the highest specificity. 
+                                            However, they are generally discouraged because they mix HTML and CSS and make it harder to maintain styles.
+    -The more specific a selector is, the higher its priority. 
+     When there is a conflict between two or more style rules, the browser applies the rule with the higher specificity.
+    -Here's an example to illustrate specificity:
+        <style>
+            div { color: blue; }          /* Type selector - low specificity */
+            .myClass { color: green; }    /* Class selector - higher specificity */
+            #myId { color: red; }         /* ID selector - even higher specificity */
+        </style>
+        <div id="myId" class="myClass">This text will be red.</div>
+    -In this example, even though the element has both an ID and a class, the color specified by the ID selector takes precedence due to its higher specificity.
+        It's essential to have a good understanding of specificity when writing CSS to avoid unexpected styling conflicts.
+        If needed, you can use more specific selectors to override less specific ones, 
+        but it's generally a good practice to keep the specificity as low as necessary for maintainability and readability.
+Q. what is the difference between var,let and const?
+     In JavaScript, var, let, and const are used to declare variables, but they have some key differences in terms of scope, hoisting, and reassignment:
+        var:
+            Scope: Variables declared with var are function-scoped. They are visible throughout the entire function in which they are declared. If declared outside of any function, they become globally scoped.
+            Hoisting: Variables declared with var are hoisted to the top of their scope, meaning they can be used before they are declared in the code.
+            Reassignment: Variables declared with var can be reassigned and updated.
+            var x = 5;
+            if (true) {
+                var x = 10; // Same variable, not creating a new one
+                console.log(x); // Outputs 10
+            }
+            console.log(x); // Outputs 10
+        let:
+            Scope: Variables declared with let are block-scoped. They are only visible within the block (enclosed by curly braces) in which they are declared.
+            Hoisting: Like var, let is hoisted, but the variable is not initialized until the declaration statement is encountered.
+            Reassignment: Variables declared with let can be reassigned.
+            let y = 5;
+            if (true) {
+                let y = 10; // Different variable in a different scope
+                console.log(y); // Outputs 10
+            }
+            console.log(y); // Outputs 5
+        const:
+            Scope: Variables declared with const are also block-scoped.
+            Hoisting: const is hoisted, but like let, the variable is not initialized until the declaration statement is encountered.
+            Reassignment: Variables declared with const cannot be reassigned. However, they are not immutable; they just cannot be reassigned to a new value.
+            const z = 5;
+            // z = 10; // Error: Assignment to constant variable
+        Recommendations:
+        Use const by default when declaring variables. Use let when you need to reassign the variable.
+        Avoid using var in modern JavaScript, as it has some quirks and can lead to unintended behavior due to its function-scoping and hoisting characteristics.
+Q. What is Temproal dead zone?
+   -let and const are Temporal Dead Zone.
+   The Temporal Dead Zone (TDZ) is a concept in JavaScript associated with the use of variables declared with let and const.
+   It refers to the time between the start of a code block and the point where a variable is declared. 
+   During this temporal dead zone, attempting to access the variable results in a ReferenceError.
+    Here's how it works:
+    Declaration:When a variable is declared using let or const, the variable is hoisted to the top of its block scope.
+    Unlike variables declared with var, variables declared with let and const are not initialized at the time of hoisting. 
+    They remain in an uninitialized state during the temporal dead zone.
+    Temporal Dead Zone:
+    The period between entering the scope (start of the block) and encountering the actual declaration of the variable is called the temporal dead zone.
+    During this zone, any attempt to access the variable will result in a ReferenceError.
+    Initialization:
+    The variable is only initialized when the execution flow reaches the actual declaration statement.
+    Here's an example to illustrate the temporal dead zone:
+    console.log(x); // Throws ReferenceError: Cannot access 'x' before initialization
+    let x = 10;    // Variable declaration and initialization
+    console.log(x); // Outputs 10
+    In this example, the first console.log(x) statement throws an error because it's trying to access the variable x before it has been declared and initialized.
+    This is the temporal dead zone for the variable x. 
+    The error is resolved once the variable is declared and initialized later in the code.
+    Understanding the temporal dead zone is important for writing robust and error-free JavaScript code, especially when working with variables declared using let and const.
+
+    console.log(x); // Throws ReferenceError: Cannot access 'x' before initialization
+    var x = 10;    // Variable declaration and initialization
+    console.log(x); // Outputs 10
+Q. is it come under temporal dead zone?
+    For var declarations, the variable is hoisted to the top of its scope and initialized with undefined. 
+    Therefore, even though the console.log(x) statement appears before the var x = 10; 
+    declaration in the code, it won't throw a ReferenceError due to the temporal dead zone.
+    Here's how the code behaves:
+    console.log(x); // Outputs undefined (no error)
+    var x = 10;    // Variable declaration and initialization
+    console.log(x); // Outputs 10
+    In this case, the first console.log(x) outputs undefined because, during the initial logging, the variable x has been hoisted but not yet assigned a value. 
+    The second console.log(x) outputs 10 after the variable x is assigned the value 10.
+    The temporal dead zone issue is more relevant to let and const declarations, as they are hoisted without initialization and accessing them before the actual declaration results in a ReferenceError. 
+    In the case of var, the variable is hoisted and initialized with undefined, avoiding the temporal dead zone behavior.
+Q. what is initilize,declare and assigned?
+  In the context of programming and variables, the terms "initialize," "assigned," and "declared" have specific meanings:
+    Declared:
+        Definition: Declaring a variable means introducing it to the programming environment. 
+                    It's the act of telling the compiler or interpreter that a particular variable exists and may be used in the program.
+        Example:
+        var x; // x is declared
+        let y; // y is declared
+        const z = 5; // z is declared and initialized
+    Assigned:
+    Definition: Assigning a value to a variable means providing it with an initial value. 
+                This is done after the variable has been declared. The assignment operator (=) is used for this purpose.
+    Example:
+        var x; // x is declared
+        x = 10; // x is assigned the value 10
+        let y; // y is declared
+        y = "Hello"; // y is assigned the string "Hello"
+        const z = 5; // z is declared and initialized
+    Initialized:
+    Definition: Initializing a variable combines the declaration and assignment into a single step. 
+                It means declaring a variable and providing it with an initial value simultaneously.
+    Example:
+    var x = 10; // x is declared and initialized with the value 10
+    let y = "Hello"; // y is declared and initialized with the string "Hello"
+    const z = 5; // z is declared and initialized with the value 5
+    In summary:
+    Declaration: Introducing a variable to the program without assigning a value to it.
+    Assignment: Giving a variable a specific value after it has been declared.
+    Initialization: Combining the declaration and assignment into a single step, providing a variable with an initial value at the time of declaration.
+Q. Do you know media query in css? what it does?
+   - it makes page responsive.
+   - Media queries are a key feature in responsive web design, allowing styles to be applied based on the characteristics of the device or viewport. 
+   - They enable developers to create designs that adapt to different screen sizes, resolutions, and other media features. 
+   - Media queries are commonly used to create responsive and mobile-friendly websites.
+
+    The basic syntax of a media query looks like this:
+    @media media_type and (media_feature) {
+    /* CSS rules to be applied when the media query conditions are met */
+    }
+    media_type: Specifies the type of media, such as screen, print, all, etc.
+    media_feature: Specifies the specific characteristics or conditions, such as max-width, min-width, orientation, etc.
+
+        Here's an example of a simple media query that changes the background color when the viewport width is 600 pixels or less:
+        @media screen and (max-width: 600px) {
+        body {
+            background-color: lightblue;
+        }
+        }
+        In this example:
+        @media screen: This media query applies to devices with a screen.
+        and: Combines the media type and media features.
+        (max-width: 600px): This condition specifies that the styles within the media query will be applied when the viewport width is 600 pixels or less.
+        So, when the viewport width is 600 pixels or less, the background color of the body element will change to light blue.
+
+        Media queries allow developers to create flexible and adaptable layouts, ensuring a positive user experience across various devices and screen sizes. 
+        They are a crucial part of modern web design and development practices.
+
+Q. what is Hoisting?
+     Refer here: https://medium.com/swlh/hoisting-in-javascript-10729798a326
+
+Q. what screen sizes commonly used?
+        In web development, the most commonly used screen sizes are those associated with desktops, laptops, tablets, and smartphones.
+        However, it's crucial for web developers to design responsive layouts that can adapt to a wide range of screen sizes. 
+        Here are some commonly targeted screen sizes and device categories:
+        Desktops and Laptops:Common screen sizes range from 1366x768 pixels to 1920x1080 pixels and higher.
+        Tablets:
+            iPads: Various models with screen sizes ranging from 7.9 inches to 12.9 inches.
+            Android Tablets: Various sizes, with popular models ranging from 7 inches to 10 inches.
+        Smartphones:
+            iPhones: Varying sizes, including models with screens ranging from around 4.7 inches to 6.7 inches.
+            Android Phones: A wide range of sizes, from compact phones with screens around 4 inches to larger devices with screens exceeding 6 inches.
+        Responsive Design:
+        Web developers often target common breakpoints in responsive design, adjusting layouts for specific ranges of screen sizes.
+        Common breakpoints might include those for small devices (e.g., smartphones), medium devices (e.g., tablets), and large devices (e.g., desktops).
+        It's important to note that the landscape of devices and screen sizes is continually evolving.
+        Therefore, web developers should prioritize responsive design principles and use flexible layouts that can adapt to various screen dimensions. 
+        Media queries in CSS are a powerful tool for implementing responsive designs, allowing developers to apply styles based on specific conditions such as screen width, height, or device orientation.
+Q. difference between margin and padding?
+     padding: content and border is called padding.
+     margin: outside the boarder is called margin.
+Q. what is callback function?
+     callback is the function which is passed into another function.
+     -what is the use of it and when the callback function is used?
+       In JavaScript, a callback function is a function that is passed as an argument to another function and is executed after the completion of some operation. 
+       The primary use of callback functions is to handle asynchronous operations, events, and ensure that certain code runs only after other code has finished execution.
+     -Here are some key points about callback functions:
+        Asynchronous Operations:
+        Callbacks are often used to manage asynchronous operations, such as reading a file, making an HTTP request, or handling user input. 
+        In these cases, the callback is executed once the asynchronous operation is complete.
+        Event Handling:
+        Callbacks are commonly used to handle events in web development. 
+        For example, a callback function can be registered to execute when a button is clicked or when a timer expires.
+        Higher-Order Functions:
+        Callbacks are frequently used with higher-order functions. 
+        These are functions that take other functions as arguments or return functions as results.
+        Avoiding Callback Hell:
+        In situations where multiple asynchronous operations need to be performed sequentially,
+         callback functions can lead to a phenomenon known as "callback hell" or "pyramid of doom," where code becomes deeply nested and harder to read.
+         To mitigate this, developers often use techniques like Promises or async/await.
+        Example:
+        // Example of a callback function
+        function fetchData(callback) {
+        // Simulating an asynchronous operation (e.g., fetching data from an API)
+        setTimeout(function () {
+            const data = 'This is the fetched data';
+            // Invoke the callback with the data
+            callback(data);
+        }, 1000);
+        }
+        // Callback function to handle the fetched data
+        function processData(data) {
+        console.log('Processing data:', data);
+        }
+        // Using the fetchData function with a callback
+        fetchData(processData);
+        In this example, fetchData is a function that simulates an asynchronous operation. 
+        It takes a callback function (processData) as an argument and invokes it once the asynchronous operation is complete.
+        Callbacks are essential in scenarios where you want to execute code after a certain operation has finished, especially in cases where the operation may take some time to complete. 
+        They provide a way to manage flow control in asynchronous and event-driven programming in JavaScript.
+Q. what is promises?
+    -promise is nothing it deals with the asynchronous tasks.
+     we use promise to make a function asynchronous. promises parameter will take resolve and reject and .then and .catch 
+Q. Event loop?
+    -it will check the global exceution context is empty or not in call stack and send the information after completing the task from microtask queue and callback queue.
+Q. do you know css pre processor?
+    -SASS- by which make the use of variable and roots
+    - can sass is directly understand, no we have convert this into css
+Q. what is AJAX?
+    AJAX (Asynchronous JavaScript and XML) is a technique used in web development to create asynchronous (non-blocking) communication between the client and the server. 
+    It allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. 
+    This enables a smoother and more dynamic user experience.
+    The primary technologies used in AJAX are JavaScript, XMLHttpRequest (XHR), and a data format such as XML or JSON (though JSON is more commonly used due to its simplicity and readability).
+    Relationship with Javascript:
+    AJAX is closely related to JavaScript because it relies on JavaScript to make asynchronous requests and handle the results. 
+    JavaScript is used to interact with the browser, manipulate the DOM, and update the content of web pages dynamically based on the data received from the server. 
+    AJAX enables developers to create more interactive and responsive web applications without the need for full-page reloads. 
+    Modern web development often leverages AJAX to build dynamic and seamless user 
+Q. tell the git commands?
+     git add .
+     git commit -m "message"
+     git push
+     git pull
+     git stash
+Q. difference between Null and undefined?
+    Null - Nothing is stored
+    Undefined- if we declare the variable initially, it will give undefined.and later we assigned the value to that variable
+Q. New feature in ES6?
+    -arrow function
+    -let and const
+    -spread and rest
+    -destructuring
+    -template literials
+Q. difference between normal function and arrow function?
+    -arrow function is also know as aynomous function because we don't give any name to arrow function and make the user to write in shoter way.
+      To get arrow function we need to help out flat arrow
+    -normal function is the function we need write in traditional way i.e., function name(){} like functional declarative,function statement and function expression
+Q. Is arrow function is get hoisted or not?
+     -No, it will not get hoisting because of that ReferenceError and typeerror is comming into the picture.
+Q. what is closure?
+     -A closure in javascript is a function that 'remembers' its lexical scope even when it's executed outside that scope.
+       In simple terms,a closure allows a function to access variables from its outer(enclosing) function even afte that outer function has finished executing.
+       example:
+       ========
+       function outerFunction(){
+        const outervariable="Iam from outer"
+        function innerFunction(){
+            console.log(outervariable) //inner function can access outervariable
+        }
+        return innerFunction;
+       }
+       const closure=outerFunction()
+       closure()
+     -It is nothing but,accessing the variable from parent to childen like it creates connection with the child block will create connection with parent block and 
+       it can access the variables to th echild element
+    - first it will check the block and get the variable if it is not present in that block, then it will go outer block, if it is not present then it will go to global block.
+Q. What is "this"?
+    -this is refer to window.with this keyword we can access the output from the window.
+Q. what is reactjs?
+    -react js is library. which build on top of javascript.it makes ui easily.
+    -the features of react js are components for code reuseable is acheived,
+    -react-native is for mobile applications.
+Q. what is JSX?
+    -it combination of html and js
+     - can browser understand javascript directly?then how it will understand
+        No, with the help babel that is one of the transpiller, this will convert jsx into normal javascript code.
+     - Do you know about webpack?
+Q. Life cycle methods in react?
+     here life cycle methods are come under class componets:
+       mounting,updating and unmouting
+       mounting- when component are initilize the first time
+       updating- After that component is updated or when we try to updated state or props
+       unmoting- it is end of the component cycle.ready to give the result 
+     -can we acheive this functional components:
+       yes, by using hooks we can acheive.
+     - which hook is used?
+        useEffect
+     - how it will behave?
+       useEffect with empty array is giving the mouting and unmouting
+Q. what is ref?
+    it is nothing but reference in the react. it is stored in DOM  element from there we can take and use it. we can in out of focus.
+Q. what is controlled component and uncontrolled component?
+   Controlled components and uncontrolled components are terms often used in the context of form elements in React. 
+   They refer to how the state of a form element is managed within a React component.
+
+        Controlled Components:
+        A controlled component is a React component whose form elements (like input, textarea, or select) are fully controlled by React state. 
+        The value of the form element is controlled by the state of the component, and any changes to the value are handled through React's state management mechanisms.
+
+        Here's a simple example of a controlled component using an input element:
+        import React, { useState } from 'react';
+
+        const ControlledComponent = () => {
+        const [inputValue, setInputValue] = useState('');
+
+        const handleChange = (event) => {
+            setInputValue(event.target.value);
+        };
+
+        return (
+            <input
+            type="text"
+            value={inputValue}
+            onChange={handleChange}
+            />
+        );
+        };
+        In this example, the inputValue state is used to control the value of the input element. 
+        The handleChange function updates the state with the new value whenever the input changes.
+
+        Uncontrolled Components:
+        An uncontrolled component is a React component where the form elements maintain their own state.
+         In this case, React doesn't control the value of the form element through its state. 
+         Instead, you rely on the DOM to handle the form element's state.
+
+        Here's an example of an uncontrolled component:
+        import React, { useRef } from 'react';
+        const UncontrolledComponent = () => {
+        const inputRef = useRef(null);
+
+        const handleClick = () => {
+            console.log('Input Value:', inputRef.current.value);
+        };
+
+        return (
+            <div>
+            <input type="text" ref={inputRef} />
+            <button onClick={handleClick}>Get Input Value</button>
+            </div>
+        );
+        };
+        In this example, the inputRef is used to reference the input element, and the input value is retrieved directly from the DOM using inputRef.
+        current.value. React doesn't manage the input value; it's handled by the DOM.
+
+        When to Use Controlled vs. Uncontrolled Components:
+        Controlled Components:
+        Use when you need to have full control over the form element's state.
+        Useful for implementing features like form validation, dynamic input behavior, or integrating with React's overall state management.
+
+        Uncontrolled Components:
+        Use when you want to integrate with non-React code or libraries that manage the state of form elements themselves.
+        Can be simpler in certain scenarios where you don't need fine-grained control over the form element's state.
+        Both controlled and uncontrolled components have their use cases, and the choice between them depends on the requirements and complexity of your application. 
+        Controlled components are often preferred in React applications because they align well with React's declarative and state-driven paradigm.
+Q.  Higher order function?
+     - higher order functions are function which takes the callback function as a argument 
+       map,filer,reduce,foreach,sort and find
+       
+        Higher-order functions are functions that take one or more functions as arguments or return a function as their result. 
+        These functions are a fundamental concept in functional programming and enable more flexible and expressive code.
+
+        Here are common higher-order functions in JavaScript and examples of how and where they are used:
+
+        map:
+        Purpose: Applies a function to each element of an array and returns a new array with the results.
+        Example:
+        const numbers = [1, 2, 3, 4, 5];
+        const squaredNumbers = numbers.map(function (num) {
+        return num * num;
+        });
+        // Result: [1, 4, 9, 16, 25]
+
+        filter:
+        Purpose: Returns a new array containing elements that satisfy a given condition.
+        Example:
+        const numbers = [1, 2, 3, 4, 5];
+        const evenNumbers = numbers.filter(function (num) {
+        return num % 2 === 0;
+        });
+        // Result: [2, 4]
+
+        reduce:
+        Purpose: Reduces an array to a single value by applying a function to each element and accumulating the results.
+        Example:
+        const numbers = [1, 2, 3, 4, 5];
+        const sum = numbers.reduce(function (acc, num) {
+        return acc + num;
+        }, 0);
+        // Result: 15
+
+        forEach:
+        Purpose: Executes a provided function once for each array element.
+        Example:
+        const numbers = [1, 2, 3, 4, 5];
+        numbers.forEach(function (num) {
+        console.log(num);
+        });
+        // Output: 1, 2, 3, 4, 5
+
+        sort:
+        Purpose: Sorts the elements of an array.
+        Example:
+        const fruits = ['banana', 'apple', 'orange', 'grape'];
+        const sortedFruits = fruits.sort();
+        // Result: ['apple', 'banana', 'grape', 'orange']
+
+        find:
+        Purpose: Returns the first element in an array that satisfies a given condition.
+        Example:
+        const numbers = [1, 2, 3, 4, 5];
+        const evenNumber = numbers.find(function (num) {
+        return num % 2 === 0;
+        });
+        // Result: 2        
+        
+        - Difference between foreach and map?
+        Return Value:
+        map returns a new array with the results of applying a function to each element.
+        forEach doesn't return anything; it's used for its side effects.
+
+        Transformation vs. Side Effects:
+        map is focused on transforming each element of the array.
+        forEach is focused on performing an action (such as logging or updating variables) for each element without creating a new array.
+
+        Chaining:
+        map can be easily chained with other array methods because it returns a new array.
+        forEach does not produce a new array, so chaining with other array methods is less common.
+        In summary, use map when you want to transform each element of an array and create a new array with the results. 
+        Use forEach when you want to iterate over the elements of an array and perform actions for their side effects.
+  
+        - difference between map and reduce?
+        Transformation vs. Aggregation:
+        map is used for transforming each element of an array.
+        reduce is used for aggregating elements into a single value.
+
+        Return Value:
+        map returns a new array with the same number of elements as the original array, but with each element transformed.
+        reduce returns a single value, not an array.
+
+        Use Cases:
+        Use map when you want to create a new array by transforming each element in the original array.
+        Use reduce when you want to compute a single value from the elements in an array, such as sum, average, or any other form of aggregation.
+
+        Accumulator:
+        reduce takes an accumulator as a parameter, which accumulates the result across each iteration.
+        map does not have an explicit accumulator; it focuses on transforming each element independently.
+
+        Examples:
+        map: Doubling each element in an array.
+        reduce: Calculating the sum of all elements in an array.
+        In summary, map is used for transforming elements, creating a new array with the same length, 
+        while reduce is used for aggregating elements into a single value. Both functions are powerful tools that,
+        when used appropriately, can simplify and make code more expressive when working with arrays.
+
+Q. what is difference between props and state?
+
+        In React, both props and state are used to manage data within a component, but they serve different purposes and have distinct characteristics.
+        Props:
+        Purpose:
+        props (short for properties) are used to pass data from a parent component to a child component.
+        They are immutable and are set by the parent component.
+        Mutability:
+        Immutable: Once set, props cannot be changed by the child component. They are read-only.
+        Any changes to the data should be managed by the parent component.
+        Example:
+        // ParentComponent.jsx
+        import React from 'react';
+        import ChildComponent from './ChildComponent';
+
+        const ParentComponent = () => {
+        const data = 'Hello from parent!';
+        return <ChildComponent data={data} />;
+        };
+
+        // ChildComponent.jsx
+        import React from 'react';
+
+        const ChildComponent = (props) => {
+        return <div>{props.data}</div>;
+        };
+        State:
+        Purpose:
+        state is used to manage internal component state, and it belongs to the component itself.
+        It allows a component to keep track of and re-render with dynamic data.
+        Mutability:
+        Mutable: The component can change its own state using the setState method.
+        Changes to state trigger a re-render of the component.
+        Example:
+        // CounterComponent.jsx
+        import React, { useState } from 'react';
+        const CounterComponent = () => {
+        const [count, setCount] = useState(0);
+        const increment = () => {
+            setCount(count + 1);
+        };
+
+        return (
+            <div>
+            <p>Count: {count}</p>
+            <button onClick={increment}>Increment</button>
+            </div>
+        );
+        };
+
+        Key Differences:
+        Source of Data:
+        props receive data from a parent component and are immutable.
+        state manages internal component data and is mutable.
+        Ownership:
+        props are owned by the parent component and passed down to child components.
+        state is owned and managed by the component itself.
+        Mutability:
+        props are immutable, and changes must be managed by the parent component.
+        state is mutable, and changes trigger re-renders of the component.
+        Usage:
+        props are used for communication between components, passing data down the component tree.
+        state is used for managing dynamic data within a component.
+        Default Values:
+        props can have default values set in the parent component.
+        state can be initialized with default values in the component itself.
+        In summary, while both props and state deal with data in React components, they have different purposes and usage patterns. 
+        Props are for passing data from parent to child components, while state is for managing internal dynamic data within a component. 
+        Understanding these differences is crucial for effective React component design.
+
+Q. What is routing in react?
+    It is basically navigate to get one component to another component.
+Q. what is server-side rendering?
+Q. Do you know how to optimize the performance of the web application?
+    -Minimize HTTP Requests: we can reduce the size of images. we can modify the meta tags. and nested components are avoided.
+Q. what is flex box?
+     - it is use for styling the component. 
+     we can arrange the element in particular manner and also it is having a argument like display:flex,flex direaction,align-center,flex wrap
+     - by using this page will be responsive
+Q. what is difference between v-dom and dom?
+Q. what is getter and setter?
+    In JavaScript, getters and setters are special methods associated with object properties that allow you to control access to those properties. 
+    They are used to create computed properties, validate and sanitize values, or trigger actions when a property is accessed or modified.
+
+        Getter:
+        ======
+        A getter is a method that gets the value of a property. It is defined using the get keyword followed by the property name.
+
+        Example:
+        const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`;
+        },
+        };
+
+        console.log(person.fullName); // Output: 'John Doe'
+        In this example, fullName is a getter that computes the full name by concatenating the firstName and lastName properties.
+
+        Setter:
+        ======
+        A setter is a method that sets the value of a property. It is defined using the set keyword followed by the property name.
+
+        Example:
+        const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        set fullName(name) {
+            const [first, last] = name.split(' ');
+            this.firstName = first;
+            this.lastName = last;
+        },
+        };
+
+        person.fullName = 'Jane Smith';
+
+        console.log(person.firstName); // Output: 'Jane'
+        console.log(person.lastName);  // Output: 'Smith'
+        In this example, fullName is a setter that allows you to set the firstName and lastName properties by providing a full name.
+
+        Usage:
+        Encapsulation:
+
+        Getters and setters help encapsulate the internal details of an object. 
+        Users of the object interact with the getter and setter methods instead of directly accessing properties.
+        Computed Properties:
+
+        Getters allow you to compute a value dynamically based on other properties.
+        Validation and Sanitization:
+
+        Setters provide an opportunity to validate and sanitize values before assigning them to properties.
+        Observable Properties:
+
+        You can use getters and setters to implement observers for property changes.
+        Backward Compatibility:
+
+        Getters and setters provide a way to introduce computed or validated properties without breaking existing code that expects regular property access.
+        Example combining Getter and Setter:
+        class Circle {
+        constructor(radius) {
+            this._radius = radius; // Using an underscore to indicate it's a private property
+        }
+
+        get diameter() {
+            return this._radius * 2;
+        }
+
+        set diameter(diameter) {
+            this._radius = diameter / 2;
+        }
+
+        get area() {
+            return Math.PI * this._radius ** 2;
+        }
+        }
+
+        const myCircle = new Circle(5);
+
+        console.log(myCircle.diameter); // Output: 10
+        console.log(myCircle.area);     // Output: 78.53981633974483
+
+        myCircle.diameter = 8;
+        console.log(myCircle.area);     // Output: 50.26548245743669
+        In this example, the Circle class uses a getter for diameter and a setter for diameter to maintain consistency between the radius and diameter of the circle. 
+        It also has a getter for area to compute the circle's area.
+        Getters and setters provide a way to enhance the behavior of properties and add more control and logic around property access and modification.
+Q. what is prototype?
+    In javascript, every object has a prototype and in javscript will achieve inheritance through prototype.
+    If i create a object there will a prototype property in that object and that will take values from the top level.
+    for example,
+     if i have a function, i create a object now whatever details available in prototype function,this child can access those properties
+    basically in javascript there is prototype inheritance 
+Q. what is inheritance?
+    Inheritance is a fundamental concept in object-oriented programming that allows you to create new classes(subclasses or child classes) based on exisiting classes(superclasses or parent classes).
+    In javascript, inheritance is implemented using prototypes and constructor functions.
+Q. what is memorization in javascript?
+    basically,memorization uses the concept of closures. and we can memorize the value like it will check first.
+    for example, if i'm doing a api call it is kind pof get request it will be repeatable. 
+    for that i will do is i cache this values so next time when i call the api and get the value for that i will compare the previosu then i will use from cache instead of again calling the api's
+    for this we have some server's like redis
+Q. call,apply,bind?
+   In ES6 and beyond, call, apply, and bind continue to exist and work just as they did in earlier versions of JavaScript. 
+   These methods are part of the language and are used for manipulating the this value of a function.
+
+    Here's a brief overview of each:
+    call method:
+    ===========
+    The call method is used to invoke a function with a specified this value and arguments provided individually.
+    function sayHello() {
+    console.log(`Hello, ${this.name}!`);
+    }
+
+    const person = { name: 'John' };
+
+    sayHello.call(person); // Outputs: Hello, John!
+
+    apply method:
+    ============
+    The apply method is similar to call, but it takes arguments as an array.
+    function sayHello(greeting) {
+    console.log(`${greeting}, ${this.name}!`);
+    }
+
+    const person = { name: 'John' };
+
+    sayHello.apply(person, ['Hola']); // Outputs: Hola, John!
+
+    bind method:
+    ===========
+    The bind method is used to create a new function with a specified this value and, optionally, initial arguments.
+    function sayHello(greeting) {
+    console.log(`${greeting}, ${this.name}!`);
+    }
+
+    const person = { name: 'John' };
+
+    const sayHelloToJohn = sayHello.bind(person, 'Bonjour');
+    sayHelloToJohn(); // Outputs: Bonjour, John!
+    These methods are not exclusive to ES6; they were available in previous versions of JavaScript as well. 
+    However, arrow functions introduced in ES6 have a different behavior for this, as they capture the this value lexically and do not have their own this binding. 
+    This can sometimes make them more predictable and avoid the need for bind in certain scenarios.
+
+    const sayHello = () => {
+    console.log(`Hello, ${this.name}!`); // `this` in arrow functions is lexically scoped
+    };
+
+    const person = { name: 'John' };
+
+    sayHello.call(person); // Outputs: Hello, undefined! (not what you might expect)
+    In the case of arrow functions, using call or apply doesn't change the behavior of this because arrow functions don't have their own this context.
+
+
+Q. hoisting?
+    https://blogs.ayushdev.com/hoisting-in-javascript-understanding-the-mechanism-and-best-practices
+    https://medium.com/@livajorge7/hoisting-in-javascript-understanding-how-it-works-d7e3be67c238
+Q. Event bubbling?
+   https://medium.com/stackanatomy/understanding-event-bubbling-and-capturing-8240192710e3
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+

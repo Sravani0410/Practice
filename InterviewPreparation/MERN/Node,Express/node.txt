@@ -1,0 +1,32 @@
+Introduction Node.js:
+=====================
+1.Node.js is a very powerful javascript-based platform
+2.Node.js is a open-source server side  runtime environment.example: client side app and server side app here node.js is used as server side applications. it was free of cost(open source).
+3.Node.js is an open source server environment
+4.Node.js allows you to run javascript on the server.It is also called as Server Side platform
+5. It is free of cost. It will run various platform(windows,Linux,windows)
+6.which is built on Google chrome's javascript v8 Engine.
+7.It provides an Event driven mechanism,non-blocking(asynchronous) I/O(input an output) platform module and ross platform runtime environment for building highly scalable server-side applications using javascript.
+
+uses in node.js:
+================
+It is used to develop I/O intensive web application like:
+1.video chat application
+2.audio chat application
+3.single page application
+4.network application
+5.RESTFul API server network
+6.Backend applications/server-side applications
+
+Why Node.js?
+===========
+Because in backend java,python,dot net still why we need node.js
+1.Node.js can generate dynamic page content.
+2.Node.js can dynamic create,open,read,write,delete and close files on the server
+3.Node.js can collect form data
+4.Node.js can add,delete,modify data in your database
+
+uses of node.js:
+================
+
+

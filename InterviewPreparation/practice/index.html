@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject"></input><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="button" value="Submit" onclick="submitForm()"></input>
+    </form>
+
+    <script>
+        function submitForm() {
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            // You can perform further actions with subject and message, such as sending an email
+            console.log('Subject:', subject);
+            console.log('Message:', message);
+        }
+    </script>
+</body>
+</html>
+

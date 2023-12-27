@@ -1,0 +1,9 @@
+1. Review functionvsclass.js
+     concepts-function Statement
+              function expression
+              function declaration
+              Anonymous function
+              named functional expression
+              difference between paraments and aruguments
+              first class function
+              arrow functions

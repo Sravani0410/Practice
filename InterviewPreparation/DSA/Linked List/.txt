@@ -1,0 +1,128 @@
+Certainly! Linked lists are a fundamental data structure frequently discussed in technical interviews. 
+A linked list is a collection of nodes where each node contains a value and a reference to the next node in the sequence. 
+Here's a simple implementation of a singly linked list in JavaScript:
+
+
+class Node {
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  // Insert at the beginning of the list
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+  }
+
+  // Insert at the end of the list
+  insertLast(data) {
+    const newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+
+    current.next = newNode;
+  }
+
+  // Insert at a specific index
+  insertAt(data, index) {
+    if (index === 0) {
+      this.insertFirst(data);
+      return;
+    }
+
+    const newNode = new Node(data);
+    let current = this.head;
+    let count = 0;
+    let previous = null;
+
+    while (count < index && current) {
+      previous = current;
+      current = current.next;
+      count++;
+    }
+
+    if (!current) {
+      // If index is out of bounds, insert at the end
+      previous.next = newNode;
+    } else {
+      newNode.next = current;
+      previous.next = newNode;
+    }
+  }
+
+  // Get at index
+  getAt(index) {
+    let current = this.head;
+    let count = 0;
+
+    while (current) {
+      if (count == index) {
+        console.log(current.data);
+      }
+      count++;
+      current = current.next;
+    }
+
+    return null;
+  }
+
+  // Remove at index
+  removeAt(index) {
+    if (!this.head) {
+      return;
+    }
+
+    let current = this.head;
+    let count = 0;
+    let previous = null;
+
+    if (index === 0) {
+      this.head = current.next;
+    } else {
+      while (count < index && current) {
+        previous = current;
+        current = current.next;
+        count++;
+      }
+
+      if (!current) {
+        return;
+      }
+
+      previous.next = current.next;
+    }
+  }
+
+  // Print the linked list
+  printList() {
+    let current = this.head;
+    while (current) {
+      console.log(current.data);
+      current = current.next;
+    }
+  }
+}
+
+// Example usage:
+const ll = new LinkedList();
+ll.insertFirst(1);
+ll.insertLast(2);
+ll.insertLast(3);
+ll.insertAt(4, 1);
+ll.printList(); // Output: 1, 4, 2, 3
+
+ll.removeAt(2);
+ll.printList(); // Output: 1, 4, 3

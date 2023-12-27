@@ -1,0 +1,20 @@
+- [ ]  ****Remove Duplicates from Sorted Array****
+- [ ]  **Rotate Array**
+- [ ]  Given an array, does an array ****Contains Duplicate****
+- [ ]  Given a **non-empty** array of integers `nums`, every element appears *twice* except for one. Find that single one.
+- [ ]  The intersection of two arrays
+- [ ]  Difference of two arrays
+- [ ]  Given an array of numbers `[1,2,3...]` you need to add another number `n` to it
+for example `[1,2,3]` + `12` = `[1,3,5]`
+- [ ]  Given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
+- [ ]  Determine if a `9 x 9`
+ Sudoku board is valid.
+- [ ]  You are given an `n x n`
+ 2D `matrix`
+ representing an image, rotate the image by **90**
+ degrees
+- [ ]  Flatten an array
+- [ ]  Given an array of strings `strs`, group **the anagrams** together. You can return the answer in **any order**.
+- [ ]  ****Longest Substring Without Repeating Characters****
+- [ ]  ****Longest Palindromic Substring****
+- [ ]  **Longest increasing subsequence**

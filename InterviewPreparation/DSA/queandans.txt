@@ -1,0 +1,371 @@
+
+
+Arrays:
+======
+1.Find the maximum product of two integers in an array:
+
+function maxProduct(nums) {
+    nums.sort((a, b) => a - b);
+    return Math.max(nums[0] * nums[1], nums[nums.length - 2] * nums[nums.length - 1]);
+}
+
+Implement an algorithm to rotate an array:
+
+javascript
+Copy code
+function rotateArray(nums, k) {
+    k = k % nums.length;
+    nums.unshift(...nums.splice(-k));
+}
+Given an array of integers, find the subarray with the maximum sum:
+
+javascript
+Copy code
+function maxSubarraySum(nums) {
+    let maxSum = Number.NEGATIVE_INFINITY;
+    let currentSum = 0;
+
+    for (const num of nums) {
+        currentSum = Math.max(num, currentSum + num);
+        maxSum = Math.max(maxSum, currentSum);
+    }
+
+    return maxSum;
+}
+Linked Lists:
+Reverse a linked list:
+
+javascript
+Copy code
+class ListNode {
+    constructor(val, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
+
+function reverseLinkedList(head) {
+    let prev = null;
+    let current = head;
+
+    while (current) {
+        const nextNode = current.next;
+        current.next = prev;
+        prev = current;
+        current = nextNode;
+    }
+
+    return prev;
+}
+Detect a cycle in a linked list:
+
+javascript
+Copy code
+function hasCycle(head) {
+    let slow = head;
+    let fast = head;
+
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+
+        if (slow === fast) {
+            return true;
+        }
+    }
+
+    return false;
+}
+Merge two sorted linked lists into a single sorted list:
+
+javascript
+Copy code
+function mergeSortedLists(l1, l2) {
+    const dummy = new ListNode();
+    let current = dummy;
+
+    while (l1 && l2) {
+        if (l1.val < l2.val) {
+            current.next = l1;
+            l1 = l1.next;
+        } else {
+            current.next = l2;
+            l2 = l2.next;
+        }
+
+        current = current.next;
+    }
+
+    current.next = l1 || l2;
+
+    return dummy.next;
+}
+Trees:
+Find the height of a binary tree:
+
+javascript
+Copy code
+class TreeNode {
+    constructor(val = 0, left = null, right = null) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+function heightOfTree(root) {
+    if (!root) {
+        return 0;
+    }
+    return 1 + Math.max(heightOfTree(root.left), heightOfTree(root.right));
+}
+Check if a binary tree is balanced:
+
+javascript
+Copy code
+function isBalanced(root) {
+    function height(node) {
+        if (!node) {
+            return 0;
+        }
+        return 1 + Math.max(height(node.left), height(node.right));
+    }
+
+    if (!root) {
+        return true;
+    }
+
+    const leftHeight = height(root.left);
+    const rightHeight = height(root.right);
+
+    return Math.abs(leftHeight - rightHeight) <= 1 && isBalanced(root.left) && isBalanced(root.right);
+}
+Given a binary tree, find its maximum depth or maximum path sum:
+
+javascript
+Copy code
+function maxDepth(root) {
+    if (!root) {
+        return 0;
+    }
+    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+}
+Graphs:
+Implement Depth-First Search (DFS) and Breadth-First Search (BFS) for a graph:
+
+javascript
+Copy code
+class Graph {
+    constructor() {
+        this.graph = {};
+    }
+
+    addEdge(u, v) {
+        if (!this.graph[u]) {
+            this.graph[u] = [];
+        }
+        this.graph[u].push(v);
+    }
+
+    dfs(node, visited = new Set()) {
+        if (!visited.has(node)) {
+            console.log(node);
+            visited.add(node);
+            for (const neighbor of this.graph[node]) {
+                this.dfs(neighbor, visited);
+            }
+        }
+    }
+
+    bfs(start) {
+        const visited = new Set();
+        const queue = [start];
+
+        while (queue.length > 0) {
+            const node = queue.shift();
+            if (!visited.has(node)) {
+                console.log(node);
+                visited.add(node);
+                queue.push(...this.graph[node]);
+            }
+        }
+    }
+}
+Find the shortest path in an unweighted graph:
+
+javascript
+Copy code
+function shortestPath(graph, start, end) {
+    const visited = new Set();
+    const queue = [[start]];
+
+    while (queue.length > 0) {
+        const path = queue.shift();
+        const node = path[path.length - 1];
+
+        if (node === end) {
+            return path;
+        }
+
+        if (!visited.has(node)) {
+            visited.add(node);
+            for (const neighbor of graph[node]) {
+                queue.push([...path, neighbor]);
+            }
+        }
+    }
+
+    return null;
+}
+Detect cycles in a directed or undirected graph:
+
+javascript
+Copy code
+function hasCycleDirected(graph) {
+    const visited = new Set();
+    const stack = new Set();
+
+    function dfs(node) {
+        visited.add(node);
+        stack.add(node);
+
+        for (const neighbor of graph[node]) {
+            if (!visited.has(neighbor)) {
+                if (dfs(neighbor)) {
+                    return true;
+                }
+            } else if (stack.has(neighbor)) {
+                return true;
+            }
+        }
+
+        stack.delete(node);
+        return false;
+    }
+
+    for (const node in graph) {
+        if (!visited.has(node)) {
+            if (dfs(node)) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+Stacks:
+Implement a stack using arrays/linked list:
+
+javascript
+Copy code
+class Stack {
+    constructor() {
+        this.items = [];
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    push(item) {
+        this.items.push(item);
+    }
+
+    pop() {
+        if (!this.isEmpty()) {
+            return this.items.pop();
+        }
+    }
+
+    peek() {
+        if (!this.isEmpty()) {
+            return this.items[this.items.length - 1];
+        }
+    }
+
+    size() {
+        return this.items.length;
+    }
+}
+Evaluate a postfix expression using a stack:
+
+javascript
+Copy code
+function evaluatePostfix(expression) {
+    const stack = [];
+
+    for (const char of expression) {
+        if (!isNaN(char)) {
+            stack.push(parseInt(char));
+        } else {
+            const operand2 = stack.pop();
+            const operand1 = stack.pop();
+
+            switch (char) {
+                case '+':
+                    stack.push(operand1 + operand2);
+                    break;
+                case '-':
+                    stack.push(operand1 - operand2);
+                    break;
+                case '*':
+                    stack.push(operand1 * operand2);
+                    break;
+                case '/':
+                    stack.push(operand1 / operand2);
+                    break;
+            }
+        }
+    }
+
+    return stack.pop();
+}
+Implement a function to sort a stack:
+
+javascript
+Copy code
+function sortStack(stack) {
+    const tempStack = [];
+
+    while (stack.length > 0) {
+        const temp = stack.pop();
+
+        while (tempStack.length > 0 && tempStack[tempStack.length - 1] > temp) {
+            stack.push(tempStack.pop());
+        }
+
+        tempStack.push(temp);
+    }
+
+    while (tempStack.length > 0) {
+        stack.push(tempStack.pop());
+    }
+}
+Queues:
+Implement a queue using stacks:
+javascript
+Copy code
+class MyQueue {
+    constructor() {
+        this.stack1 = [];
+        this.stack2 = [];
+    }
+
+    enqueue(item) {
+        this.stack1.push(item);
+    }
+
+    dequeue() {
+        if (this.stack2.length === 0) {
+            while (this.stack1.length > 0) {
+                this.stack2.push(this.stack1.pop());
+            }
+        }
+
+        return this.stack2.pop();
+    }
+}
+
+
+
+

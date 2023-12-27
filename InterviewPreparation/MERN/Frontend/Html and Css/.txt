@@ -1,0 +1,156 @@
+HTML:
+=====
+- [ ]  How do you add CSS to an HTML webpage?
+- [ ]  What does CSS stand for?
+- [ ]  What does HTML stand for?
+- [ ]  What are the features of HTML5?
+- [ ]  What are the different types of storage in HTML5?
+- [ ]  What do the following mean in html 
+`<section>`
+`<article>`
+`<footer>`
+`<nav>`
+`<aside>`
+- [ ]  What are forms in HTML?
+- [ ]  What are event listeners in HTML?
+- [ ]  what is onload event?
+- [ ]  What is scroll event?
+- [ ]  How do you use Geo Location API?
+- [ ]  How do you know if a user is offline or not? What API does the browser provide for that?
+- [ ]  How do you use Video and Audio tags?
+
+CSS:
+====
+- [ ]  What are CSS selectors?
+- [ ]  What are CSS variables?
+- [ ]  What is the difference between position absolute and relative?
+    - [ ]  Create a search bar with CSS
+- [ ]  What is Box Model?
+- [ ]  What is a flex-box?
+    - [ ]  What does justify-content, justifyItems, justifySelf mean?
+    - [ ]  What do AlignItems, AlignContent, and AlignSelf mean?
+- [ ]  What are grids?
+- [ ]  What are the differences between Flex and Grids?
+- [ ]  What is specificity, and how do you calculate it?
+- [ ]  What are media queries?
+- [ ]  What is the difference between min-width and max-width in media queries?
+- [ ]  What are animation and keyframe
+
+
+- [ ]  How do you build an infinite scrolling page?
+- [ ]  How to build a page like imgur or pinterest?
+- [ ]  What are SVGs?
+- [ ]  How do you animate SVGs
+
+
+
+
+
+When preparing for a front-end interview, 
+it's essential to have a solid understanding of HTML and CSS. Here's a list of topics you should cover:
+
+HTML Topics:
+
+1.HTML Semantics:
+   - Proper use of semantic HTML elements (e.g., <header>, <nav>, <main>, <footer>).
+
+2.HTML Forms:
+   - Form structure and attributes.
+   - Input types (text, password, radio, checkbox, etc.).
+   - Form validation and attributes (required, pattern).
+
+3.HTML5 Features:
+   -  New elements (e.g., <article>, <section>, <figure>).
+   -  Multimedia elements (<audio>, <video>).
+   -  Geolocation and local storage.
+
+4.HTML Accessibility:
+    - Use of ARIA roles and attributes.
+    - Creating accessible forms.
+
+5.Responsive Web Design:
+   - Meta viewport tag.
+   - Media queries for different screen sizes.
+   - Responsive images (srcset, sizes).
+
+6.SEO Best Practices:
+Proper use of headings (h1, h2, etc.).
+Image alt attributes.
+Meta tags (title, description).
+
+7.HTML Templates:
+Template tags and <slot>.
+
+CSS Topics:
+===========
+1.CSS Box Model:
+Margin, padding, border.
+Understanding of box-sizing property.
+
+2.CSS Layout:
+Display property (block, inline, inline-block).
+Positioning (relative, absolute, fixed).
+Flexbox and Grid layouts.
+
+3.CSS Selectors:
+Type, class, ID selectors.
+Attribute selectors.
+Pseudo-classes and pseudo-elements.
+
+4.CSS Specificity and Cascade:
+Understanding specificity.
+Importance of the order of styles in the stylesheet.
+
+5.Responsive Design:
+Media queries.
+Fluid grids and responsive images.
+Mobile-first vs. desktop-first approaches.
+
+6.CSS Transitions and Animations:
+Transition properties (transition, transition-property, transition-duration, etc.).
+Keyframe animations.
+
+7.CSS Flexbox:
+Basics of flex container and flex items.
+Flex properties (flex-grow, flex-shrink, flex-basis).
+
+8.CSS Grid:
+Basics of grid container and grid items.
+Grid properties (grid-template-rows, grid-template-columns).
+
+9.CSS Variables:
+Declaration and usage of CSS variables.
+
+10.CSS Preprocessors (e.g., Sass, Less):
+Basic understanding of variables, mixins, and nesting.
+
+11.CSS Frameworks:
+Familiarity with popular frameworks (Bootstrap, Bulma, Tailwind CSS).
+
+12.CSS Architecture and Methodologies:
+BEM (Block, Element, Modifier) methodology.
+Organizing styles for scalability and maintainability.
+
+13.Cross-Browser Compatibility:
+Testing and fixing for different browsers.
+
+14.CSS Grid Systems:
+Understanding and using grid systems for layout.
+
+15.CSS Transforms and Transitions:
+Transform functions (translate, rotate, scale).
+Transition timing functions and properties.
+
+16.CSS Positioning:
+Static, relative, absolute, fixed positioning.
+
+17.CSS3 Features:
+Rounded corners, gradients, shadows.
+Multiple background images.
+
+18.CSS Best Practices:
+Consistent naming conventions.
+Efficient use of styles for performance.
+
+Remember to practice your skills with hands-on coding exercises,
+build small projects to reinforce your knowledge, and be ready to discuss your experiences in using HTML and CSS in real-world scenarios.

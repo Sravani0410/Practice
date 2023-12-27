@@ -1,0 +1,114 @@
+# Javascript questions
+
+1. undefined
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27353/szrhbm8l18CyQr8IoEbZkgX5nVSRZWhjPCM5Zu3s.mp4
+    
+2. NaN
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27354/Mlg3Issh2MoKkRSPTwE9bG8Zp2nL2FomBQQe4S3p.mp4
+    
+3. ==
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27355/Y48Tw5Z5w47DynWM8Q2fd8x7BdO7Or0m9XeKOLDU.mp4
+    
+4. && || operators and short-circuiting
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27356/I50eHQcMJbdtr6iEFUeGxpnrpOUIdE6nr3pZaHWI.mp4
+    
+5. functions
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27357/hEp4EgadeYFXrgVwqC4rmOGxpaM5OnuZbq6Cm8qv.mp4
+    
+6. arrays
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27359/nTdyt7rurBqdTITNqIxyKdCQgncO4PPjLkB16hOD.mp4
+    
+7. objects
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27360/EQsBtFZm8RuCQQWlUm2XgFSLmGAXwdho4nGzsk89.mp4
+    
+8. hoisting
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27361/ABNRwqAeVfpCWFFYdEtzrTZpI9tvelRiYlo8TrTN.mp4
+    
+9. scoping
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27362/YFRJZhlGjY0NESHqqjpT80l3iTqK1e6glrMXjLBy.mp4
+    
+10. promises
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27358/BQfpcSeRRVmi7YPdpvKCYGbfm4p8Z2oOXW3Sw3aF.mov
+    
+11. var let const
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27364/9OuUd1EtlmDjx8xqVOFQx1XGCnXuCoqyGAA85n3Y.mov
+    
+12. arrow functions, this, call, apply, bind
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27365/bOa6PmGGvDyIPWyEJ8PQaFUUwu7gwydXQG1gTZSM.mov
+    
+13. prototypes
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/lecture/541/material/16c222aa19898e5058938167c8ab6c57/Prototypes.mp4
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27366/2bmkAfdeI5VAauZpVZ3uCpcNuHtjRiaWKdqyVrh5.mov
+    
+14. classes
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/lecture/576/material/a7aeed74714116f3b292a982238f83d2/zoom_0.mp4
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27367/WdKk3eaT4LDsvpUAcYIyRT7Kg3gG6TQAD8CXAv1n.mov
+    
+15. bigint
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27368/BemgIoOvcZlxHdYeJ8bAvsganYXOphkTjE140YfO.mov
+    
+16. event loop
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27369/JMokAN6K79kSmMDMItbnIWAblDF4LJe1vdkXQOCR.mov
+    
+17. `this` keyword explained in short
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27370/51HiRyT0ICZUvMv46iLzvWBcAA6pOSfQJBlKvtn9.mov
+    
+18. Object methods defineProperty, hasOwnProperty
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27371/FrABoLtscNyZRVXtWdfN7yDc22nUF4fEbzGzKEDq.mov
+    
+19. Object freeze
+20. fetch vs axios
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27372/OlXyQ8J7VaghAEmXNcrWGpzw6wYYUuBYppgJhoSH.mov
+    
+21. SetTimeout - Amazon question Approach 1
+    
+    This has one more approach given in the closures page
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27373/KJz25MgPzL69urM1nesyjgtC6HqntTCV2Tb4JGQM.mov
+    
+22. strict mode
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27374/Lq7J3QoWgjgnDaPxsTy90CA6cl0kwfPn6MyQBKlz.mov
+    
+23. Recursion vs Iterative approach problem
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27375/SxOBZxndzZU3jyKzQnoT7aRvGoMB7xzhqQpSrPqb.mov
+    
+24. DOM, Event propogation
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27376/AHpI7t6NOP5nFXQMjfHnb9rs0lQjXn2m4LoUjN6S.mov
+    
+25. IIFE
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/material/videos/27377/xKZXsVSDlPcswrsh8BqRtRAWXJUDNWKT4xqN3omH.mov
+    
+26. create your own array object with prototype chain
+    
+    https://masai-course.s3.ap-south-1.amazonaws.com/lecture/542/material/7dcd340d84f762eba80aa538b0c527f7/Creating%20your%20own%20array.mp4
+    
+27. What is mutability and immutability?
+
+28. Can you describe the main difference between a `.forEach` 
+loop and a `.map()` and why you would pick one versus the other?
+

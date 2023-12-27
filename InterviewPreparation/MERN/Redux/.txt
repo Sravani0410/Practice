@@ -1,0 +1,40 @@
+# Redux
+
+- [ ]  What is Redux?
+- [ ]  What are actions?
+- [ ]  What are action creators?
+- [ ]  What are dispatchers?
+- [ ]  What are reducers?
+- [ ]  What are pure functions?
+- [ ]  Why do we spread the state or return a new object in reducers?
+- [ ]  Why do dispatchers take only actions which are objects
+- [ ]  What are types in actions why do we need them?
+- [ ]  What happens when you pass a function into a dispatcher?
+- [ ]  Where do dispatchers come from?
+- [ ]  What are the properties of a store?
+- [ ]  Can you create your own redux and create the following methods?
+dispatchers
+constructor
+getState
+subscribe
+- [ ]  Explain redux to a 5 year old?
+- [ ]  What is the difference between Context API and Redux?
+- [ ]  What are redux thunks?
+- [ ]  Why do we need to use network requests in redux thunks?
+- [ ]  What are middlewares?
+- [ ]  Can you write your own middleware instead of thunks? what do thunks do?
+- [ ]  Explain with a diagram how state gets updated with redux?
+- [ ]  What is useSelector?
+- [ ]  What is the compareFn that you pass in a useSelector?
+- [ ]  What is useDispatch?
+- [ ]  What is the use of Provider?
+- [ ]  what is redux tool kit? How does it make redux better?
+
+
+- **Context is not a state management ( Context vs Redux)**
+    
+    https://blog.isquaredsoftware.com/2021/01/context-redux-differences/
+    
+- **React, Redux, and Context Behavior**
+
+-**Create your own Redux: Answer**

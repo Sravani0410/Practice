@@ -1,7 +1,23 @@
 1. How is the work in jaipur?
-2. What nitroxpress is about?
+2. What nitroxpress is about?   
+    It is the logistic services to help eCommerce businesses increase growth and revenue.
+    The main focus is to make shipping convenient and faster for small and medium-sized
+    eCommerce Businesses.
 3. what features you make?
+Create Order: while creating the order
+    Create the order page while during the payment if wallet has
+    sufficient balance and negiative balance is zero it will debit from wallet or otherwise
+    through phone pay we can recharge the wallet then debit, if negative balance is there
+    it will automatically debit eventhough sufficient balance. working delivery boy ,
+    delievery biy partner crud operation. If login with delivery boy account it will locate
+    the location. stages with tracking functionality.
 4. how many people are there in the group?
 5. how many are using this app?
 6. tell me about the company?
 
+Features : Built a system with user authentication, document uploads, and seamless
+PhonePe integration for B2C orders with negative limit. Admin manages CRUD
+operations, tracks delivery personnel in real-time, and sets permissions for secure
+access to different roles.
+Tech Stack using this project: HTML | CSS | Javascript| Local Storage | Bootstrap |
+AWS deploy for frontend | API | Postgresql | Python

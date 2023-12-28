@@ -1,0 +1,65 @@
+Explain the Project:
+  Nitroxpress: 
+  Features:
+  Basically this project consists admin,b2b,b2c,employee,delivery boy,tracking the order,add wallet,notification,transactions.
+    Create Order: 
+    =============
+    while creating the order on behalf of b2b, admin and employee will do if wallet balance or negative balance is there. 
+    create order consists 3 stages,basic inforamtion,Item details and summary details.
+    basic inforamtion like Company name( which includes while create a account as b2b there are asking company name,documents ) through search using javascript.Pickup details,Delivered details.
+    Item details which includes weight,length,breadth,height,Delivery type,pickup date,package shipping if toggle is yes,product price(if price is more than 50000 we have upload the pdf).
+    Package Details which includes product type,when we choose quantity with background itself calcaulate and give the output and fill the tax,price,discount,total price this details will change insurance also 
+    and this quantity calcualtion is based on weight,length,breadth,height.and we can add order tag which is optional.and we want to change any data we can go preveious,back it will stored in local storage. 
+    Final stage is summary details: we can display the data to convenient to check before proceed to payment.
+    Payment process are different type:
+      i) if negative limit is 0 and if wallet is 0 then first add amount to wallet through phonepay and then dedit from wallet
+      ii) if negative limit is 0 and if wallet is sufficient balance it will debit from wallet 
+      iii) if nehative limit is 0 and if wallet is insufficient balance then also first add amount to wallet through phonepay and then dedit from wallet
+      iv) if negative limit is some amount and order is sufficient:
+           NL < Order but amount is not sufficent--> add the amount to wallet remaining balance which we need
+           NL = Order but amount is not sufficient--> dedit from negative limit
+           NL > Order but amount is not sufficient --> dedit from negative limit
+    Note: actually this payment method is includes first check the wallet,then negative balance, then add the amount from phonepay.
+    working delivery boy Feature: which includes CRUD operation for that creating delivery boy name,number,email,password,confirm password,upload the documnets like driving lincence,aadhar card,4 photos,duration,give the permission ,
+      we can display the data and also while login and logout with delivery boy account time will also displayed 
+      we can edit,delete the delivery boy.
+    chat system in support ticket
+    delievery boy crud operation. If login with delivery boy account it will locate.
+    delievery partner CRUD Operation.
+    stages after creating order:
+    ===========================
+    there are 11 stages i.e.,pending,ready to pickup,picked up,recieved at hub,booked,in-transit,out-for-delivery,delivered,RTO,RTO-delivered,Cancelled order.
+    while doing this stages if click on any order is it will navigate to summary page which included details of order,address,track and remark along with filter,search, download the order in csv file.
+    Remark: 
+    we can add the remark in any stage it will carry forward and view remark in all stages.
+    Track: we can track the order 
+    Pending stage:
+     here i implement 2 cases:
+     i)the select delivery boy after select we have to confirm then it will move to ready to pickup
+     ii) after cancel it will go to cancelled stage and also amount credited to wallet
+    cancelled stage:
+     here if we want to rebook the order there also we have to payment so same payment process is applicable while creating order like it will check first check the wallet,then negative balance, then add the amount from phonepay.
+     ready to pickup and pickup up stages are access by delivery boy and admin
+     recieved at hub will be access by admin or employee only
+     ready to pickup,pickup these three stage can access by admin,employee and delivery boy not b2b.
+     recieved at hub :
+     ===============
+      we have to moved to booked before, there is a popup, it includes choose delievery partner,awb no,date these are madatatory 
+       other than these there are few senories which is optional:
+        i) no changes it will go to booked stage
+        ii) if change if weight,length,breadth,height calcaulate will be includes again change the base price and total amount. 
+        iii) if change the zone then also base price we can change the base price manually then automatically total amount will change.
+        iv) while doing this process money will dedit from wallet if sufficent balance is there.
+    Intransit:
+    =========
+      in-transit there few senories:
+       i) if we want to proceed further means details right then we will move to out for delivery.
+       ii) if we want change the maually tracking order then we can do that. we can see in track order in view more and view less while doing the moving.
+    Out for delievry:
+    ================
+     in out for delievery there are 3 stages to move:
+        intransit:if we want to move back to intransit we can do that while doing this it will ask the reason. that reason we can see it tracking 
+        RTO: if we want to do return the product we can do that it will ask the reason and also money will dedit because it was logistic website it will be debit from wallet.it will moved to rto delivered.
+        Delievered: it will be delivered it will be final stage.
+
+    stages with tracking functionality.

@@ -1,0 +1,9 @@
+reduces:
+=======
+var myarray = [5, 10, 3, 2];
+var new_array = [];
+myarray.reduce(function(a,b,i) { return new_array[i] = a+b; },0);
+new_array // [5, 15, 18, 20]
+
+search:
+=======

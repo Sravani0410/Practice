@@ -1,63 +1,6 @@
-1.What is the difference between null and undefined in JavaScript?
-   * null is an assignment value that represents the intentional absence of any object value. 
-   * It is typically used to indicate that a variable has no value or an object property is intentionally empty.
-   * undefined means that a variable has been declared but has not been assigned a value. 
-   * It is the default value of variables that are declared but not initialized.
 
-2.Explain the concept of hoisting in JavaScript.
-   *Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their respective scopes during the compilation phase. 
-   *This means that you can use variables and call functions before they are declared in your code.
-   example:
-   console.log(x); // Output: undefined
-   var x = 10;
-   In the example above, even though x is accessed before it is declared, it doesn't throw an error. 
-   This is because during hoisting, the declaration of x is moved to the top, making it accessible throughout the scope.
 
-3.How does prototypal inheritance work in JavaScript?
-   *In JavaScript, objects can inherit properties and methods from other objects.
-   *This is achieved through prototypal inheritance. Each object has an internal link to another object called its prototype.
-   *When a property or method is accessed on an object, JavaScript looks for it in the object itself and, if not found, follows the prototype chain to find it in its prototype object.
-    example:
-    function Person(name) {
-    this.name = name;
-    }
-    Person.prototype.greet = function () {
-    console.log('Hello, my name is ' + this.name);
-    };
-    var john = new Person('John');
-    john.greet(); // Output: Hello, my name is John
-    In the example above, the Person function serves as a constructor. 
-    The greet method is added to the prototype of Person, so all instances created using new Person() can access and use that method.
 
-4.Describe the event bubbling and event capturing mechanisms in the DOM.
-    *Event bubbling and event capturing are two mechanisms for handling events in the Document Object Model (DOM).
-    *Event bubbling is the default behavior where an event triggered on a specific element will also trigger the same event on all of its parent elements in the DOM hierarchy, propagating upwards until it reaches the document root.
-    *Event capturing is the opposite mechanism where the event is first captured by the topmost element in the hierarchy and then propagated downwards to the target element.
-    *You can control the event flow by using the addEventListener method with the optional third parameter useCapture. 
-    *Setting useCapture to true enables event capturing, while setting it to false (default) enables event bubbling.
-5.What is the purpose of closures in JavaScript? Can you provide an example?
-    *Closures are functions that have access to variables from their outer (enclosing) lexical scope even after the outer function has finished executing.
-    *They are useful for creating private variables, implementing data encapsulation, and creating functions with persistent state
-    example:
-    function counter() {
-    var count = 0;
-    return function () {
-        count++;
-        console.log(count);
-    };
-    }
-    var increment = counter();
-    increment(); // Output: 1
-    increment(); // Output: 2
-    In the example above, the counter function returns an inner function that increments and logs a count variable. 
-    The inner function has access to the count variable even after the counter function has completed, thanks to closures.
-
-6.Explain the differences between synchronous and asynchronous programming in JavaScript.
-    *Synchronous programming executes code sequentially, blocking further execution until a task is complete. 
-    *Each statement waits for the previous one to finish.
-    *Asynchronous programming allows multiple tasks to be executed concurrently. 
-    *Instead of waiting for a task to complete, it delegates the task to another part of the program and continues executing the next statement.
-    *Asynchronous programming in JavaScript is commonly achieved through callback functions, promises, and async/await syntax.
 7.How does the this keyword work in JavaScript? Give some examples of how it can be used.
     *In JavaScript, the value of this is determined by how a function is called. 
     *It refers to the object on which a function is invoked.

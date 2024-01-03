@@ -10,7 +10,7 @@ function findIndex(arr, target) {
 }
 
 // Example usage:
-const array = [1, 2, 3, 4, 5];
+const array = [1, 2, 3, 4, 5,6];
 const target = 6;
 const result = findIndex(array, target);
 console.log(result);

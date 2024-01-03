@@ -26,7 +26,72 @@ Because in backend java,python,dot net still why we need node.js
 3.Node.js can collect form data
 4.Node.js can add,delete,modify data in your database
 
-uses of node.js:
-================
+Q) how many phases in event loop?
+    In Node.js, the event loop is a crucial part of its architecture, and it follows a specific set of phases during its execution. 
+    The event loop is responsible for handling asynchronous operations and I/O operations efficiently. 
+    Here are the phases of the event loop in Node.js:
+        Timers:
+        =======
+        In the timers phase, callbacks scheduled by setTimeout() and setInterval() are executed. 
+        The event loop checks if any of the timers have expired, and 
+        if so, their associated callback functions are added to the execution queue.
+        example:
+        setTimeout(() => {
+        console.log("This callback will be executed after a delay.");
+        }, 1000);
 
+        I/O Callbacks:
+        ==============
+        The I/O callbacks phase handles callbacks from I/O events. 
+        For example, when a file read or a network request is completed, the associated callback functions are executed in this phase.
+        const fs = require('fs');
+        fs.readFile('example.txt', 'utf8', (err, data) => {
+        console.log('File content:', data);
+        });
+
+        Idle, Prepare:
+        ==============
+        These phases are internal and typically not encountered in everyday development. 
+        Idle phase executes callbacks repeatedly until there are no more callbacks to execute.
+        Poll:
+        ====
+        The poll phase is responsible for retrieving new I/O events from the event queue. 
+        If there are pending callbacks from the poll queue, they are executed. 
+        If there are no events in the poll queue, the event loop may wait for events to arrive.
+        const http = require('http');
+        const server = http.createServer((req, res) => {
+        res.end('Hello, world!');
+        });
+        server.listen(3000, () => {
+        console.log('Server listening on port 3000');
+        });
+
+        Check:
+        ======
+        The check phase is used for executing setImmediate() callbacks. 
+        Callbacks scheduled using setImmediate() are executed in this phase after the poll phase.
+        setImmediate(() => {
+        console.log('This callback will be executed in the Check phase.');
+        });
+
+        Close Callbacks:
+        ================
+        The close callbacks phase is responsible for executing callbacks associated with close events, such as closing a server or a socket.
+        const server = http.createServer((req, res) => {
+        // server logic
+        res.end('Hello, world!');
+        });
+
+        server.close(() => {
+        console.log('Server closed.');
+        });
+
+        The event loop in Node.js continuously cycles through these phases, processing events and callbacks. 
+        It's important to note that while the event loop follows this sequence of phases, the execution order can vary based on the type and nature of asynchronous operations. 
+        Also, the event loop might revisit certain phases if new events or callbacks are added to the queue during its execution.
+
+        Understanding the event loop is crucial for writing efficient and non-blocking Node.js applications. 
+        It allows developers to reason about the order of execution for asynchronous operations and design applications that can handle a large number of concurrent connections.
+Q) how to explicity the cors in express?
+     
 

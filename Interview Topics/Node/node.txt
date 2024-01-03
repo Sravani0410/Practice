@@ -1,7 +1,9 @@
 Introduction Node.js:
 =====================
 1.Node.js is a very powerful javascript-based platform
-2.Node.js is a open-source server side  runtime environment.example: client side app and server side app here node.js is used as server side applications. it was free of cost(open source).
+2.Node.js is a open-source server side  runtime environment.
+example: client side app and server side app here node.js is used as server side applications. 
+            it was free of cost(open source).
 3.Node.js is an open source server environment
 4.Node.js allows you to run javascript on the server.It is also called as Server Side platform
 5. It is free of cost. It will run various platform(windows,Linux,windows)

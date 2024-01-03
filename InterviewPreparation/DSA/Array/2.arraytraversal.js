@@ -2,8 +2,8 @@
 // JavaScript Solution:
 // function sumOfArrayElements(arr) {
 //   let sum = 0;
-//   for (let element of arr) {
-//     sum += element;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
 //   }
 //   return sum;
 // }
@@ -14,17 +14,17 @@
 // console.log(result);
 
 
-function arrayTraversal(nums) {
-  const result = [];
+// function arrayTraversal(nums) {
+//   const result = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    result.push(nums[i] * 2);
-  }
+//   for (let i = 0; i < nums.length; i++) {
+//     result.push(nums[i] * 2);
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-// Example usage:
-const array = [1, 2, 3, 4, 5, 6, 7];
-const result = arrayTraversal(array);
-console.log(result);
+// // Example usage:
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// const result = arrayTraversal(array);
+// console.log(result);

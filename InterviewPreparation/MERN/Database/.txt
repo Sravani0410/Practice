@@ -1,22 +1,83 @@
+Q) NoSQL Database Concepts:
+    ACID Properties:
+    While NoSQL databases often relax some ACID properties for scalability, it's essential to understand the trade-offs.
 
-Types of NoSQL databases
-
-- Types of NoSQL Databases
-- Mongo Queries
+    Sharding:
+    Distributed databases use sharding to horizontally scale data across multiple nodes.
+Q) Types of NoSQL databases
+  - Types of NoSQL Databases
+      NoSQL databases are categorized into four main types:
+      Document-Oriented Databases:
+      MongoDB
+      CouchDB
+      Key-Value Stores:
+      Redis
+      DynamoDB
+      Wide-Column Stores:
+      Cassandra
+      HBase
+      Graph Databases:
+      Neo4j
+      Amazon Neptune
+Q) Mongo Queries
     - CRUD operations
+        Create:
+        db.collection.insertOne({ key: "value" });
+        Read:
+        db.collection.find({ key: "value" });
+        Update:
+        db.collection.updateOne({ key: "oldValue" }, { $set: { key: "newValue" } });
+        Delete:
+        db.collection.deleteOne({ key: "value" });
     - query embedded / nested documents
+        db.collection.find({ "nested.key": "value" });  
     - query array documents
+        db.collection.find({ arrayField: "value" });
     - query array of embedded documents
+        db.collection.find({ "arrayField.key": "value" });
     - projection ( $, elemMatch, slice )
+        db.collection.find({ key: "value" }, { _id: 0, key: 1 });
+        1. Projection Operator $:
+        The $ projection operator is used to project the first element in an array that matches the query condition.
+        // Retrieve the first matching comment for a specific post
+         db.posts.findOne({ _id: postId }, { comments: { $elemMatch: { user: "Alice" } } });
+         In this example, only the first comment by the user "Alice" will be included in the result.
+        2.Projection Operator $elemMatch:
+          The $elemMatch projection operator is used to project only the first element in an array that matches all the specified criteria.
+          // Retrieve posts where the first comment is by the user "Alice" and has a score greater than 5
+          db.posts.find(
+            { comments: { $elemMatch: { user: "Alice", score: { $gt: 5 } } } },
+            { comments: 1 }
+          );
+          In this example, only the first comment that satisfies both conditions (user is "Alice" and score is greater than 5) will be included in the result.
+        3. Projection Operator $slice:
+           The $slice projection operator is used to limit the number of elements in an array that are included in the result.
+          Example:
+          // Retrieve posts with only the first two comments
+          db.posts.find({}, { comments: { $slice: 2 } });
+          In this example, only the first two comments of each post will be included in the result.  
     - query null or missing fields
+        db.collection.find({ key: { $exists: false } });
     - [query operators](https://www.mongodb.com/docs/manual/reference/operator/query/#std-label-query-selectors)
         - Comparison ( $eq, $gt, $gte, $in, $lt, $lte, $ne, $nin )
+        db.collection.find({ key: { $gt: 5 } });
         - Logical  ( $and, $not, $nor, $or )
+        db.collection.find({ $or: [{ key1: "value1" }, { key2: "value2" }] });
         - Array ( all, elemMatch, size )
+        db.collection.find({ arrayField: { $size: 3 } });
         - Evaluation ( expr, regex, where )
+        db.collection.find({ key: { $regex: /pattern/ } });
         - geospatial ( bonus )
         - element (exists, type )
-- Aggregation Operations
+Q) Aggregation Operations
+        Understanding Aggregation Pipeline:
+        The aggregation pipeline consists of stages.
+        Each stage processes documents and passes them to the next stage.
+        Example:
+        db.collection.aggregate([
+          { $match: { key: "value" } },
+          { $group: { _id: "$category", total: { $sum: "$quantity" } } },
+        ]);
     - understanding aggregation pipeline
         An aggregation pipeline consists of one or more [stages](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/#std-label-aggregation-pipeline-operator-reference) 
         that process documents:
@@ -28,27 +89,125 @@ Types of NoSQL databases
         - limitations of aggregation
         - diskUsage
         - **Memory Restrictions**
-    - match
-    - group
-    - buckets
-    - count
-    - graphLookup
-    - geoNear
-    - limit
-    - skip
-    - sort
-    - sortByCount
-    - out
-    - project
-    - set
-    - unset
-    - unwind
+    - match  { $match: { key: "value" } }
+    - group  { $group: { _id: "$category", total: { $sum: "$quantity" } } }
+    - buckets { $bucket: { groupBy: "$price", boundaries: [0, 100, 200], default: "Other" } }
+    - count  { $count: "total_documents" }
+    - graphLookup  { $graphLookup: { from: "employees", startWith: "$manager", connectFromField: "manager", connectToField: "name", as: "reportingHierarchy" } }
+    - geoNear { $geoNear: { near: { type: "Point", coordinates: [x, y] }, distanceField: "distance", spherical: true } }
+    - limit  { $limit: 10 }
+    - skip { $skip: 5 }
+    - sort { $sort: { key: 1 } }
+    - sortByCount { $sortByCount: "$category" }
+    - out { $out: "new_collection" }
+    - project { $project: { key: 1, _id: 0 } }
+    - set  { $set: { newField: { $add: ["$field1", "$field2"] } } }
+    - unset   { $unset: "fieldToRemove" }
+    - unwind  { $unwind: "$arrayField" }
     - findAndModify
-- Indexing
+    -$facet:
+      {
+        $facet: {
+          categoryCounts: [{ $sortByCount: "$category" }],
+          totalQuantity: [{ $group: { _id: null, total: { $sum: "$quantity" } } }]
+        }
+      }
+     - $lookup:
+      {
+        $lookup: {
+          from: "orders",
+          localField: "customerId",
+          foreignField: "customerId",
+          as: "customerOrders"
+        }
+      }
+     - $merge:
+      { $merge: { into: "merged_collection", whenMatched: "merge", whenNotMatched: "insert" } }
+Q) Aggregation Limitations:
+    Disk Usage
+    Memory Restrictions    
+Q) Indexing
     - use mongo Compass to show GUI
-    - single index
-    - compound index
-    - how does query engine decide to select index A, B, C
+       Using MongoDB Compass:MongoDB Compass provides a GUI for managing indexes. You can create and analyze indexes visually.
+    - single index: db.collection.createIndex({ key: 1 });
+    - compound index: db.collection.createIndex({ key1: 1, key2: -1 });
+    - how does query engine decide to select index A, B, C 
+       The query engine selects an index based on the query execution plan and index statistics.
     - how does compound index work
+       A compound index encompasses multiple fields. It's effective for queries involving those fields in various combinations.
     - B+ trees database
-- GeoSpatial queries
+       MongoDB uses B+ trees to organize and store indexes efficiently.
+     -  Text Index:
+        db.collection.createIndex({ textField: "text" });
+     -   Wildcard Index:
+        db.collection.createIndex({ "$**": 1 });
+     -   TTL (Time-To-Live) Index:
+        db.logs.createIndex({ createdAt: 1 }, { expireAfterSeconds: 3600 });
+    -MongoDB Write Concern:
+      MongoDB supports different levels of write concerns:
+        db.collection.insertOne({ key: "value" }, { writeConcern: { w: "majority", j: true } });
+Q) GeoSpatial queries
+   MongoDB supports geospatial queries for location-based data.
+      Example:
+      db.places.createIndex({ location: "2dsphere" });
+
+      db.places.find({
+        location: {
+          $near: {
+            $geometry: {
+              type: "Point",
+              coordinates: [longitude, latitude]
+            },
+            $maxDistance: 1000
+          }
+        }
+      });
+   Geospatial Index:
+    db.places.createIndex({ location: "2dsphere" });
+    GeoWithin Query:
+    db.places.find({
+      location: {
+        $geoWithin: {
+          $geometry: {
+            type: "Polygon",
+            coordinates: [[...]] // Define the polygon coordinates
+          }
+        }
+      }
+    });
+    GeoIntersects Query:
+    db.places.find({
+      location: {
+        $geoIntersects: {
+          $geometry: {
+            type: "LineString",
+            coordinates: [[...]] // Define the line coordinates
+          }
+        }
+      }
+    });
+Q) NoSQL Database Use Cases:
+    Document Store Use Case:
+    Storing flexible JSON-like documents makes document-oriented databases suitable for content management systems.
+
+    Key-Value Store Use Case:
+    In-memory key-value stores are often used for caching systems (e.g., Redis).
+
+    Wide-Column Store Use Case:
+    Wide-column stores are effective for time-series data (e.g., Apache Cassandra).
+
+    Graph Database Use Case:
+    Graph databases excel in social network analysis and recommendation systems.
+
+Q) NoSQL Database Consistency Models:
+    Eventual Consistency:
+    NoSQL databases often prioritize eventual consistency over immediate consistency for distributed systems.
+
+Q)MongoDB Security:
+    Authentication and Authorization:
+    MongoDB supports authentication with username/password and role-based access control.
+
+    TLS/SSL Encryption:
+    Securing data in transit with TLS/SSL encryption.
+
+    

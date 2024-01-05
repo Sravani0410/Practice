@@ -1,0 +1,13 @@
+1. what is React?
+    -React is the open source frontend javascript libarary used for building user interface for singfle web page application
+    -major features are:
+       -it uses virtual dom instead of using the real dom for manipulation which make a application run much smoother
+       and faster and it supports server side rendering
+       - it follws unidirectional data and it allows us to create reusable module. 
+         so application developement is much faster
+
+2. what is virtual dom and how it works?
+    - v-dom is exact same as real dom we can say light representation of real dom.
+    - v-dom cannot directly change but real dom can change directly.
+    - whenever there is a change in a component or
+     there is chain in corpaorte state in a componnet or diffing alogorithm to run an comparsion done between real dom and v-dom and only the updated the changed components

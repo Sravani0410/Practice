@@ -68,7 +68,8 @@
     This can be particularly beneficial for optimizing performance in components that rely on expensive computations or render logic.
  
    Q) how to correctly use these techniques to optimize components in a React application.
-      Optimizing components in a React application involves using memoization techniques like React.memo and useMemo judiciously. Here are some guidelines for correctly using these techniques to optimize components:
+      Optimizing components in a React application involves using memoization techniques like React.memo and useMemo judiciously. 
+      Here are some guidelines for correctly using these techniques to optimize components:
     1. Identify Expensive Operations:
         Before applying memoization, identify parts of your component logic that are computationally expensive or involve unnecessary renders.
     2. Use React.memo for Functional Components:

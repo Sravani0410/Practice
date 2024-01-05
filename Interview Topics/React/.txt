@@ -1,0 +1,134 @@
+1. Hooks:
+    -useState
+       useState is React Hook that allows you to add state to a functional component. 
+       It returns an array with two values: the current state and a function to update it. 
+       The Hook takes an initial state value as an argument and returns an updated state value whenever the setter function is called.
+       const [state, setState] = useState(initialValue);
+    -useEffect --> what is dependency array and when empty array and how with dependencies it will work
+    -useContext
+         -Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+    -useReducer
+            -useReducer is a hook
+            -it is similar to the useState() hook method.it is used to store and update the states.
+               but differnce is useState cannot take reducer function as it first parameter and its the intialstate as the second
+            -useReducer is used to manage complex state in components.
+            -in useState we are mange one component
+            -reducer is a pure function (it will not depends on any other external variable it will depends on argument as same input)
+            -it will accept the previous app state and the action.
+            -why it is use is: by taking these two inputs, it will update next state, and return the new object
+                previous app state = initialState
+            -example:
+                const initialstate={count:0}
+                reducer(state=initialstate,action)  => it will develop newstate
+            -action-here action is an object
+                    -that can have type of action and payload
+                    -{
+                        type:"increment"
+                        payalod:{
+                                count:0
+                                }
+                    }
+            -action creator is a function that will return action object
+                export default ActonCreator(){
+                    return {action}
+                } 
+            -if aany action is in useReducer it will be dispatch then only it will work
+    -useMemo
+    -useCallback
+    -useRef
+
+2. Higher order components
+    -what
+    -why
+    -where
+    -how
+    -give example
+    -machine code round it is important
+
+3. Life cycle methods of components:
+    -class components
+      but it is important
+    -what is the life cycle methods aand what is the order of redency
+    -life cycle phase with methods:
+      -mounting  
+      -updating
+      -unmounting
+
+4. state management
+     -state and props
+     -props driling
+     -React context
+     -how to pass the data between 2 slibings
+
+5. Redux/Zustand
+     -how redux work
+     -why 
+     -when
+     -redux-toolkit (RTK)
+
+6. custom hooks: when using custom hooks it will be easy, clean code,it should be maintainable, readable and reuseable
+     -when to use
+     -code 
+     -example:
+        -use localstorage
+
+7.  Lazy loading: it will make the application much more performance.
+                  perforamnce is most important when we come to react application adn any frontend application
+      -code splitting
+      -chucking
+      -suspense
+
+8. virtual dom
+     -Reconciliation algorithm
+     -react fiber alogothim
+     - how the component is render
+     - Diffing algorithm --> it will dif it and only render specific parts of it
+     - how render works
+
+9. SSR and CSR (important)
+     What 
+     we can use SSR in next js
+        -sinced it is ssr rendering th redering instead of happening on the client side it actually happens on the server side.
+        -now the thing is that notice here it is probably web page and client requested so we send this webpage to the client 
+        -but if client needs more page the client will actually throw you a request and based on the request this web page will genereated
+        -and webside is eventually side back to the client.
+        -so every time client make a request web page is rendered on the server and this hsi web page is being thrown at the client now.
+        -the advantage is client don't have to wait for entire element in page to load up in the web page
+     what are the benefits
+     what are the difference between them
+     SEO: Search Engine optimization is helpful to increase the quanlity and quantity of the website traffic and
+         increase the visibilty of our website or a web page in the web search engine. 
+     performance
+
+10. Routing (RBAC-->Role base access control)
+      - how to handle the different routes
+      - next js has there own router inbuilt but react js it needs library i.e., react router
+      - how to manage the protected routes and un protected routes
+      -how to handle router
+      -how to handle the query parameters
+      -dynamic routing
+
+11. Testing
+      -React Testing library
+
+12. Async tasks (useEffect in depth)
+    - how to make API calls (fetch,axios)
+    - Events ( event bubbling,event capturing, what happpened when we scroll)
+    - Async tasks like callback hell,promises,setTimeout,setInterval
+
+13. Reusability
+    modularity (readable)
+    testability
+
+14. performance
+      shiver UI
+      asset optimization
+      optimization code
+
+15. styling
+    
+
+
+
+    
+

@@ -14,7 +14,9 @@ Class components.
 Component lifecycle methods.
 Higher-order components (HOCs):
 class Component:
-Higher-order components (HOCs) are a powerful pattern in React that allows you to reuse component logic. HOCs are functions that take a component and return a new component with additional props or behavior. They enable you to abstract away common functionality and apply it to multiple components.
+Higher-order components (HOCs) are a powerful pattern in React that allows you to reuse component logic. 
+HOCs are functions that take a component and return a new component with additional props or behavior. 
+They enable you to abstract away common functionality and apply it to multiple components.
 
 Here's an example of a simple HOC in JavaScript:
 
@@ -112,7 +114,9 @@ const App = () => {
 };
 
 export default App;
-In this example, withLogger is a higher-order component function that takes a functional component (WrappedComponent) and returns a new functional component. It uses the useEffect hook to log messages when the component mounts and unmounts. The rest of the pattern is similar to the class component example.
+In this example, withLogger is a higher-order component function that takes a functional component (WrappedComponent) and returns a new functional component. 
+It uses the useEffect hook to log messages when the component mounts and unmounts. 
+The rest of the pattern is similar to the class component example.
 
 The key point here is that the concept of higher-order components is not tied to class components; it can be used with functional components and hooks as well.
 Presentational vs Container components.

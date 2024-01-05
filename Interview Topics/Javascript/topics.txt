@@ -37,6 +37,25 @@ Q) Explain the concept of hoisting in JavaScript.
    In the example above, even though x is accessed before it is declared, it doesn't throw an error. 
    This is because during hoisting, the declaration of x is moved to the top, making it accessible throughout the scope.
 
+Q) Event loop: The event loop is a constantly running process that monitors both the callback queue and the call stack. 
+
+Q) What is the purpose of closures in JavaScript? Can you provide an example?
+    *Closures are functions that have access to variables from their outer (enclosing) lexical scope even after the outer function has finished executing.
+    *They are useful for creating private variables, implementing data encapsulation, and creating functions with persistent state
+    example:
+    function counter() {
+    var count = 0;
+    return function () {
+        count++;
+        console.log(count);
+    };
+    }
+    var increment = counter();
+    increment(); // Output: 1
+    increment(); // Output: 2
+    In the example above, the counter function returns an inner function that increments and logs a count variable. 
+    The inner function has access to the count variable even after the counter function has completed, thanks to closures.
+    
 Q) How does prototypal inheritance work in JavaScript?
    *In JavaScript, objects can inherit properties and methods from other objects.
    *This is achieved through prototypal inheritance. 
@@ -64,22 +83,7 @@ Q) Describe the event bubbling and event capturing mechanisms in the DOM.
     *You can control the event flow by using the addEventListener method with the optional third parameter useCapture. 
     *Setting useCapture to true enables event capturing, while setting it to false (default) enables event bubbling.
 
-Q) What is the purpose of closures in JavaScript? Can you provide an example?
-    *Closures are functions that have access to variables from their outer (enclosing) lexical scope even after the outer function has finished executing.
-    *They are useful for creating private variables, implementing data encapsulation, and creating functions with persistent state
-    example:
-    function counter() {
-    var count = 0;
-    return function () {
-        count++;
-        console.log(count);
-    };
-    }
-    var increment = counter();
-    increment(); // Output: 1
-    increment(); // Output: 2
-    In the example above, the counter function returns an inner function that increments and logs a count variable. 
-    The inner function has access to the count variable even after the counter function has completed, thanks to closures.
+
 
 Q) Explain the differences between synchronous and asynchronous programming in JavaScript.
     *Synchronous programming executes code sequentially, blocking further execution until a task is complete. 
@@ -87,3 +91,18 @@ Q) Explain the differences between synchronous and asynchronous programming in J
     *Asynchronous programming allows multiple tasks to be executed concurrently. 
     *Instead of waiting for a task to complete, it delegates the task to another part of the program and continues executing the next statement.
     *Asynchronous programming in JavaScript is commonly achieved through callback functions, promises, and async/await syntax.
+
+Q) what is pure fucntion?
+    A pure function is a function (a block of code) that always returns the same result if same argument are passed
+    It does not depends on any state or data change during the program's execution.
+    Rather,it only depends on its input argument
+    example:
+    Pure function:
+    function calcualte(price){
+        return price*2
+    }
+    not a pure function:
+     var tax=2
+     function calcualte(price){
+        return price*(tax/100)+price
+     }

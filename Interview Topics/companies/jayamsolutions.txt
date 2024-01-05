@@ -1,0 +1,55 @@
+1. tell me about your self?
+2. explain the project?
+3. what techstack are used?
+4. how many components are there in react?
+5. difference between class and functional them?
+6. what is difference between v-dom and real dom?
+7. what is stateless component?
+8. what database are used?
+9. what is customhooks?
+10. how to deploy the code?
+11. how to install react app?
+12. which version are used?
+13. where to push the code?(github)
+14. how to push the code means which terminal(git bash,terminal)
+15. in mongodb what are db commands are there?
+    In MongoDB, there are various commands that you can use to interact with databases. These commands are typically used in the MongoDB shell or through a MongoDB driver in a programming language. Here are some of the common database-related commands in MongoDB:
+
+        Use Database:
+
+        use <database_name>: Switches to the specified database or creates a new one if it doesn't exist.
+        Show Databases:
+
+        show dbs: Lists all available databases on the MongoDB server.
+        Show Collections:
+
+        show collections: Lists all collections in the currently selected database.
+        Create Collection:
+
+        db.createCollection("<collection_name>"): Creates a new collection in the current database.
+        Drop Collection:
+
+        db.<collection_name>.drop(): Deletes the specified collection and all its documents.
+        Insert Document:
+
+        db.<collection_name>.insert(<document>): Inserts a document into the specified collection.
+        Find Documents:
+
+        db.<collection_name>.find(<query>): Retrieves documents from the collection based on the specified query.
+        Update Documents:
+
+        db.<collection_name>.update(<query>, <update>): Updates documents in the collection based on the specified query.
+        Delete Documents:
+
+        db.<collection_name>.remove(<query>): Removes documents from the collection based on the specified query.
+        Index Management:
+
+        db.<collection_name>.createIndex(<index_spec>): Creates an index on the specified fields in the collection.
+        db.<collection_name>.getIndexes(): Lists all indexes on the collection.
+        Aggregation Framework:
+
+        MongoDB provides a powerful aggregation framework for data transformation and analysis. Commands like db.<collection_name>.aggregate(<pipeline>) are used for this purpose.
+        Authentication:
+
+        db.auth(<username>, <password>): Authenticates the current session against a MongoDB database.
+        These are just a few examples, and MongoDB provides a rich set of commands for various operations. The MongoDB documentation is a valuable resource for exploring and learning more about the available commands: MongoDB Documentation.
